@@ -1,5 +1,5 @@
 {
-	"name": "@pumpncode/eslint-config",
+	"name": "@pumpn/eslint-config",
 	"version": "0.2.0",
 	"description": "standard eslint config for pumpn code projects",
 	"main": "index.js",
