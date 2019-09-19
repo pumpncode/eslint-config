@@ -4,7 +4,7 @@ module.exports = {
 		sourceType: "module"
 	},
 	extends: [
-		"airbnb"
+		"airbnb-base"
 	],
 	env: {
 		browser: true,
