@@ -313,12 +313,16 @@ module.exports = {
 		"import",
 		"compat"
 	],
-	settings: {
-		polyfills: [
+	"settings": {
+		"polyfills": [
+			"Array",
 			"fetch",
-			"Object.assign"
+			"Number",
+			"Object",
+			"Promise",
+			"Set"
 		]
-	},
+	}
 	overrides: [
 		{
 		  	files: ["flow-typed/**/**.js"],
