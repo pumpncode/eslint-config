@@ -322,7 +322,7 @@ module.exports = {
 			"Promise",
 			"Set"
 		]
-	}
+	},
 	overrides: [
 		{
 		  	files: ["flow-typed/**/**.js"],
