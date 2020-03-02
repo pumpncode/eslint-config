@@ -1,6 +1,6 @@
 {
 	"name": "@pumpn/eslint-config",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "standard eslint config for pumpn code projects",
 	"main": "index.js",
 	"author": "Nano Miratus <nanomiratus@gmail.com>",
@@ -8,7 +8,7 @@
 	"private": false,
 	"type": "module",
 	"peerDependencies": {
-		"eslint": "6.8.0"
+		"eslint": "^7.0.0-alpha.1"
 	},
 	"dependencies": {
 		"babel-eslint": "^10.0.3",
