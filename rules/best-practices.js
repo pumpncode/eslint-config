@@ -1,4 +1,5 @@
 // @flow
+
 const maxComplexity = 15;
 
 module.exports = {

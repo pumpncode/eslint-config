@@ -1,3 +1,4 @@
+// @flow
 module.exports = {
 	plugins: ["compat"],
 	rules: {

@@ -1,5 +1,7 @@
+// @flow
+
 module.exports = {
-	plugis: ["jsdoc"],
+	plugins: ["jsdoc"],
 	rules: {
 		"jsdoc/check-access": "warn",
 		"jsdoc/check-alignment": "warn",
