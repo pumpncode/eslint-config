@@ -75,5 +75,10 @@ module.exports = {
 		"jsdoc/require-returns-description": "warn",
 		"jsdoc/require-returns-type": "warn",
 		"jsdoc/valid-types": "warn"
+	},
+	settings: {
+		jsdoc: {
+			ignorePrivate: true
+		}
 	}
 };
