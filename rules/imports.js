@@ -111,7 +111,7 @@ module.exports = {
 		"import/no-unused-modules": [
 			"error",
 			{
-				ignoreExports: [`${process.cwd()}/index.js`],
+				ignoreExports: [`${process.cwd()}/index.js`, `${process.cwd()}/src/index.js`],
 				missingExports: true,
 				unusedExports: true
 			}
