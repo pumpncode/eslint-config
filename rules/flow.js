@@ -30,5 +30,10 @@ module.exports = {
 		"flowtype/union-intersection-spacing": ["error", "always"],
 		"flowtype/use-flow-type": "error",
 		"flowtype/valid-syntax": "error"
+	},
+	settings: {
+		flowtype: {
+			onlyFilesWithFlowAnnotation: false
+		}
 	}
 };
