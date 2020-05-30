@@ -1,4 +1,4 @@
-// @flo
+// @flow
 
 module.exports = {
 	env: {
