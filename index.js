@@ -14,5 +14,6 @@ module.exports = {
 		"./rules/strict.js",
 		"./rules/style.js",
 		"./rules/variables.js"
-	]
+	],
+	ignorePatterns: ["dist/**", "node_modules/**"]
 };
