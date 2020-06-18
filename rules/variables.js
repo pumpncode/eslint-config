@@ -1,4 +1,3 @@
-// @flow
 const confusingBrowserGlobals = require("confusing-browser-globals");
 
 module.exports = {

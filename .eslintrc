@@ -7,8 +7,6 @@
 		{
 			"files": ["**/**.js"],
 			"rules": {
-				"flowtype/require-return-type": "off",
-				"flowtype/require-parameter-type": "off",
 				"import/no-commonjs": "off",
 				"import/no-unused-modules": "off"
 			}

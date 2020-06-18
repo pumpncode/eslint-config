@@ -1,5 +1,3 @@
-// @flow
-
 module.exports = {
 	rules: {
 		"for-direction": "error",

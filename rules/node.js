@@ -1,5 +1,3 @@
-// @flow
-
 module.exports = {
 	env: {
 		node: true

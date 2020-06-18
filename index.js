@@ -1,5 +1,3 @@
-// @flow
-
 module.exports = {
 	env: {
 		browser: true,
@@ -10,7 +8,6 @@ module.exports = {
 		"./rules/compat.js",
 		"./rules/errors.js",
 		"./rules/es6.js",
-		"./rules/flow.js",
 		"./rules/imports.js",
 		"./rules/jsdoc.js",
 		"./rules/node.js",

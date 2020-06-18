@@ -1,4 +1,3 @@
-// @flow
 const maxDepth = 10;
 const maxNestedCallbacks = 10;
 const maxParams = 6;
