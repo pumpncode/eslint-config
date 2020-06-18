@@ -2,6 +2,15 @@ module.exports = {
 	env: {
 		es6: true
 	},
+	overrides: [
+		{
+			files: "babel.config.js",
+			rules: {
+				"import/no-commonjs": "off",
+				"import/no-unused-modules": "off"
+			}
+		}
+	],
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: "module"
@@ -110,9 +119,9 @@ module.exports = {
 		"import/no-unused-modules": [
 			"error",
 			{
-				ignoreExports: [`${process.cwd()}/index.js`, `${process.cwd()}/src/index.js`],
+				ignoreExports: ["./src/index.js", "./index.js"],
 				missingExports: true,
-				unusedExports: true
+				unusedExports: false
 			}
 		],
 		"import/no-useless-path-segments": [

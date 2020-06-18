@@ -6,7 +6,6 @@ module.exports = {
 		"jsdoc/check-examples": [
 			"warn",
 			{
-				captionRequired: true,
 				configFile: "./.example.eslintrc"
 			}
 		],
@@ -50,6 +49,7 @@ module.exports = {
 					"FunctionDeclaration",
 					"FunctionExpression"
 				],
+				publicOnly: true,
 				require: {
 					ArrowFunctionExpression: true,
 					ClassDeclaration: true,

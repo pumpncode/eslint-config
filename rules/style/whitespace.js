@@ -85,7 +85,9 @@ module.exports = {
 			"after",
 			{
 				overrides: {
-					"=": "none"
+					":": "before",
+					"?": "before",
+					"|>": "before"
 				}
 			}
 		],

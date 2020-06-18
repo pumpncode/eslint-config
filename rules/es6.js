@@ -4,6 +4,7 @@ module.exports = {
 	},
 	parser: "babel-eslint",
 	parserOptions: {
+		allowAwaitOutsideFunction: true,
 		ecmaFeatures: {
 			generators: false,
 			objectLiteralDuplicateProperties: false

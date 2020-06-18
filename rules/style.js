@@ -55,7 +55,8 @@ module.exports = {
 				exceptions: [
 					"x",
 					"y",
-					"z"
+					"z",
+					"_"
 				],
 				max: 35,
 				min: 2
@@ -113,7 +114,7 @@ module.exports = {
 			}
 		],
 		"new-parens": "error",
-		"no-bitwise": "error",
+		"no-bitwise": "off",
 		"no-continue": "error",
 		"no-lonely-if": "error",
 		"no-mixed-operators": [
