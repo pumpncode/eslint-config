@@ -21,7 +21,7 @@
 	"repository": "https://github.com/pumpncode/eslint-config",
 	"devDependencies": {
 		"@babel/core": "^7.10.2",
-		"@pumpn/babel-preset": "^0.7.0",
+		"@pumpn/babel-preset": "^2.0.0",
 		"eslint": "^7.2.0"
 	}
 }
