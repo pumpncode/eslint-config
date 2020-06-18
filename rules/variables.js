@@ -1,6 +1,6 @@
 const confusingBrowserGlobals = require("confusing-browser-globals");
 
-export default {
+module.exports = {
 	rules: {
 		"init-declarations": ["error", "always"],
 		"no-delete-var": "error",
