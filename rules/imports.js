@@ -4,7 +4,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: "babel.config.js",
+			files: "babel.config.*",
 			rules: {
 				"import/no-commonjs": "off",
 				"import/no-unused-modules": "off"
