@@ -4,10 +4,10 @@ const maxParams = 6;
 
 module.exports = {
 	extends: [
-		"./style/array.js",
-		"./style/function.js",
-		"./style/object.js",
-		"./style/whitespace.js"
+		"./style/array.cjs",
+		"./style/function.cjs",
+		"./style/object.cjs",
+		"./style/whitespace.cjs"
 	],
 	rules: {
 		"block-spacing": ["error", "always"],

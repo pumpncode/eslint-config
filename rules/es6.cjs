@@ -2,14 +2,9 @@ module.exports = {
 	env: {
 		es6: true
 	},
-	parser: "babel-eslint",
+	parser: "@babel/eslint-parser",
 	parserOptions: {
 		allowAwaitOutsideFunction: true,
-		ecmaFeatures: {
-			generators: false,
-			objectLiteralDuplicateProperties: false
-		},
-		ecmaVersion: 6,
 		sourceType: "module"
 	},
 	rules: {

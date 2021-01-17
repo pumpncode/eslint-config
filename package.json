@@ -2,26 +2,25 @@
 	"name": "@pumpn/eslint-config",
 	"version": "6.0.0",
 	"description": "standard eslint config for pumpn code projects",
-	"main": "index.js",
+	"main": "index.cjs",
 	"author": "Nano Miratus <nanomiratus@gmail.com>",
 	"license": "MIT",
 	"private": false,
-	"type": "module",
 	"peerDependencies": {
-		"eslint": "^7.2.0"
+		"eslint": "^7.18.0"
 	},
 	"dependencies": {
-		"babel-eslint": "^11.0.0-beta.2",
-		"confusing-browser-globals": "^1.0.9",
-		"eslint-plugin-compat": "^3.7.0",
-		"eslint-plugin-import": "^2.21.2",
-		"eslint-plugin-jsdoc": "^27.1.2",
+		"confusing-browser-globals": "^1.0.10",
+		"eslint-plugin-compat": "^3.9.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsdoc": "^31.0.6",
 		"eslint-plugin-sort-keys-fix": "^1.1.1"
 	},
 	"repository": "https://github.com/pumpncode/eslint-config",
 	"devDependencies": {
-		"@babel/core": "^7.10.2",
+		"@babel/core": "^7.12.10",
+		"@babel/eslint-parser": "^7.12.1",
 		"@pumpn/babel-preset": "^2.0.0",
-		"eslint": "^7.2.0"
+		"eslint": "^7.18.0"
 	}
 }

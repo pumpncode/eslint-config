@@ -119,7 +119,12 @@ module.exports = {
 		"import/no-unused-modules": [
 			"error",
 			{
-				ignoreExports: ["./src/index.js", "./index.js"],
+				ignoreExports: [
+					"./src/index.js",
+					"./index.js",
+					"./src/index.cjs",
+					"./index.cjs"
+				],
 				missingExports: true,
 				unusedExports: false
 			}
@@ -152,14 +157,16 @@ module.exports = {
 		"import/extensions": [
 			".js",
 			".mjs",
-			".jsx"
+			".jsx",
+			".cjs"
 		],
 		"import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"],
 		"import/resolver": {
 			node: {
 				extensions: [
-					".mjs",
 					".js",
+					".mjs",
+					".cjs",
 					".json"
 				]
 			}
