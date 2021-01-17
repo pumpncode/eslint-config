@@ -6,7 +6,7 @@ module.exports = {
 		"jsdoc/check-examples": [
 			"warn",
 			{
-				configFile: "./.example.eslintrc"
+				matchingFileName: "example.js"
 			}
 		],
 		"jsdoc/check-indentation": "warn",

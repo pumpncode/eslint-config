@@ -9,6 +9,12 @@ module.exports = {
 				"import/no-commonjs": "off",
 				"import/no-unused-modules": "off"
 			}
+		},
+		{
+			files: ["example.js"],
+			rules: {
+				"import/no-unused-modules": "off"
+			}
 		}
 	],
 	parserOptions: {
