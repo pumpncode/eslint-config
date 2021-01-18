@@ -2,7 +2,7 @@ module.exports = {
 	plugins: ["jsdoc"],
 	rules: {
 		"jsdoc/check-access": "warn",
-		"jsdoc/check-alignment": "warn",
+		"jsdoc/check-alignment": ["warn", "always"],
 		"jsdoc/check-examples": [
 			"warn",
 			{
