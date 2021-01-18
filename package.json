@@ -6,6 +6,7 @@
 	"author": "Nano Miratus <nanomiratus@gmail.com>",
 	"license": "MIT",
 	"private": false,
+	"type": "module",
 	"peerDependencies": {
 		"eslint": "^7.18.0"
 	},
