@@ -4,15 +4,15 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: "babel.config.*",
+			files: ["example.js"],
 			rules: {
-				"import/no-commonjs": "off",
 				"import/no-unused-modules": "off"
 			}
 		},
 		{
-			files: ["example.js"],
+			files: "**/**.cjs",
 			rules: {
+				"import/no-commonjs": "off",
 				"import/no-unused-modules": "off"
 			}
 		}
@@ -125,12 +125,7 @@ module.exports = {
 		"import/no-unused-modules": [
 			"error",
 			{
-				ignoreExports: [
-					"./src/index.js",
-					"./index.js",
-					"./src/index.cjs",
-					"./index.cjs"
-				],
+				ignoreExports: ["./src/index.*", "./index.*"],
 				missingExports: true,
 				unusedExports: false
 			}
@@ -163,16 +158,14 @@ module.exports = {
 		"import/extensions": [
 			".js",
 			".mjs",
-			".jsx",
-			".cjs"
+			".jsx"
 		],
-		"import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"],
+		"import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json|cjs)$"],
 		"import/resolver": {
 			node: {
 				extensions: [
 					".js",
 					".mjs",
-					".cjs",
 					".json"
 				]
 			}
