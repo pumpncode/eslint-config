@@ -4,12 +4,6 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ["example.js"],
-			rules: {
-				"import/no-unused-modules": "off"
-			}
-		},
-		{
 			files: "**/**.cjs",
 			rules: {
 				"import/no-commonjs": "off",

@@ -1,4 +1,12 @@
 module.exports = {
+	overrides: [
+		{
+			files: ["example.js"],
+			rules: {
+				"import/no-unused-modules": "off"
+			}
+		}
+	],
 	plugins: ["jsdoc"],
 	rules: {
 		"jsdoc/check-access": "warn",
