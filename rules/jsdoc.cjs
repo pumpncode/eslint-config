@@ -9,7 +9,12 @@ module.exports = {
 				matchingFileName: "example.js"
 			}
 		],
-		"jsdoc/check-indentation": "warn",
+		"jsdoc/check-indentation": [
+			"warn",
+			{
+				excludeTags: ["description", "example"]
+			}
+		],
 		"jsdoc/check-param-names": "warn",
 		"jsdoc/check-property-names": "warn",
 		"jsdoc/check-syntax": "warn",
