@@ -1,6 +1,6 @@
 {
 	"name": "@pumpn/eslint-config",
-	"version": "10.1.2",
+	"version": "10.2.0",
 	"description": "standard eslint config for pumpn code projects",
 	"main": "index.cjs",
 	"author": "Nano Miratus <nanomiratus@gmail.com>",
