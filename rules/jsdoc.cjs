@@ -1,7 +1,7 @@
 module.exports = {
 	overrides: [
 		{
-			files: ["example.js"],
+			files: ["jsdoc-example.js"],
 			rules: {
 				"import/no-unused-modules": "off"
 			}
@@ -14,7 +14,7 @@ module.exports = {
 		"jsdoc/check-examples": [
 			"warn",
 			{
-				matchingFileName: "example.js"
+				matchingFileName: "jsdoc-example.js"
 			}
 		],
 		"jsdoc/check-indentation": [
