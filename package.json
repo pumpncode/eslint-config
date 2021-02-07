@@ -23,8 +23,7 @@
 		"@babel/core": "^7.12.13",
 		"@pumpn/babel-preset": "^3.1.3",
 		"@pumpn/np-config": "^2.1.0",
-		"eslint": "^7.19.0",
-		"np": "^7.2.0"
+		"eslint": "^7.19.0"
 	},
 	"scripts": {
 		"release": "np --no-cleanup --no-2fa",
