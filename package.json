@@ -11,7 +11,7 @@
 		"eslint": "^7.21.0"
 	},
 	"dependencies": {
-		"@babel/eslint-parser": "^7.13.8",
+		"@babel/eslint-parser": "^7.13.10",
 		"confusing-browser-globals": "^1.0.10",
 		"eslint-plugin-compat": "^3.9.0",
 		"eslint-plugin-import": "^2.22.1",
@@ -20,8 +20,8 @@
 	},
 	"repository": "https://github.com/pumpncode/eslint-config",
 	"devDependencies": {
-		"@babel/core": "^7.13.8",
-		"@pumpn/babel-preset": "^3.1.5",
+		"@babel/core": "^7.13.10",
+		"@pumpn/babel-preset": "^3.2.0",
 		"@pumpn/np-config": "^2.3.0",
 		"eslint": "^7.21.0"
 	},
