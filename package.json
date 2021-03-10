@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.13.10",
 		"@pumpn/babel-preset": "^3.2.0",
-		"@pumpn/np-config": "^2.3.0",
+		"@pumpn/np-config": "^2.3.1",
 		"eslint": "^7.21.0"
 	},
 	"scripts": {
