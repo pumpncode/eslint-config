@@ -45,7 +45,7 @@ module.exports = {
 			}
 		],
 		"sort-keys": "off",
-		"sort-keys/sort-keys": [
+		"sort-keys/sort-keys-fix": [
 			"error",
 			"asc",
 			{
