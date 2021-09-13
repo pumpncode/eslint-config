@@ -1,5 +1,5 @@
 module.exports = {
-	plugins: ["sort-keys-fix"],
+	plugins: ["sort-keys"],
 	rules: {
 		"computed-property-spacing": ["error", "never"],
 		"key-spacing": [
@@ -44,17 +44,12 @@ module.exports = {
 				unnecessary: true
 			}
 		],
-		"sort-keys": [
+		"sort-keys": "off",
+		"sort-keys/sort-keys": [
 			"error",
 			"asc",
 			{
-				natural: true
-			}
-		],
-		"sort-keys-fix/sort-keys-fix": [
-			"error",
-			"asc",
-			{
+				minKeys: 10,
 				natural: true
 			}
 		]
