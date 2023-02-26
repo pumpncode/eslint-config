@@ -11,7 +11,8 @@
 	"scripts": {
 		"lint": "eslint .",
 		"prepublish": "npm run lint",
-		"release": "np"
+		"release": "np",
+		"test": "echo 'no tests yet'"
 	},
 	"devDependencies": {
 		"@pumpn/np-config": "^2.3.2",
