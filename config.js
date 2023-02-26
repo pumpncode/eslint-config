@@ -17,6 +17,8 @@ const convertedGlobals = Object.fromEntries(
 		.map(([global, isWritable]) => [global, isWritable ? "writable" : "readonly"])
 );
 
+export * from "./addons.js";
+
 export default [
 	js.configs.recommended,
 	{
@@ -43,8 +45,16 @@ export default [
 				babelOptions: {
 					babelrc: false,
 					configFile: false,
-					presets: ["@babel/preset-react"],
-					plugins: ["@babel/plugin-syntax-import-assertions", "@babel/plugin-proposal-export-default-from"]
+					presets: [
+						[
+							"@babel/preset-react",
+							{
+								bugfixes: true,
+								shippedProposals: true
+							}
+						]
+					],
+					plugins: ["@babel/plugin-proposal-export-default-from"]
 				}
 			}
 		},

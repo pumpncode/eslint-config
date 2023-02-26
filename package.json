@@ -23,9 +23,9 @@
 	"dependencies": {
 		"@babel/eslint-parser": "^7.19.1",
 		"@babel/plugin-proposal-export-default-from": "^7.18.10",
-		"@babel/plugin-syntax-import-assertions": "^7.20.0",
 		"@babel/preset-react": "^7.18.6",
 		"@eslint/js": "^8.35.0",
+		"@jsenv/importmap-eslint-resolver": "^5.2.5",
 		"globals": "^13.20.0"
 	},
 	"peerDependencies": {
