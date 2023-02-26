@@ -44,7 +44,7 @@ export default [
 					babelrc: false,
 					configFile: false,
 					presets: ["@babel/preset-react"],
-					plugins: ["@babel/plugin-syntax-import-assertions"]
+					plugins: ["@babel/plugin-syntax-import-assertions", "@babel/plugin-proposal-export-default-from"]
 				}
 			}
 		},
