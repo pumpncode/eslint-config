@@ -1,5 +1,3 @@
-import { fileURLToPath } from "url";
-
 export default {
 	languageOptions: {
 		globals: {
@@ -9,7 +7,7 @@ export default {
 	settings: {
 		"import/resolver": {
 			"@jsenv/importmap-eslint-resolver": {
-				projectDirectoryUrl: fileURLToPath(new URL(".", import.meta.url)),
+				projectDirectoryUrl: process.cwd(),
 				importMapFileRelativeUrl: "./import-map.json"
 			}
 		}
