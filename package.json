@@ -10,12 +10,12 @@
 	"repository": "https://github.com/pumpncode/eslint-config",
 	"scripts": {
 		"lint": "eslint .",
-		"prepublish": "npm run lint",
+		"prepublishOnly": "npm run lint",
 		"release": "np",
 		"test": "echo 'no tests yet'"
 	},
 	"devDependencies": {
-		"@pumpn/np-config": "^2.3.2",
+		"@pumpn/np-config": "^3.0.0",
 		"eslint": "^8.35.0",
 		"eslint-plugin-react": "*",
 		"np": "^7.6.3"

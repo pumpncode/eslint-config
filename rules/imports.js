@@ -72,7 +72,8 @@ export default {
 				"**/protractor.conf.js",
 				"**/protractor.conf.*.js",
 				"**/karma.conf.js",
-				"**/eslint.config.js"
+				"**/eslint.config.js",
+				"**/.np-config.cjs"
 			],
 			optionalDependencies: false
 		}
@@ -129,6 +130,6 @@ export default {
 			"newlines-between": "always"
 		}
 	],
-	"import/prefer-default-export": ["error"],
+	"import/prefer-default-export": ["off"],
 	"import/unambiguous": "off"
 };
