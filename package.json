@@ -16,22 +16,22 @@
 	},
 	"devDependencies": {
 		"@pumpn/np-config": "^3.0.0",
-		"eslint": "^8.35.0",
+		"eslint": "^8.40.0",
 		"eslint-plugin-react": "*",
-		"np": "^7.6.3"
+		"np": "^7.7.0"
 	},
 	"dependencies": {
-		"@babel/eslint-parser": "^7.19.1",
+		"@babel/eslint-parser": "^7.21.8",
 		"@babel/plugin-proposal-export-default-from": "^7.18.10",
 		"@babel/preset-react": "^7.18.6",
-		"@eslint/js": "^8.35.0",
+		"@eslint/js": "^8.40.0",
 		"@jsenv/importmap-eslint-resolver": "^5.2.5",
 		"globals": "^13.20.0"
 	},
 	"peerDependencies": {
-		"eslint": "^8.34.0",
+		"eslint": "^8.40.0",
 		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsdoc": "^40.0.0",
+		"eslint-plugin-jsdoc": "^44.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-sort-keys-plus": "^1.3.1"
 	}

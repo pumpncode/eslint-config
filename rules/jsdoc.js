@@ -22,7 +22,7 @@ export default {
 	"jsdoc/empty-tags": ["warn"],
 	"jsdoc/implements-on-classes": ["warn"],
 	"jsdoc/match-description": ["warn"],
-	"jsdoc/newline-after-description": ["warn"],
+	"jsdoc/tag-lines": ["warn", "any", { startLines: 1 }],
 	"jsdoc/no-bad-blocks": ["warn"],
 	"jsdoc/no-defaults": ["warn"],
 	"jsdoc/no-undefined-types": ["warn"],
