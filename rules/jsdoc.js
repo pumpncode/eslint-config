@@ -22,7 +22,6 @@ export default {
 	"jsdoc/empty-tags": ["warn"],
 	"jsdoc/implements-on-classes": ["warn"],
 	"jsdoc/match-description": ["warn"],
-	"jsdoc/tag-lines": ["warn", "any", { startLines: 1 }],
 	"jsdoc/no-bad-blocks": ["warn"],
 	"jsdoc/no-defaults": ["warn"],
 	"jsdoc/no-undefined-types": ["warn"],
@@ -75,5 +74,10 @@ export default {
 	"jsdoc/require-returns-check": ["warn"],
 	"jsdoc/require-returns-description": ["warn"],
 	"jsdoc/require-returns-type": ["warn"],
+	"jsdoc/tag-lines": [
+		"warn",
+		"any",
+		{ startLines: 1 }
+	],
 	"jsdoc/valid-types": ["warn"]
 };
