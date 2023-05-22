@@ -11,6 +11,14 @@ export default {
 	"no-unmodified-loop-condition": ["error"],
 	"no-unreachable-loop": ["error"],
 	"no-unused-private-class-members": ["error"],
+	"no-unused-vars": [
+		"error",
+		{
+			args: "after-used",
+			caughtErrors: "all",
+			ignoreRestSiblings: true
+		}
+	],
 	"no-use-before-define": ["error"],
 	"require-atomic-updates": ["error"]
 };
