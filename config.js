@@ -1,80 +1,66 @@
-import babelParser from "@babel/eslint-parser";
-import js from "@eslint/js";
-import eslintPluginImport from "eslint-plugin-import";
-import eslintPluginJsdoc from "eslint-plugin-jsdoc";
-import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
-import eslintPluginSortKeysPlus from "eslint-plugin-sort-keys-plus";
+import process from "node:process";
+
 import globals from "globals";
 
+import plugins from "./plugins.js";
 import rules from "./rules.js";
+
+const cssFilesRefreshRate = 5_000;
 
 const convertedGlobals = Object.fromEntries(
 	Object.entries({
-		...globals.node,
-		...globals.browser
+		...globals.browser,
+		...globals.builtin
 	})
-		.map(([global, isWritable]) => [global, isWritable ? "writable" : "readonly"])
+		.map(([global, isWritable]) => [
+			global,
+			isWritable
+				? "writable"
+				: "readonly"
+		])
 );
 
-export * from "./addons.js";
-
-export default [
-	js.configs.recommended,
+const config = [
 	{
-		files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-		...reactRecommended,
-		...reactJsxRuntime
+		ignores: [
+			"_fresh/**",
+			"documentation/**",
+			"patches/**"
+		]
 	},
 	{
 		files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
 		languageOptions: {
 			ecmaVersion: "latest",
-			sourceType: "module",
 			globals: {
+				Deno: "readonly",
 				...convertedGlobals
 			},
-			parser: babelParser,
 			parserOptions: {
-				ecmaVersion: "latest",
-				sourceType: "module",
-				requireConfigFile: false,
 				ecmaFeatures: {
 					jsx: true
 				},
-				babelOptions: {
-					babelrc: false,
-					configFile: false,
-					presets: [
-						[
-							"@babel/preset-react",
-							{
-								bugfixes: true,
-								shippedProposals: true
-							}
-						]
-					],
-					plugins: ["@babel/plugin-proposal-export-default-from"]
-				}
-			}
-		},
-		plugins: {
-			"sort-keys-plus": eslintPluginSortKeysPlus,
-			jsdoc: eslintPluginJsdoc,
-			import: eslintPluginImport
-		},
-		settings: {
-			jsdoc: {
-				ignorePrivate: true,
-				mode: "permissive"
+				ecmaVersion: "latest",
+				jsxPragma: null,
+				requireConfigFile: false,
+				sourceType: "module"
 			},
+			sourceType: "module"
+		},
+		linterOptions: {
+			noInlineConfig: false,
+			reportUnusedDisableDirectives: "error"
+		},
+		plugins,
+		rules,
+		settings: {
+			formComponents: ["Form"],
 			"import/core-modules": [],
 			"import/extensions": [
 				".js",
 				".mjs",
 				".jsx"
 			],
-			"import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json|cjs)$"],
 			"import/parsers": {
 				espree: [
 					".js",
@@ -84,38 +70,81 @@ export default [
 				]
 			},
 			"import/resolver": {
+				"@jsenv/importmap-eslint-resolver": {
+					importMapFileRelativeUrl: "./import-map.json",
+					projectDirectoryUrl: process.cwd()
+				},
 				node: true
 			},
-			react: {
-				version: "detect"
+			jsdoc: {
+				mode: "typescript",
+				tagNamePreference: {
+					augments: "extends",
+					extends: "extends",
+					function: "method",
+					method: "method"
+				}
 			},
-			formComponents: ["Form"],
 			linkComponents: [
 				{
-					name: "Link",
-					linkAttribute: "to"
+					linkAttribute: "to",
+					name: "Link"
 				}
-			]
-		},
-		rules
-	},
-	{
-		files: ["jsdoc-example.js"],
-		rules: {
-			"import/no-unused-modules": "off"
+			],
+			react: {
+				pragma: "h",
+				version: "18"
+			},
+			regexp: {
+				allowedCharacterRanges: ["alphanumeric"]
+			},
+			tailwindcss: {
+				callees: [
+					"classnames",
+					"clsx",
+					"ctl"
+				],
+				classRegex: "^class(Name)?$",
+				config: "tailwind.config.js",
+				cssFiles: [
+					"**/*.css",
+					"!**/node_modules",
+					"!**/.*",
+					"!**/dist",
+					"!**/build"
+				],
+				cssFilesRefreshRate,
+				removeDuplicates: true,
+				skipClassAttribute: false,
+				tags: [],
+				whitelist: []
+			}
 		}
 	},
 	{
-		files: ["**/**.cjs"],
+		files: ["**/*.{jsx,mjsx,tsx,mtsx}"],
 		rules: {
-			"import/no-commonjs": ["off"],
-			"import/no-unused-modules": "off"
+			"jsdoc/require-param": ["warn", { unnamedRootBase: ["props"] }]
 		}
 	},
 	{
-		languageOptions: {
-			ecmaVersion: "latest",
-			sourceType: "module"
+		files: ["**/_exports.?(*.)js"],
+		rules: {
+			"import/max-dependencies": "off",
+			"import/prefer-default-export": "off"
+		}
+	},
+	{
+		files: [
+			"benchmarks/**/*",
+			"tests/**/*",
+			"scripts/**/*"
+		],
+		rules: {
+			"import/no-unused-modules": "off",
+			"import/unambiguous": "off"
 		}
 	}
 ];
+
+export default config;

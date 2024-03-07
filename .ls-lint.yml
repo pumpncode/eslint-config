@@ -1,6 +1,6 @@
 ls:
   .js: kebab-case
 
-ignore: 
-  - .git 
+ignore:
+  - .git
   - node_modules

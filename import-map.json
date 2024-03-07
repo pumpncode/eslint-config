@@ -1,0 +1,26 @@
+{
+	"imports": {
+		"@eslint-community/eslint-plugin-eslint-comments": "npm:@eslint-community/eslint-plugin-eslint-comments@^4.1.0",
+		"@jsenv/importmap-eslint-resolver": "npm:@jsenv/importmap-eslint-resolver@^5.2.5",
+		"@stylistic/eslint-plugin": "npm:@stylistic/eslint-plugin@^1.6.3",
+		"eslint-plugin-github": "npm:eslint-plugin-github@^4.10.2",
+		"eslint-plugin-import": "npm:eslint-plugin-import@^2.29.1",
+		"eslint-plugin-jsdoc": "npm:eslint-plugin-jsdoc@^48.2.1",
+		"eslint-plugin-jsx-a11y": "npm:eslint-plugin-jsx-a11y@^6.8.0",
+		"eslint-plugin-no-secrets": "npm:eslint-plugin-no-secrets@^0.8.9",
+		"eslint-plugin-no-unsanitized": "npm:eslint-plugin-no-unsanitized@^4.0.2",
+		"eslint-plugin-perfectionist": "npm:eslint-plugin-perfectionist@^2.6.0",
+		"eslint-plugin-promise": "npm:eslint-plugin-promise@^6.1.1",
+		"eslint-plugin-react": "npm:eslint-plugin-react@^7.34.0",
+		"eslint-plugin-redos": "npm:eslint-plugin-redos@^4.4.5",
+		"eslint-plugin-regexp": "npm:eslint-plugin-regexp@^2.2.0",
+		"eslint-plugin-security": "npm:eslint-plugin-security@^2.1.1",
+		"eslint-plugin-sonarjs": "npm:eslint-plugin-sonarjs@^0.24.0",
+		"eslint-plugin-tailwindcss": "npm:eslint-plugin-tailwindcss@^3.14.3",
+		"eslint-plugin-unicorn": "npm:eslint-plugin-unicorn@^51.0.1",
+		"globals": "https://esm.sh/globals@^14.0.0",
+		"preact": "https://esm.sh/*preact@10.19.3?dev",
+		"preact/jsx-runtime": "https://esm.sh/*preact@10.19.3/jsx-runtime?dev",
+		"radash": "npm:radash"
+	}
+}
