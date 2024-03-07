@@ -1,0 +1,40 @@
+/* eslint-disable import/max-dependencies -- collection file */
+import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
+import stylistic from "@stylistic/eslint-plugin";
+import github from "eslint-plugin-github";
+import eslintPluginImport from "eslint-plugin-import";
+import jsdoc from "eslint-plugin-jsdoc";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import noSecrets from "eslint-plugin-no-secrets";
+import noUnsanitized from "eslint-plugin-no-unsanitized";
+import perfectionist from "eslint-plugin-perfectionist";
+import promise from "eslint-plugin-promise";
+import react from "eslint-plugin-react";
+import redos from "eslint-plugin-redos";
+import regexp from "eslint-plugin-regexp";
+import security from "eslint-plugin-security";
+import sonarjs from "eslint-plugin-sonarjs";
+import tailwindcss from "eslint-plugin-tailwindcss";
+import unicorn from "eslint-plugin-unicorn";
+
+const plugins = {
+	"@eslint-community/eslint-comments": eslintComments,
+	"@stylistic": stylistic,
+	github,
+	import: eslintPluginImport,
+	jsdoc,
+	"jsx-a11y": jsxA11y,
+	"no-secrets": noSecrets,
+	"no-unsanitized": noUnsanitized,
+	perfectionist,
+	promise,
+	react,
+	redos,
+	regexp,
+	security,
+	sonarjs,
+	tailwindcss,
+	unicorn
+};
+
+export default plugins;

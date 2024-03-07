@@ -1,0 +1,40 @@
+{
+	"tasks": {
+		"lint": "deno run -A npm:eslint .",
+		"docs": "jsdoc --configure jsdoc.json"
+	},
+	"compilerOptions": {
+		"allowJs": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"alwaysStrict": true,
+		"checkJs": true,
+		"exactOptionalPropertyTypes": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact",
+		"noErrorTruncation": true,
+		"noFallthroughCasesInSwitch": false,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"noUncheckedIndexedAccess": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"strict": true,
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"dom.asynciterable",
+			"deno.ns",
+			"deno.unstable",
+			"esnext"
+		]
+	},
+	"loader": "native",
+	"importMap": "./import-map.json",
+	"exclude": [
+		"**/_fresh/*"
+	]
+}
