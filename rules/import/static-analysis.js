@@ -57,7 +57,8 @@ const staticAnalysisRules = {
 		}
 	],
 	"import/no-self-import": "error",
-	"import/no-unresolved": "error",
+	// TODO [2024-04-01]: Change to "error" when there is a resolver for deno
+	"import/no-unresolved": "off",
 	"import/no-useless-path-segments": [
 		"error",
 		{
