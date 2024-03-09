@@ -58,7 +58,7 @@ const styleGuideRules = {
 			"newlines-between": "always",
 			pathGroups: [
 				...new Map([
-					["builtin", ["std"]],
+					["builtin", ["@std"]],
 					[
 						"internal",
 						[

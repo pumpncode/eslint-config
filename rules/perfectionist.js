@@ -62,7 +62,7 @@ const perfectionistRules = {
 					islands: "@/islands/**",
 					logic: "@/logic/**",
 					plugins: "@/plugins/**",
-					std: "std/**",
+					std: "@std/**",
 					utilities: "@/utilities/**"
 				}
 			},
