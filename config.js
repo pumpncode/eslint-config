@@ -67,7 +67,6 @@ const config = [
 					".jsx"
 				]
 			},
-			"import/resolver": "deno-resolver.js",
 			jsdoc: {
 				mode: "typescript",
 				tagNamePreference: {
