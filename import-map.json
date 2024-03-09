@@ -17,7 +17,7 @@
 		"eslint-plugin-sonarjs": "npm:eslint-plugin-sonarjs@^0.24.0",
 		"eslint-plugin-tailwindcss": "npm:eslint-plugin-tailwindcss@^3.14.3",
 		"eslint-plugin-unicorn": "npm:eslint-plugin-unicorn@^51.0.1",
-		"globals": "https://esm.sh/globals@^14.0.0",
+		"globals": "npm:globals@^14.0.0",
 		"preact": "https://esm.sh/*preact@10.19.3?dev",
 		"preact/jsx-runtime": "https://esm.sh/*preact@10.19.3/jsx-runtime?dev",
 		"radash": "npm:radash"
