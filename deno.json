@@ -1,4 +1,7 @@
 {
+	"name": "@pumpn/eslint-config",
+	"version": "12.1.0",
+	"exports": "./config.js",
 	"tasks": {
 		"lint": "deno run -A npm:eslint .",
 		"docs": "jsdoc --configure jsdoc.json"
