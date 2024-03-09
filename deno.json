@@ -4,7 +4,8 @@
 	"exports": "./config.js",
 	"tasks": {
 		"lint": "deno run -A npm:eslint .",
-		"docs": "jsdoc --configure jsdoc.json"
+		"docs": "jsdoc --configure jsdoc.json",
+		"publish": "VERSION=$(cat deno.json | jq -r .version) && git tag -a \"v$VERSION\" -m \"\" && git push origin \"v$VERSION\" && deno publish && npm publish"
 	},
 	"compilerOptions": {
 		"allowJs": true,
