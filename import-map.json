@@ -1,7 +1,6 @@
 {
 	"imports": {
 		"@eslint-community/eslint-plugin-eslint-comments": "npm:@eslint-community/eslint-plugin-eslint-comments@^4.1.0",
-		"@jsenv/importmap-eslint-resolver": "npm:@jsenv/importmap-eslint-resolver@^5.2.5",
 		"@stylistic/eslint-plugin": "npm:@stylistic/eslint-plugin@^1.6.3",
 		"eslint-plugin-github": "npm:eslint-plugin-github@^4.10.2",
 		"eslint-plugin-import": "npm:eslint-plugin-import@^2.29.1",

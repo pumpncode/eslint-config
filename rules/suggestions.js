@@ -73,7 +73,7 @@ const suggestionsRules = {
 	"logical-assignment-operators": "error",
 	"multiline-comment-style": "off",
 	"new-cap": "error",
-	"no-alert": "error",
+	"no-alert": "off",
 	"no-array-constructor": "error",
 	"no-bitwise": "error",
 	"no-caller": "error",

@@ -23,7 +23,6 @@
 	},
 	"dependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
-		"@jsenv/importmap-eslint-resolver": "^5.2.5",
 		"@stylistic/eslint-plugin": "^1.6.3",
 		"eslint-plugin-github": "^4.10.2",
 		"eslint-plugin-import": "^2.29.1",

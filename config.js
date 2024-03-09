@@ -1,5 +1,3 @@
-import process from "node:process";
-
 import globals from "globals";
 
 import plugins from "./plugins.js";
@@ -68,13 +66,6 @@ const config = [
 					".mjs",
 					".jsx"
 				]
-			},
-			"import/resolver": {
-				"@jsenv/importmap-eslint-resolver": {
-					importMapFileRelativeUrl: "./import-map.json",
-					projectDirectoryUrl: process.cwd()
-				},
-				node: true
 			},
 			jsdoc: {
 				mode: "typescript",

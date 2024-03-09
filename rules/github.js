@@ -14,7 +14,7 @@ const githubRules = {
 	"github/no-d-none": "error",
 	"github/no-dataset": "error",
 	"github/no-dynamic-script-tag": "error",
-	"github/no-implicit-buggy-globals": "error",
+	"github/no-implicit-buggy-globals": "off",
 	"github/no-inner-html": "error",
 	"github/no-innerText": "error",
 	"github/no-then": "error",
