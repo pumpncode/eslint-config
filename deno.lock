@@ -6,6 +6,7 @@
       "npm:@eslint-community/eslint-plugin-eslint-comments@^4.3.0": "npm:@eslint-community/eslint-plugin-eslint-comments@4.3.0_eslint@9.4.0",
       "npm:@stylistic/eslint-plugin@^1.6.3": "npm:@stylistic/eslint-plugin@1.8.1_eslint@9.4.0",
       "npm:@stylistic/eslint-plugin@^2.1.0": "npm:@stylistic/eslint-plugin@2.1.0_eslint@9.4.0",
+      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:eslint": "npm:eslint@9.4.0",
       "npm:eslint-plugin-import-x@^0.5.1": "npm:eslint-plugin-import-x@0.5.1_eslint@9.4.0",
       "npm:eslint-plugin-jsdoc@^48.2.1": "npm:eslint-plugin-jsdoc@48.2.9_eslint@9.4.0",
@@ -335,6 +336,10 @@
       },
       "@types/json-schema@7.0.15": {
         "integrity": "sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==",
+        "dependencies": {}
+      },
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
         "dependencies": {}
       },
       "@types/normalize-package-data@2.4.4": {
