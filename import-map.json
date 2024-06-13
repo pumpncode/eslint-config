@@ -7,7 +7,7 @@
 		"eslint-plugin-no-secrets": "npm:eslint-plugin-no-secrets@^1.0.2",
 		"eslint-plugin-perfectionist": "npm:eslint-plugin-perfectionist@^2.11.0",
 		"eslint-plugin-promise": "npm:eslint-plugin-promise@^6.2.0",
-		"eslint-plugin-react": "https://esm.sh/gh/mdjermanovic/eslint-plugin-react@ef6f9c5dba/index.js?bundle",
+		"eslint-plugin-react": "./patches/eslint-plugin-react/index.js",
 		"eslint-plugin-redos": "npm:eslint-plugin-redos@^4.4.5",
 		"eslint-plugin-regexp": "npm:eslint-plugin-regexp@^2.6.0",
 		"eslint-plugin-security": "npm:eslint-plugin-security@^3.0.0",
