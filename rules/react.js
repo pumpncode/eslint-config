@@ -6,7 +6,7 @@ const reactRules = {
 	"react/default-props-match-prop-types": "error",
 	"react/destructuring-assignment": "error",
 	"react/display-name": "error",
-	"react/forbid-component-props": "error",
+	"react/forbid-component-props": "off",
 	"react/forbid-dom-props": "error",
 	"react/forbid-elements": "error",
 	"react/forbid-foreign-prop-types": "error",

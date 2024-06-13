@@ -1,5 +1,5 @@
 const layoutAndFormattingRules = {
-	"line-comment-position": ["error", { position: "above" }],
+	"line-comment-position": "off",
 	"unicode-bom": ["error", "never"]
 };
 

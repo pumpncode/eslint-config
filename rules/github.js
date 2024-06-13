@@ -12,7 +12,7 @@ const githubRules = {
 	"github/js-class-name": "error",
 	"github/no-blur": "error",
 	"github/no-d-none": "error",
-	"github/no-dataset": "error",
+	"github/no-dataset": "off",
 	"github/no-dynamic-script-tag": "error",
 	"github/no-implicit-buggy-globals": "off",
 	"github/no-inner-html": "error",

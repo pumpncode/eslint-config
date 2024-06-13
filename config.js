@@ -53,13 +53,14 @@ const config = [
 		rules,
 		settings: {
 			formComponents: ["Form"],
-			"import/core-modules": [],
-			"import/extensions": [
+			"import-x/core-modules": [],
+			"import-x/extensions": [
 				".js",
 				".mjs",
 				".jsx"
 			],
-			"import/parsers": {
+			"import-x/ignore": ["@turf/turf"],
+			"import-x/parsers": {
 				espree: [
 					".js",
 					".cjs",
@@ -121,8 +122,8 @@ const config = [
 	{
 		files: ["**/_exports.?(*.)js"],
 		rules: {
-			"import/max-dependencies": "off",
-			"import/prefer-default-export": "off"
+			"import-x/max-dependencies": "off",
+			"import-x/prefer-default-export": "off"
 		}
 	},
 	{
@@ -132,8 +133,8 @@ const config = [
 			"scripts/**/*"
 		],
 		rules: {
-			"import/no-unused-modules": "off",
-			"import/unambiguous": "off"
+			"import-x/no-unused-modules": "off",
+			"import-x/unambiguous": "off"
 		}
 	}
 ];

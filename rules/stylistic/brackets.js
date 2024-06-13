@@ -47,9 +47,9 @@ const bracketsRules = {
 			condition: wrapMultilinesDefault,
 			declaration: wrapMultilinesDefault,
 			logical: wrapMultilinesDefault,
+			prop: wrapMultilinesDefault,
+			propertyValue: wrapMultilinesDefault,
 			return: wrapMultilinesDefault
-			// TODO [@stylistic/eslint-plugin@>1.6.3]: uncomment when @stylistic/eslint-plugin releases
-			// prop: "never"
 		}
 	],
 	"@stylistic/new-parens": ["error", "always"],

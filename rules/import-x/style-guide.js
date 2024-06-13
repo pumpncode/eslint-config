@@ -1,20 +1,20 @@
 const maxDependencies = 10;
 
 const styleGuideRules = {
-	"import/consistent-type-specifier-style": "error",
-	"import/dynamic-import-chunkname": "off",
-	"import/exports-last": "error",
-	"import/extensions": ["error", "ignorePackages"],
-	"import/first": "error",
-	"import/group-exports": "error",
-	"import/max-dependencies": [
+	"import-x/consistent-type-specifier-style": "error",
+	"import-x/dynamic-import-chunkname": "off",
+	"import-x/exports-last": "error",
+	"import-x/extensions": ["error", "ignorePackages"],
+	"import-x/first": "error",
+	"import-x/group-exports": "error",
+	"import-x/max-dependencies": [
 		"error",
 		{
 			max: maxDependencies
 		}
 	],
-	"import/newline-after-import": "error",
-	"import/no-anonymous-default-export": [
+	"import-x/newline-after-import": "error",
+	"import-x/no-anonymous-default-export": [
 		"error",
 		{
 			allowAnonymousClass: false,
@@ -27,18 +27,18 @@ const styleGuideRules = {
 			allowObject: false
 		}
 	],
-	"import/no-default-export": "off",
-	"import/no-duplicates": "error",
-	"import/no-named-default": "error",
-	"import/no-named-export": "off",
-	"import/no-namespace": [
+	"import-x/no-default-export": "off",
+	"import-x/no-duplicates": "error",
+	"import-x/no-named-default": "error",
+	"import-x/no-named-export": "off",
+	"import-x/no-namespace": [
 		"error",
 		{
 			ignore: ["{./**/,**/}_exports.?(*.)js"]
 		}
 	],
-	"import/no-unassigned-import": "error",
-	"import/order": [
+	"import-x/no-unassigned-import": "error",
+	"import-x/order": [
 		"off",
 		{
 			alphabetize: {
@@ -80,7 +80,7 @@ const styleGuideRules = {
 			warnOnUnassignedImports: false
 		}
 	],
-	"import/prefer-default-export": ["error", { target: "single" }]
+	"import-x/prefer-default-export": ["error", { target: "single" }]
 };
 
 export default styleGuideRules;

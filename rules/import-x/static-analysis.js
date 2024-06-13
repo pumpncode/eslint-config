@@ -1,24 +1,24 @@
 const staticAnalysisRules = {
-	"import/default": "error",
-	"import/named": "error",
-	"import/namespace": "error",
-	"import/no-absolute-path": "error",
-	"import/no-cycle": [
+	"import-x/default": "error",
+	"import-x/named": "error",
+	"import-x/namespace": "error",
+	"import-x/no-absolute-path": "error",
+	"import-x/no-cycle": [
 		"error",
 		{
 			maxDepth: Infinity
 		}
 	],
-	"import/no-dynamic-require": "error",
-	"import/no-internal-modules": [
+	"import-x/no-dynamic-require": "error",
+	"import-x/no-internal-modules": [
 		"off",
 		{
 			allow: []
 		}
 	],
-	"import/no-relative-packages": "error",
-	"import/no-relative-parent-imports": "off",
-	"import/no-restricted-paths": [
+	"import-x/no-relative-packages": "error",
+	"import-x/no-relative-parent-imports": "off",
+	"import-x/no-restricted-paths": [
 		"error",
 		{
 			zones: [
@@ -56,17 +56,17 @@ const staticAnalysisRules = {
 			]
 		}
 	],
-	"import/no-self-import": "error",
-	// TODO [2024-04-01]: Change to "error" when there is a resolver for deno
-	"import/no-unresolved": "off",
-	"import/no-useless-path-segments": [
+	"import-x/no-self-import": "error",
+	// TODO [2024-07-01]: Change to "error" when there is a resolver for deno
+	"import-x/no-unresolved": "off",
+	"import-x/no-useless-path-segments": [
 		"error",
 		{
 			commonjs: false,
 			noUselessIndex: false
 		}
 	],
-	"import/no-webpack-loader-syntax": "error"
+	"import-x/no-webpack-loader-syntax": "error"
 };
 
 export default staticAnalysisRules;

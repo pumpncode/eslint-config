@@ -1,4 +1,5 @@
 const commentsRules = {
+	"@stylistic/line-comment-position": ["error", { position: "above" }],
 	"@stylistic/lines-around-comment": [
 		"error",
 		{
@@ -17,6 +18,7 @@ const commentsRules = {
 			ignorePattern: "/* @type"
 		}
 	],
+	"@stylistic/multiline-comment-style": "off",
 	"@stylistic/spaced-comment": "off"
 };
 

@@ -45,18 +45,30 @@ const stylisticIssuesRules = {
 		"error",
 		{
 			order: [
-				"\\s",
-				"\\w",
-				"\\d",
-				"\\p",
+				String.raw`\s`,
+				String.raw`\w`,
+				String.raw`\d`,
+				String.raw`\p`,
 				"*",
-				"\\q",
+				String.raw`\q`,
 				"[]"
 			]
 		}
 	],
 	"regexp/sort-flags": "error",
-	"regexp/unicode-escape": ["error", "unicodeCodePointEscape"]
+	"regexp/unicode-escape": ["error", "unicodeCodePointEscape"],
+	"regexp/unicode-property": [
+		"error",
+		{
+			generalCategory: "never",
+			key: "ignore",
+			property: {
+				binary: "ignore",
+				generalCategory: "ignore",
+				script: "long"
+			}
+		}
+	]
 };
 
 export default stylisticIssuesRules;

@@ -1,12 +1,12 @@
-/* eslint-disable import/max-dependencies -- collection file */
+/* eslint-disable import-x/max-dependencies -- collection file */
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
-import github from "eslint-plugin-github";
-import eslintPluginImport from "eslint-plugin-import";
+// import github from "eslint-plugin-github";
+import importX from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
-import jsxA11y from "eslint-plugin-jsx-a11y";
+// import jsxA11y from "eslint-plugin-jsx-a11y";
 import noSecrets from "eslint-plugin-no-secrets";
-import noUnsanitized from "eslint-plugin-no-unsanitized";
+// import noUnsanitized from "eslint-plugin-no-unsanitized";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
 import react from "eslint-plugin-react";
@@ -20,12 +20,12 @@ import unicorn from "eslint-plugin-unicorn";
 const plugins = {
 	"@eslint-community/eslint-comments": eslintComments,
 	"@stylistic": stylistic,
-	github,
-	import: eslintPluginImport,
+	// github,
+	"import-x": importX,
 	jsdoc,
-	"jsx-a11y": jsxA11y,
+	// "jsx-a11y": jsxA11y,
 	"no-secrets": noSecrets,
-	"no-unsanitized": noUnsanitized,
+	// "no-unsanitized": noUnsanitized,
 	perfectionist,
 	promise,
 	react,

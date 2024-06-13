@@ -9,8 +9,7 @@ const jsxRules = {
 			when: "multiline"
 		}
 	],
-	// TODO [@stylistic/eslint-plugin@>1.6.3]: change to "non-jsx" when @stylistic/eslint-plugin releases
-	"@stylistic/jsx-one-expression-per-line": ["off"],
+	"@stylistic/jsx-one-expression-per-line": ["error", { allow: "single-line" }],
 	"@stylistic/jsx-pascal-case": ["error", { allowNamespace: true }],
 	"@stylistic/jsx-props-no-multi-spaces": "error",
 	"@stylistic/jsx-self-closing-comp": "error",

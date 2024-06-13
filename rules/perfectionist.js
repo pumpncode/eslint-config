@@ -70,12 +70,12 @@ const perfectionistRules = {
 				"builtin",
 				"std",
 				"external",
-				"internal",
 				"utilities",
 				"plugins",
 				"logic",
 				"components",
 				"islands",
+				"internal",
 				"type",
 				"internal-type",
 				"parent-type",
@@ -88,12 +88,21 @@ const perfectionistRules = {
 				"unknown"
 			],
 			"ignore-case": false,
+			"internal-pattern": ["@/**"],
 			"newlines-between": "always",
 			order: "asc",
 			type: "natural"
 		}
 	],
 	"perfectionist/sort-interfaces": [
+		"error",
+		{
+			"ignore-case": false,
+			order: "asc",
+			type: "natural"
+		}
+	],
+	"perfectionist/sort-intersection-types": [
 		"error",
 		{
 			"ignore-case": false,
