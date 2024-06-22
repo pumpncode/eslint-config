@@ -32,7 +32,7 @@ const jsdocRules = {
 	"jsdoc/no-restricted-syntax": "off",
 	"jsdoc/no-types": "off",
 	"jsdoc/no-undefined-types": [
-		"warn",
+		"off",
 		{
 			definedTypes: ["Iterable", "IterableIterator"]
 		}
