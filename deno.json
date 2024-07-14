@@ -3,7 +3,7 @@
 	"version": "13.0.2",
 	"exports": "./config.js",
 	"tasks": {
-		"lint": "deno run -A npm:eslint .",
+		"lint": "deno run -A npm:eslint",
 		"docs": "jsdoc --configure jsdoc.json",
 		"publish": "VERSION=$(cat deno.json | jq -r .version) && git tag -a \"v$VERSION\" -m \"\" && git push origin \"v$VERSION\" && deno publish --no-check && npm publish"
 	},

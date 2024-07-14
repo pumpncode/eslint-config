@@ -17,26 +17,26 @@
 		"test": "echo 'no tests yet'"
 	},
 	"devDependencies": {
-		"eslint": "^9.4.0",
+		"eslint": "^9.7.0",
 		"funbridge-jsdoc-template": "github:52-entertainment/funbridge-react-jsdoc",
 		"jsdoc-mermaid": "1.0.0"
 	},
 	"dependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
-		"@stylistic/eslint-plugin": "^2.1.0",
-		"eslint-plugin-import-x": "^0.5.1",
-		"eslint-plugin-jsdoc": "^48.2.9",
+		"@stylistic/eslint-plugin": "^2.3.0",
+		"eslint-plugin-import-x": "^3.0.1",
+		"eslint-plugin-jsdoc": "^48.7.0",
 		"eslint-plugin-no-secrets": "^1.0.2",
 		"eslint-plugin-perfectionist": "^2.11.0",
-		"eslint-plugin-promise": "^6.2.0",
+		"eslint-plugin-promise": "^6.4.0",
 		"eslint-plugin-react": "github:jsx-eslint/eslint-plugin-react#pull/3759",
 		"eslint-plugin-redos": "^4.4.5",
 		"eslint-plugin-regexp": "^2.6.0",
-		"eslint-plugin-security": "^3.0.0",
+		"eslint-plugin-security": "^3.0.1",
 		"eslint-plugin-sonarjs": "^1.0.3",
-		"eslint-plugin-tailwindcss": "^3.17.3",
-		"eslint-plugin-unicorn": "^53.0.0",
-		"globals": "^15.4.0"
+		"eslint-plugin-tailwindcss": "^3.17.4",
+		"eslint-plugin-unicorn": "^54.0.0",
+		"globals": "^15.8.0"
 	},
 	"peerDependencies": {
 		"eslint": "^9.4.0"

@@ -16,6 +16,24 @@ const jsdocRules = {
 	],
 	"jsdoc/check-types": "warn",
 	"jsdoc/check-values": "warn",
+	"jsdoc/convert-to-jsdoc-comments": [
+		"warn",
+		{
+			allowedPrefixes: [
+				"@ts-",
+				"istanbul ",
+				"c8 ",
+				"v8 ",
+				"eslint",
+				"prettier-",
+				"TODO",
+				"MARK"
+			],
+			enableFixer: true,
+			enforceJsdocLineStyle: "multi",
+			lineOrBlockStyle: "both"
+		}
+	],
 	"jsdoc/empty-tags": "warn",
 	"jsdoc/implements-on-classes": "warn",
 	"jsdoc/imports-as-dependencies": "off",
@@ -146,6 +164,12 @@ const jsdocRules = {
 	"jsdoc/require-returns-check": "warn",
 	"jsdoc/require-returns-description": "warn",
 	"jsdoc/require-returns-type": "warn",
+	"jsdoc/require-template": [
+		"warn",
+		{
+			requireSeparateTemplates: true
+		}
+	],
 	"jsdoc/require-throws": "warn",
 	"jsdoc/require-yields": "warn",
 	"jsdoc/require-yields-check": "warn",
