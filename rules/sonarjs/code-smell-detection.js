@@ -1,5 +1,5 @@
 const maximumCognitiveComplexity = 15;
-const maxSwitchCases = 5;
+const maxSwitchCases = 20;
 const duplicateStringThreshold = 3;
 const identicalFunctionThreshold = 3;
 

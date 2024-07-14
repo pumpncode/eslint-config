@@ -92,7 +92,7 @@ const jsdocRules = {
 				// "ImportExpression",
 				// "LogicalExpression",
 				// "LogicalExpression",
-				"MemberExpression",
+				// "MemberExpression",
 				"MethodDefinition"
 				// "ModuleDeclarations",
 				// "ModuleExpression",

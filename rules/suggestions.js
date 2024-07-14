@@ -69,7 +69,7 @@ const suggestionsRules = {
 		}
 	],
 	"id-match": "off",
-	"init-declarations": "warn",
+	"init-declarations": "off",
 	"logical-assignment-operators": "error",
 	"multiline-comment-style": "off",
 	"new-cap": "error",
