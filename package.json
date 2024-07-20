@@ -1,6 +1,6 @@
 {
 	"name": "@pumpn/eslint-config",
-	"version": "13.2.0",
+	"version": "14.0.0",
 	"description": "standard eslint config for pumpn code projects",
 	"main": "config.js",
 	"author": "Nano Miratus <nanomiratus@gmail.com>",
@@ -40,5 +40,9 @@
 	},
 	"peerDependencies": {
 		"eslint": "^9.4.0"
+	},
+	"overrides": {
+		"@typescript-eslint/type-utils": "^8.0.0-alpha.47",
+		"@typescript-eslint/utils": "^8.0.0-alpha.47"
 	}
 }
