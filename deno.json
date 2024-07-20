@@ -5,7 +5,9 @@
 	"tasks": {
 		"lint": "deno run -A npm:eslint",
 		"docs": "jsdoc --configure jsdoc.json",
-		"publish": "VERSION=$(cat deno.json | jq -r .version) && git tag -a \"v$VERSION\" -m \"\" && git push origin \"v$VERSION\" && deno publish --no-check && npm publish"
+		"publish": "VERSION=$(cat deno.json | jq -r .version) && git tag -a \"v$VERSION\" -m \"\" && git push origin \"v$VERSION\" && deno publish --no-check && npm publish",
+		"update-import-map": "deno run -A ./scripts/update-import-map.js",
+		"update-tsconfig": "deno run -A ./scripts/update-tsconfig.js"
 	},
 	"compilerOptions": {
 		"allowJs": true,
@@ -36,7 +38,6 @@
 			"esnext"
 		]
 	},
-	"loader": "native",
 	"importMap": "./import-map.json",
 	"exclude": [
 		"**/_fresh/*"

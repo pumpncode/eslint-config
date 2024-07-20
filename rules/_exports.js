@@ -1,3 +1,4 @@
+export { default as dependRules } from "./depend.js";
 export { default as eslintCommentsRules } from "./eslint-comments.js";
 // export { default as githubRules } from "./github.js";
 export { default as importXRules } from "./import-x.js";

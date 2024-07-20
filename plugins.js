@@ -1,6 +1,8 @@
 /* eslint-disable import-x/max-dependencies -- collection file */
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
+import react from "@eslint-react/eslint-plugin";
 import stylistic from "@stylistic/eslint-plugin";
+import depend from "eslint-plugin-depend";
 // import github from "eslint-plugin-github";
 import importX from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
@@ -9,7 +11,6 @@ import noSecrets from "eslint-plugin-no-secrets";
 // import noUnsanitized from "eslint-plugin-no-unsanitized";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
-import react from "eslint-plugin-react";
 import redos from "eslint-plugin-redos";
 import regexp from "eslint-plugin-regexp";
 import security from "eslint-plugin-security";
@@ -26,6 +27,7 @@ const plugins = {
 	// "jsx-a11y": jsxA11y,
 	"no-secrets": noSecrets,
 	// "no-unsanitized": noUnsanitized,
+	depend,
 	perfectionist,
 	promise,
 	react,

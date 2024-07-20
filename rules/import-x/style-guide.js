@@ -34,7 +34,7 @@ const styleGuideRules = {
 	"import-x/no-namespace": [
 		"error",
 		{
-			ignore: ["{./**/,**/}_exports.?(*.)js"]
+			ignore: ["{./**/,**/}_exports.?(*.)js", "@typescript-eslint/parser"]
 		}
 	],
 	"import-x/no-unassigned-import": "error",

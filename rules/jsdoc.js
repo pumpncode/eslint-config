@@ -1,9 +1,14 @@
 const jsdocRules = {
 	"jsdoc/check-access": "warn",
 	"jsdoc/check-alignment": "warn",
-	// TODO [eslint-plugin-jsdoc@>=49]: enable when https://github.com/eslint/eslint/issues/14745 is fixed
+	// TODO [eslint-plugin-jsdoc@>=49]: enable when https://github.com/eslint/eslint/issues/14745 and https://github.com/gajus/eslint-plugin-jsdoc/issues/928 are closed
 	"jsdoc/check-examples": "off",
-	"jsdoc/check-indentation": "warn",
+	"jsdoc/check-indentation": [
+		"warn",
+		{
+			excludeTags: ["example", "typedef"]
+		}
+	],
 	"jsdoc/check-line-alignment": "off",
 	"jsdoc/check-param-names": "warn",
 	"jsdoc/check-property-names": "warn",
@@ -14,6 +19,7 @@ const jsdocRules = {
 			definedTags: ["category", "component"]
 		}
 	],
+	"jsdoc/check-template-names": "warn",
 	"jsdoc/check-types": "warn",
 	"jsdoc/check-values": "warn",
 	"jsdoc/convert-to-jsdoc-comments": [
@@ -137,8 +143,20 @@ const jsdocRules = {
 	"jsdoc/require-jsdoc": [
 		"warn",
 		{
+			contexts: [
+				`
+					:not(
+						:matches(
+							CallExpression > ObjectExpression > Property,
+							ArrayExpression:has(Literal ~ ArrowFunctionExpression),
+							CallExpression,
+							Property > AssignmentPattern
+						)
+					) > ArrowFunctionExpression
+				`.replaceAll(/\s/gu, "")
+			],
 			require: {
-				ArrowFunctionExpression: true,
+				ArrowFunctionExpression: false,
 				ClassDeclaration: true,
 				ClassExpression: true,
 				FunctionDeclaration: true,

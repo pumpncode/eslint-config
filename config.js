@@ -1,3 +1,4 @@
+import * as parser from "@typescript-eslint/parser";
 import globals from "globals";
 
 import plugins from "./plugins.js";
@@ -34,14 +35,18 @@ const config = [
 				Deno: "readonly",
 				...convertedGlobals
 			},
+			parser,
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true
 				},
 				ecmaVersion: "latest",
 				jsxPragma: null,
+				parser,
+				project: "./tsconfig.json",
 				requireConfigFile: false,
-				sourceType: "module"
+				sourceType: "module",
+				tsconfigRootDir: import.meta.dirname
 			},
 			sourceType: "module"
 		},
@@ -83,8 +88,8 @@ const config = [
 					name: "Link"
 				}
 			],
-			react: {
-				pragma: "h",
+			"react-x": {
+				jsxPragma: "h",
 				version: "18"
 			},
 			regexp: {

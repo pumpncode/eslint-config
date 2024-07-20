@@ -4,7 +4,7 @@ const maxClassesPerFile = 1;
 const maxDepth = 8;
 const maxLinesPerFile = 500;
 const maxLinesPerFunction = 100;
-const maxNestedCallbacks = 4;
+const maxNestedCallbacks = 10;
 const maxParameters = 3;
 const maxStatements = 20;
 
