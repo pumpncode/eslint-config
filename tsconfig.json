@@ -19,5 +19,8 @@
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
 		"strict": true
-	}
+	},
+	"include": [
+		"./**/*"
+	]
 }

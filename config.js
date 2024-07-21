@@ -46,7 +46,7 @@ const config = [
 				project: "./tsconfig.json",
 				requireConfigFile: false,
 				sourceType: "module",
-				tsconfigRootDir: import.meta.dirname
+				tsconfigRootDir: "./"
 			},
 			sourceType: "module"
 		},
