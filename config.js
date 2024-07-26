@@ -141,6 +141,12 @@ const config = [
 			"import-x/no-unused-modules": "off",
 			"import-x/unambiguous": "off"
 		}
+	},
+	{
+		files: ["**/*.{ts,tsx}"],
+		rules: {
+			"no-undef": "off"
+		}
 	}
 ];
 
