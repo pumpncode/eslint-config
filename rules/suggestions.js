@@ -28,7 +28,7 @@ const suggestionsRules = {
 		}
 	],
 	"max-nested-callbacks": ["error", maxNestedCallbacks],
-	"max-params": ["error", maxParameters],
+	"max-params": ["off", maxParameters],
 	"max-statements": ["error", { max: maxStatements }],
 	"accessor-pairs": "error",
 	"arrow-body-style": "error",

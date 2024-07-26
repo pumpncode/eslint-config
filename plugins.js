@@ -3,6 +3,7 @@ import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
 import react from "@eslint-react/eslint-plugin";
 import stylistic from "@stylistic/eslint-plugin";
 import depend from "eslint-plugin-depend";
+import funcParamsArgs from "eslint-plugin-func-params-args";
 // import github from "eslint-plugin-github";
 import importX from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
@@ -28,6 +29,7 @@ const plugins = {
 	"no-secrets": noSecrets,
 	// "no-unsanitized": noUnsanitized,
 	depend,
+	"func-params-args": funcParamsArgs,
 	perfectionist,
 	promise,
 	react,
