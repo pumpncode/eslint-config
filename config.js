@@ -22,14 +22,28 @@ const convertedGlobals = Object.fromEntries(
 
 const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
 
-const rulesWithAutofixDisabled = {
-	...Object.fromEntries(
-		Object.entries(rules)
-			.flatMap(([key, value]) => [[key, "off"], [`disable-autofix/${key}`, value]])
-	),
-	"disable-autofix/@eslint-react/no-leaked-conditional-rendering": "off",
-	"disable-autofix/@eslint-react/prefer-read-only-props": "off"
-};
+const rulesDisabledInExamples = new Set([
+	"@eslint-react/no-leaked-conditional-rendering",
+	"@eslint-react/prefer-read-only-props",
+	"@stylistic/no-multiple-empty-lines",
+	"import-x/no-self-import",
+	"@stylistic/line-comment-position",
+	"no-inline-comments",
+	"@stylistic/eol-last"
+]);
+
+const rulesWithAutofixDisabled = Object.fromEntries(
+	Object.entries(rules)
+		.flatMap(([key, value]) => [
+			[key, "off"],
+			[
+				`disable-autofix/${key}`,
+				rulesDisabledInExamples.has(key)
+					? "off"
+					: value
+			]
+		])
+);
 
 const config = [
 	{
