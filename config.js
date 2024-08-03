@@ -204,6 +204,7 @@ const config = [
 				projectService: false
 			}
 		},
+		plugins,
 		rules: rulesWithAutofixDisabled
 	}
 ];
