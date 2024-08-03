@@ -191,7 +191,12 @@ const config = [
 		processor: "examples/examples"
 	},
 	{
-		files: ["**/*.md/*.js"],
+		files: [
+			"**/*.md/*.js",
+			"**/*.jsdoc-defaults",
+			"**/*.jsdoc-params",
+			"**/*.jsdoc-properties"
+		],
 		languageOptions: {
 			parserOptions: {
 				program: null,
@@ -199,21 +204,6 @@ const config = [
 				projectService: false
 			}
 		},
-		name: "jsdoc/examples/rules",
-		rules: rulesWithAutofixDisabled
-	},
-	{
-		files: [defaultGlob],
-		name: "jsdoc/default-expressions/processor",
-		processor: "examples/examples"
-	},
-	{
-		files: [
-			"**/*.jsdoc-defaults",
-			"**/*.jsdoc-params",
-			"**/*.jsdoc-properties"
-		],
-		name: "jsdoc/default-expressions/rules",
 		rules: rulesWithAutofixDisabled
 	}
 ];
