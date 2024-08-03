@@ -1,4 +1,5 @@
 import * as parser from "@typescript-eslint/parser";
+import { getJsdocProcessorPlugin } from "eslint-plugin-jsdoc/getJsdocProcessorPlugin.js";
 import globals from "globals";
 
 import plugins from "./plugins.js";
@@ -19,6 +20,8 @@ const convertedGlobals = Object.fromEntries(
 		])
 );
 
+const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
+
 const config = [
 	{
 		ignores: [
@@ -28,7 +31,7 @@ const config = [
 		]
 	},
 	{
-		files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+		files: [defaultGlob],
 		languageOptions: {
 			ecmaVersion: "latest",
 			globals: {
@@ -146,6 +149,62 @@ const config = [
 		files: ["**/*.{ts,tsx}"],
 		rules: {
 			"no-undef": "off"
+		}
+	},
+	{
+		files: [defaultGlob],
+		plugins: {
+			examples: getJsdocProcessorPlugin({
+				captionRequired: false,
+				checkDefaults: true,
+				checkExamples: true,
+				checkParams: true,
+				checkProperties: true,
+				paddedIndent: 0,
+				parser,
+				sourceType: "module"
+			})
+		},
+		processor: "examples/examples"
+	},
+	{
+		files: ["**/*.md/*.js"],
+		languageOptions: {
+			parserOptions: {
+				program: null,
+				project: false,
+				projectService: false
+			}
+		},
+		name: "jsdoc/examples/rules",
+		rules: {
+			"@stylistic/eol-last": "off",
+			"@stylistic/line-comment-position": "off",
+			"@stylistic/no-multiple-empty-lines": "off",
+			"no-inline-comments": "off",
+			"react/no-leaked-conditional-rendering": "off",
+			"react/prefer-read-only-props": "off"
+		}
+	},
+	{
+		files: [defaultGlob],
+		name: "jsdoc/default-expressions/processor",
+		processor: "examples/examples"
+	},
+	{
+		files: [
+			"**/*.jsdoc-defaults",
+			"**/*.jsdoc-params",
+			"**/*.jsdoc-properties"
+		],
+		name: "jsdoc/default-expressions/rules",
+		rules: {
+			"@stylistic/eol-last": "off",
+			"@stylistic/line-comment-position": "off",
+			"@stylistic/no-multiple-empty-lines": "off",
+			"no-inline-comments": "off",
+			"react/no-leaked-conditional-rendering": "off",
+			"react/prefer-read-only-props": "off"
 		}
 	}
 ];

@@ -18,7 +18,7 @@ const promiseRules = {
 		}
 	],
 	"promise/prefer-await-to-callbacks": "error",
-	"promise/prefer-await-to-then": "error",
+	"promise/prefer-await-to-then": ["error", { strict: true }],
 	"promise/valid-params": "error"
 };
 

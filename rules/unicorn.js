@@ -67,7 +67,14 @@ const unicornRules = {
 	"unicorn/no-instanceof-array": "error",
 	"unicorn/no-invalid-fetch-options": "error",
 	"unicorn/no-invalid-remove-event-listener": "error",
-	"unicorn/no-keyword-prefix": ["error", { disallowedPrefixes: ["new"] }],
+	"unicorn/no-keyword-prefix": [
+		"error",
+		{
+			disallowedPrefixes: ["new"],
+			onlyCamelCase: true
+		}
+	],
+	"unicorn/no-length-as-slice-end": "error",
 	"unicorn/no-lonely-if": "error",
 	"unicorn/no-magic-array-flat-depth": "error",
 	"unicorn/no-negated-condition": "error",

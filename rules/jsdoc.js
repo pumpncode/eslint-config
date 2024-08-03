@@ -1,8 +1,16 @@
 const jsdocRules = {
 	"jsdoc/check-access": "warn",
 	"jsdoc/check-alignment": "warn",
-	// TODO [eslint-plugin-jsdoc@>=49]: enable when https://github.com/eslint/eslint/issues/14745 and https://github.com/gajus/eslint-plugin-jsdoc/issues/928 are closed
-	"jsdoc/check-examples": "off",
+	"jsdoc/check-examples": [
+		"off",
+		{
+			allowInlineConfig: true,
+			captionRequired: false,
+			noDefaultExampleRules: true,
+			paddedIndent: 4,
+			reportUnusedDisableDirectives: true
+		}
+	],
 	"jsdoc/check-indentation": [
 		"warn",
 		{
@@ -19,7 +27,7 @@ const jsdocRules = {
 			definedTags: ["category", "component"]
 		}
 	],
-	"jsdoc/check-template-names": "warn",
+	"jsdoc/check-template-names": "off",
 	"jsdoc/check-types": "warn",
 	"jsdoc/check-values": "warn",
 	"jsdoc/convert-to-jsdoc-comments": [
@@ -120,7 +128,7 @@ const jsdocRules = {
 			descriptionStyle: "body"
 		}
 	],
-	"jsdoc/require-description-complete-sentence": "warn",
+	"jsdoc/require-description-complete-sentence": "off",
 	"jsdoc/require-example": "warn",
 	"jsdoc/require-file-overview": [
 		"off",
@@ -147,7 +155,7 @@ const jsdocRules = {
 				`
 					:not(
 						:matches(
-							CallExpression > ObjectExpression > Property,
+							ObjectExpression > Property,
 							ArrayExpression:has(Literal ~ ArrowFunctionExpression),
 							CallExpression,
 							Property > AssignmentPattern

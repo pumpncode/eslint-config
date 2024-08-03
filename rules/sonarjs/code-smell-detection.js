@@ -20,7 +20,7 @@ const codeSmellDetectionRules = {
 	"sonarjs/no-gratuitous-expressions": "error",
 	"sonarjs/no-identical-functions": ["error", identicalFunctionThreshold],
 	"sonarjs/no-inverted-boolean-check": "error",
-	"sonarjs/no-nested-switch": "error",
+	"sonarjs/no-nested-switch": "off",
 	"sonarjs/no-nested-template-literals": "error",
 	"sonarjs/no-redundant-boolean": "error",
 	"sonarjs/no-redundant-jump": "error",

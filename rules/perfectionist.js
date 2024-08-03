@@ -2,16 +2,16 @@ const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",
 		{
-			"ignore-case": false,
+			groupKind: "literals-first",
+			ignoreCase: false,
 			order: "asc",
-			"spread-last": true,
 			type: "natural"
 		}
 	],
 	"perfectionist/sort-astro-attributes": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -31,7 +31,7 @@ const perfectionistRules = {
 				["get-method", "set-method"],
 				"unknown"
 			],
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -39,7 +39,7 @@ const perfectionistRules = {
 	"perfectionist/sort-enums": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -47,7 +47,7 @@ const perfectionistRules = {
 	"perfectionist/sort-exports": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -55,7 +55,7 @@ const perfectionistRules = {
 	"perfectionist/sort-imports": [
 		"error",
 		{
-			"custom-groups": {
+			customGroups: {
 				type: {},
 				value: {
 					components: "@/components/**",
@@ -87,9 +87,9 @@ const perfectionistRules = {
 				"index",
 				"unknown"
 			],
-			"ignore-case": false,
-			"internal-pattern": ["@/**"],
-			"newlines-between": "always",
+			ignoreCase: false,
+			internalPattern: ["@/**"],
+			newlinesBetween: "always",
 			order: "asc",
 			type: "natural"
 		}
@@ -97,7 +97,7 @@ const perfectionistRules = {
 	"perfectionist/sort-interfaces": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -105,7 +105,7 @@ const perfectionistRules = {
 	"perfectionist/sort-intersection-types": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -118,7 +118,7 @@ const perfectionistRules = {
 				"unknown",
 				"multiline"
 			],
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -126,7 +126,7 @@ const perfectionistRules = {
 	"perfectionist/sort-maps": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -134,7 +134,7 @@ const perfectionistRules = {
 	"perfectionist/sort-named-exports": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -142,7 +142,7 @@ const perfectionistRules = {
 	"perfectionist/sort-named-imports": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -150,7 +150,7 @@ const perfectionistRules = {
 	"perfectionist/sort-object-types": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -158,7 +158,7 @@ const perfectionistRules = {
 	"perfectionist/sort-objects": [
 		"error",
 		{
-			"custom-groups": {
+			customGroups: {
 				id: ["id"],
 				groupBeforeAfter1: ["before*"],
 				groupBeforeAfter2: ["after*"],
@@ -240,17 +240,25 @@ const perfectionistRules = {
 				"groupColor3",
 				"unknown"
 			],
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
-			"partition-by-comment": true,
-			"partition-by-new-line": true,
+			partitionByComment: true,
+			partitionByNewLine: true,
 			type: "natural"
 		}
 	],
 	"perfectionist/sort-svelte-attributes": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
+			order: "asc",
+			type: "natural"
+		}
+	],
+	"perfectionist/sort-switch-case": [
+		"error",
+		{
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -258,7 +266,15 @@ const perfectionistRules = {
 	"perfectionist/sort-union-types": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
+			order: "asc",
+			type: "natural"
+		}
+	],
+	"perfectionist/sort-variable-declarations": [
+		"error",
+		{
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}
@@ -266,7 +282,7 @@ const perfectionistRules = {
 	"perfectionist/sort-vue-attributes": [
 		"error",
 		{
-			"ignore-case": false,
+			ignoreCase: false,
 			order: "asc",
 			type: "natural"
 		}

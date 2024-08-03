@@ -16,7 +16,20 @@ const miscRules = {
 		}
 	],
 	"@stylistic/max-statements-per-line": ["error", { max: 1 }],
-	"@stylistic/member-delimiter-style": "error",
+	"@stylistic/member-delimiter-style": [
+		"error",
+		{
+			multiline: {
+				delimiter: "comma",
+				requireLast: false
+			},
+			multilineDetection: "brackets",
+			singleline: {
+				delimiter: "comma",
+				requireLast: false
+			}
+		}
+	],
 	"@stylistic/nonblock-statement-body-position": ["error", "beside"],
 	"@stylistic/one-var-declaration-per-line": ["error", "always"],
 	"@stylistic/padded-blocks": [

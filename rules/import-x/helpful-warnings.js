@@ -9,6 +9,7 @@ const helpfulWarningsRules = {
 	"import-x/no-unused-modules": [
 		"error",
 		{
+			ignoreUnusedTypeExports: true,
 			missingExports: true,
 			unusedExports: false
 		}
