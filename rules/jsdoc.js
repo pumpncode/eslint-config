@@ -191,7 +191,7 @@ const jsdocRules = {
 	"jsdoc/require-returns-description": "warn",
 	"jsdoc/require-returns-type": "warn",
 	"jsdoc/require-template": [
-		"warn",
+		"off",
 		{
 			requireSeparateTemplates: true
 		}
