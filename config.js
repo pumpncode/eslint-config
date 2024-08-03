@@ -22,6 +22,11 @@ const convertedGlobals = Object.fromEntries(
 
 const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
 
+const rulesWithAutofixDisabled = Object.fromEntries(
+	Object.entries(rules)
+		.flatMap(([key, value]) => [[key, "off"], [`disable-autofix/${key}`, value]])
+);
+
 const config = [
 	{
 		ignores: [
@@ -177,14 +182,7 @@ const config = [
 			}
 		},
 		name: "jsdoc/examples/rules",
-		rules: {
-			"@stylistic/eol-last": "off",
-			"@stylistic/line-comment-position": "off",
-			"@stylistic/no-multiple-empty-lines": "off",
-			"no-inline-comments": "off",
-			"react/no-leaked-conditional-rendering": "off",
-			"react/prefer-read-only-props": "off"
-		}
+		rules: rulesWithAutofixDisabled
 	},
 	{
 		files: [defaultGlob],
@@ -198,14 +196,7 @@ const config = [
 			"**/*.jsdoc-properties"
 		],
 		name: "jsdoc/default-expressions/rules",
-		rules: {
-			"@stylistic/eol-last": "off",
-			"@stylistic/line-comment-position": "off",
-			"@stylistic/no-multiple-empty-lines": "off",
-			"no-inline-comments": "off",
-			"react/no-leaked-conditional-rendering": "off",
-			"react/prefer-read-only-props": "off"
-		}
+		rules: rulesWithAutofixDisabled
 	}
 ];
 
