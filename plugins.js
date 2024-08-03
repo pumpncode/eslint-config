@@ -34,13 +34,13 @@ const plugins = {
 	"no-secrets": noSecrets,
 	perfectionist,
 	promise,
-	react,
 	redos,
 	regexp,
 	security,
 	sonarjs,
 	tailwindcss,
-	unicorn
+	unicorn,
+	...react.configs.all.plugins
 };
 
 export default plugins;
