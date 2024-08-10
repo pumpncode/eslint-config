@@ -41,7 +41,7 @@
 		"globals": "^15.9.0"
 	},
 	"peerDependencies": {
-		"eslint": "^9.8.0"
+		"eslint": "^9.9.0"
 	},
 	"overrides": {
 		"@typescript-eslint/type-utils": "^8.0.0-alpha.47",
