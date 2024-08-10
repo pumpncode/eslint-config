@@ -1,6 +1,6 @@
 {
 	"name": "@pumpn/eslint-config",
-	"version": "15.1.1",
+	"version": "15.1.2",
 	"exports": "./config.js",
 	"tasks": {
 		"lint": "deno run -A npm:eslint",
