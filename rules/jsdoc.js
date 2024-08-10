@@ -52,6 +52,14 @@ const jsdocRules = {
 	"jsdoc/implements-on-classes": "warn",
 	"jsdoc/imports-as-dependencies": "off",
 	"jsdoc/informative-docs": "warn",
+	"jsdoc/lines-before-block": [
+		"warn",
+		{
+			excludedTags: ["type"],
+			ignoreSameLine: true,
+			lines: 1
+		}
+	],
 	"jsdoc/match-description": "off",
 	"jsdoc/match-name": "off",
 	"jsdoc/multiline-blocks": "warn",
