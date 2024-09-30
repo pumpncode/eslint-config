@@ -234,7 +234,6 @@ const perfectionistRules = {
 				"groupPrecedenceOrdinal9",
 				"groupPrecedenceOrdinal10",
 				"groupPrecedenceOrdinalLast",
-				"groupColor0",
 				"groupColor1",
 				"groupColor2",
 				"groupColor3",
