@@ -33,7 +33,7 @@ const bestPracticesRules = {
 	"regexp/prefer-regexp-test": "off",
 	"regexp/prefer-set-operation": "error",
 	"regexp/require-unicode-regexp": "error",
-	// TODO [2024-09-01]: enable when https://github.com/microsoft/vscode/pull/206580 is resolved
+	// TODO [2024-11-01]: enable when https://github.com/microsoft/TypeScript-TmLanguage/pull/1032 is resolved
 	"regexp/require-unicode-sets-regexp": "off",
 	"regexp/simplify-set-operations": "error",
 	"regexp/sort-alternatives": "error",
