@@ -3,3 +3,4 @@ export { default as debugRules } from "./debug.js";
 export { default as domRules } from "./dom.js";
 export { default as hooksExtraRules } from "./hooks-extra.js";
 export { default as namingConventionRules } from "./naming-convention.js";
+export { default as webApiRules } from "./web-api.js";
