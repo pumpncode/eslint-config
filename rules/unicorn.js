@@ -31,10 +31,10 @@ const patterns = {
 };
 
 const unicornRules = {
-	"unicorn/better-regex": "error",
 	"unicorn/catch-error-name": "error",
 	"unicorn/consistent-destructuring": "error",
 	"unicorn/consistent-empty-array-spread": "error",
+	"unicorn/consistent-existence-index-check": "error",
 	"unicorn/consistent-function-scoping": "error",
 	"unicorn/custom-error-definition": "error",
 	"unicorn/empty-brace-spaces": "error",
@@ -142,10 +142,12 @@ const unicornRules = {
 	"unicorn/prefer-dom-node-text-content": "error",
 	"unicorn/prefer-event-target": "error",
 	"unicorn/prefer-export-from": "error",
+	"unicorn/prefer-global-this": "error",
 	"unicorn/prefer-includes": "error",
 	"unicorn/prefer-json-parse-buffer": "off",
 	"unicorn/prefer-keyboard-event-key": "error",
 	"unicorn/prefer-logical-operator-over-ternary": "error",
+	"unicorn/prefer-math-min-max": "error",
 	"unicorn/prefer-math-trunc": "error",
 	"unicorn/prefer-modern-dom-apis": "error",
 	"unicorn/prefer-modern-math-apis": "error",

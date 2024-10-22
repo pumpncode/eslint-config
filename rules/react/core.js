@@ -39,8 +39,9 @@ const coreRules = {
 	"@eslint-react/no-unstable-default-props": "error",
 	"@eslint-react/no-unused-class-component-members": "error",
 	"@eslint-react/no-unused-state": "error",
-	"@eslint-react/no-useless-fragment": "error",
+	"@eslint-react/no-useless-fragment": ["error", { allowExpressions: true }],
 	"@eslint-react/prefer-destructuring-assignment": "error",
+	"@eslint-react/prefer-react-namespace-import": "error",
 	"@eslint-react/prefer-read-only-props": "error",
 	"@eslint-react/prefer-shorthand-boolean": "error",
 	"@eslint-react/prefer-shorthand-fragment": "error"

@@ -2,6 +2,9 @@ const namingConventionRules = {
 	"@eslint-react/naming-convention/component-name": [
 		"error",
 		{
+			allowAllCaps: false,
+			allowLeadingUnderscore: false,
+			allowNamespace: false,
 			excepts: [],
 			rule: "PascalCase"
 		}

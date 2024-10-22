@@ -25,11 +25,11 @@ const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
 const rulesDisabledInExamples = new Set([
 	"@eslint-react/no-leaked-conditional-rendering",
 	"@eslint-react/prefer-read-only-props",
+	"@stylistic/eol-last",
+	"@stylistic/line-comment-position",
 	"@stylistic/no-multiple-empty-lines",
 	"import-x/no-self-import",
-	"@stylistic/line-comment-position",
-	"no-inline-comments",
-	"@stylistic/eol-last"
+	"no-inline-comments"
 ]);
 
 const rulesWithAutofixDisabled = Object.fromEntries(
@@ -114,6 +114,13 @@ const config = [
 					name: "Link"
 				}
 			],
+			perfectionist: {
+				ignoreCase: false,
+				order: "asc",
+				partitionByComment: true,
+				partitionByNewLine: true,
+				type: "natural"
+			},
 			"react-x": {
 				jsxPragma: "h",
 				version: "18"

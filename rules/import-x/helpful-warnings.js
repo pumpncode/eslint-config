@@ -6,6 +6,7 @@ const helpfulWarningsRules = {
 	"import-x/no-mutable-exports": "error",
 	"import-x/no-named-as-default": "error",
 	"import-x/no-named-as-default-member": "error",
+	"import-x/no-rename-default": "error",
 	"import-x/no-unused-modules": [
 		"error",
 		{

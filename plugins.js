@@ -1,3 +1,4 @@
+/* eslint-disable import-x/no-rename-default -- bad export names */
 /* eslint-disable import-x/max-dependencies -- collection file */
 // import github from "eslint-plugin-github";
 // import jsxA11y from "eslint-plugin-jsx-a11y";

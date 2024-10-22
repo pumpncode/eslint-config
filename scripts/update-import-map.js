@@ -10,7 +10,7 @@ const packageJsonFilePath = join(cwd(), "package.json");
 const packageJsonFileContent = await readTextFile(packageJsonFilePath);
 const packageJson = JSON.parse(packageJsonFileContent);
 
-const importMapFilePath = join(cwd(), "import-map.json");
+const importMapFilePath = join(cwd(), "deno.json");
 const importMapFileContent = await readTextFile(importMapFilePath);
 const importMap = JSON.parse(importMapFileContent);
 

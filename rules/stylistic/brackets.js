@@ -1,6 +1,6 @@
 import { minItemsForArrayNewline } from "./_common/_exports.js";
 
-const minPropertiesForObjectNewline = 3;
+const minElementsForCurlyNewline = 3;
 const wrapMultilinesDefault = "parens-new-line";
 
 const bracketsRules = {
@@ -14,6 +14,14 @@ const bracketsRules = {
 	"@stylistic/array-bracket-spacing": ["error", "never"],
 	"@stylistic/arrow-parens": ["error", "always"],
 	"@stylistic/brace-style": ["error", "stroustrup"],
+	"@stylistic/curly-newline": [
+		"error",
+		{
+			minElements: minElementsForCurlyNewline,
+			consistent: true,
+			multiline: true
+		}
+	],
 	"@stylistic/function-paren-newline": ["error", "multiline-arguments"],
 	"@stylistic/jsx-closing-bracket-location": "error",
 	"@stylistic/jsx-curly-brace-presence": [
@@ -56,7 +64,7 @@ const bracketsRules = {
 	"@stylistic/object-curly-newline": [
 		"error",
 		{
-			minProperties: minPropertiesForObjectNewline,
+			minProperties: minElementsForCurlyNewline,
 			consistent: true,
 			multiline: true
 		}

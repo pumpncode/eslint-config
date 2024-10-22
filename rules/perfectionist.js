@@ -2,18 +2,7 @@ const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",
 		{
-			groupKind: "literals-first",
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-astro-attributes": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
+			groupKind: "literals-first"
 		}
 	],
 	"perfectionist/sort-classes": [
@@ -26,32 +15,18 @@ const perfectionistRules = {
 				"property",
 				"constructor",
 				"static-method",
+				"static-function-property",
 				"private-method",
+				"private-function-property",
 				"method",
+				"function-property",
 				["get-method", "set-method"],
 				"unknown"
-			],
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
+			]
 		}
 	],
-	"perfectionist/sort-enums": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-exports": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
+	"perfectionist/sort-enums": ["error"],
+	"perfectionist/sort-exports": ["error"],
 	"perfectionist/sort-imports": [
 		"error",
 		{
@@ -87,29 +62,13 @@ const perfectionistRules = {
 				"index",
 				"unknown"
 			],
-			ignoreCase: false,
 			internalPattern: ["@/**"],
 			newlinesBetween: "always",
-			order: "asc",
-			type: "natural"
+			sortSideEffects: true
 		}
 	],
-	"perfectionist/sort-interfaces": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-intersection-types": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
+	"perfectionist/sort-interfaces": ["error"],
+	"perfectionist/sort-intersection-types": ["error"],
 	"perfectionist/sort-jsx-props": [
 		"error",
 		{
@@ -117,44 +76,13 @@ const perfectionistRules = {
 				"shorthand",
 				"unknown",
 				"multiline"
-			],
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
+			]
 		}
 	],
-	"perfectionist/sort-maps": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-named-exports": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-named-imports": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-object-types": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
+	"perfectionist/sort-maps": ["error"],
+	"perfectionist/sort-named-exports": ["error"],
+	"perfectionist/sort-named-imports": ["error"],
+	"perfectionist/sort-object-types": ["error"],
 	"perfectionist/sort-objects": [
 		"error",
 		{
@@ -238,54 +166,13 @@ const perfectionistRules = {
 				"groupColor2",
 				"groupColor3",
 				"unknown"
-			],
-			ignoreCase: false,
-			order: "asc",
-			partitionByComment: true,
-			partitionByNewLine: true,
-			type: "natural"
+			]
 		}
 	],
-	"perfectionist/sort-svelte-attributes": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-switch-case": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-union-types": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-variable-declarations": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-vue-attributes": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			type: "natural"
-		}
-	]
+	"perfectionist/sort-sets": ["error"],
+	"perfectionist/sort-switch-case": ["error"],
+	"perfectionist/sort-union-types": ["error"],
+	"perfectionist/sort-variable-declarations": ["error"]
 };
 
 export default perfectionistRules;

@@ -18,7 +18,8 @@
 		"noUncheckedIndexedAccess": false,
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
-		"strict": true
+		"strict": true,
+		"noEmit": true
 	},
 	"include": [
 		"./**/*"

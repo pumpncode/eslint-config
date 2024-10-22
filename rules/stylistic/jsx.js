@@ -1,6 +1,6 @@
 const jsxRules = {
 	"@stylistic/jsx-child-element-spacing": "error",
-	"@stylistic/jsx-closing-tag-location": "error",
+	"@stylistic/jsx-closing-tag-location": ["error", "line-aligned"],
 	"@stylistic/jsx-equals-spacing": ["error", "never"],
 	"@stylistic/jsx-max-props-per-line": [
 		"error",
