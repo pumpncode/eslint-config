@@ -1,7 +1,5 @@
 {
 	"deno.enable": true,
 	"deno.lint": false,
-	"deno.unstable": true,
-	"eslint.experimental.useFlatConfig": true,
 	"eslint.useESLintClass": true
 }
