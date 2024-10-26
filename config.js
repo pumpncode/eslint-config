@@ -59,6 +59,7 @@ const config = [
 			ecmaVersion: "latest",
 			globals: {
 				Deno: "readonly",
+				Temporal: "readonly",
 				...convertedGlobals
 			},
 			parser,
