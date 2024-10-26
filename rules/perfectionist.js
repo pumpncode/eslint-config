@@ -74,7 +74,6 @@ const perfectionistRules = {
 			],
 			internalPattern: ["@/**"],
 			newlinesBetween: "always",
-			partitionByComment: false,
 			sortSideEffects: true
 		}
 	],
