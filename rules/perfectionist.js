@@ -31,7 +31,8 @@ const perfectionistRules = {
 				["protected-method", "protected-function-property"],
 				["private-method", "private-function-property"],
 				"unknown"
-			]
+			],
+			partitionByComment: false
 		}
 	],
 	"perfectionist/sort-enums": ["error"],
@@ -73,6 +74,7 @@ const perfectionistRules = {
 			],
 			internalPattern: ["@/**"],
 			newlinesBetween: "always",
+			partitionByComment: false,
 			sortSideEffects: true
 		}
 	],
@@ -90,7 +92,7 @@ const perfectionistRules = {
 	],
 	"perfectionist/sort-maps": ["error"],
 	"perfectionist/sort-named-exports": ["error"],
-	"perfectionist/sort-named-imports": ["error"],
+	"perfectionist/sort-named-imports": ["error", { partitionByComment: false }],
 	"perfectionist/sort-object-types": ["error"],
 	"perfectionist/sort-objects": [
 		"error",
@@ -181,7 +183,7 @@ const perfectionistRules = {
 	"perfectionist/sort-sets": ["error"],
 	"perfectionist/sort-switch-case": ["error"],
 	"perfectionist/sort-union-types": ["error"],
-	"perfectionist/sort-variable-declarations": ["error"]
+	"perfectionist/sort-variable-declarations": ["error", { partitionByComment: false }]
 };
 
 export default perfectionistRules;
