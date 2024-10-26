@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",

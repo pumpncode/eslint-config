@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const funcParamsArgsRules = {
 	"func-params-args/func-args": [
 		"warn",

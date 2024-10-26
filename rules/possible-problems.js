@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const possibleProblemsRules = {
 	"array-callback-return": "error",
 	"constructor-super": "error",

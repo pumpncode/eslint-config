@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const securityRules = {
 	"security/detect-bidi-characters": "warn",
 	"security/detect-buffer-noassert": "warn",

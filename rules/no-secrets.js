@@ -1,5 +1,12 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
 const tolerance = 5;
 
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const noSecretsRules = {
 	"no-secrets/no-secrets": [
 		"error",

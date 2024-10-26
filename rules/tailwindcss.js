@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const tailwindcssRules = {
 	"tailwindcss/classnames-order": "error",
 	"tailwindcss/enforces-negative-arbitrary-values": "error",

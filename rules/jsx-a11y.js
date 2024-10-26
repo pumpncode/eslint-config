@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const jsxA11yRules = {
 	"jsx-a11y/alt-text": "error",
 	"jsx-a11y/anchor-ambiguous-text": [

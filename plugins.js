@@ -1,5 +1,7 @@
+/* eslint-disable object-shorthand -- const types */
 /* eslint-disable import-x/no-rename-default -- bad export names */
 /* eslint-disable import-x/max-dependencies -- collection file */
+
 // import github from "eslint-plugin-github";
 // import jsxA11y from "eslint-plugin-jsx-a11y";
 // import noUnsanitized from "eslint-plugin-no-unsanitized";
@@ -21,19 +23,34 @@ import sonarjs from "eslint-plugin-sonarjs";
 import tailwindcss from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 
-const plugins = {
+/**
+ * @import { Linter, ESLint } from "eslint"
+ */
+
+const reactPlugins = /** @type {Record<string, ESLint.Plugin>} */ (
+	/** @type {unknown} */ (react.configs.all.plugins)
+);
+
+/**
+ * @satisfies { Linter.Config["plugins"] }
+ */
+const plugins = /** @type {const} */ ({
 	// github,
 	// "jsx-a11y": jsxA11y,
 	// "no-unsanitized": noUnsanitized,
 	"@eslint-community/eslint-comments": eslintComments,
-	"@stylistic": stylistic,
+	"@stylistic": /** @type {ESLint.Plugin} */ (stylistic),
 	depend,
 	"disable-autofix": disableAutofix,
 	"func-params-args": funcParamsArgs,
-	"import-x": importX,
+	"import-x": /** @type {ESLint.Plugin} */ (
+		/** @type {unknown} */ (importX)
+	),
 	jsdoc,
 	"no-secrets": noSecrets,
-	perfectionist,
+	perfectionist: /** @type {ESLint.Plugin} */ (
+		/** @type {unknown} */ (perfectionist)
+	),
 	promise,
 	redos,
 	regexp,
@@ -41,7 +58,7 @@ const plugins = {
 	sonarjs,
 	tailwindcss,
 	unicorn,
-	...react.configs.all.plugins
-};
+	...reactPlugins
+});
 
 export default plugins;

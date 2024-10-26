@@ -1,3 +1,7 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
 const minIdentifierLength = 2;
 const maxIdentifierLength = 30;
 const maxClassesPerFile = 1;
@@ -8,6 +12,9 @@ const maxNestedCallbacks = 10;
 const maxParameters = 3;
 const maxStatements = 20;
 
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const suggestionsRules = {
 	"max-classes-per-file": ["error", maxClassesPerFile],
 	"max-depth": ["error", maxDepth],

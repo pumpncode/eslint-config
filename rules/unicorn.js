@@ -1,3 +1,7 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
 const hexadecimalGroupLength = 2;
 const binaryGroupLength = 4;
 const octalGroupLength = 4;
@@ -30,6 +34,9 @@ const patterns = {
 	"-->": "⟶"
 };
 
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const unicornRules = {
 	"unicorn/catch-error-name": "error",
 	"unicorn/consistent-destructuring": "error",

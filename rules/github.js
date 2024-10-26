@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const githubRules = {
 	"github/a11y-aria-label-is-well-formatted": "error",
 	"github/a11y-no-title-attribute": "error",

@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const promiseRules = {
 	"promise/always-return": "error",
 	"promise/avoid-new": "off",

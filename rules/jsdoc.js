@@ -1,3 +1,10 @@
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @satisfies {Linter.RulesRecord}
+ */
 const jsdocRules = {
 	"jsdoc/check-access": "warn",
 	"jsdoc/check-alignment": "warn",

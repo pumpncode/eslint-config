@@ -5,6 +5,10 @@ import globals from "globals";
 import plugins from "./plugins.js";
 import rules from "./rules.js";
 
+/**
+ * @import { Linter } from "eslint"
+ */
+
 const cssFilesRefreshRate = 5_000;
 
 const convertedGlobals = Object.fromEntries(
@@ -45,7 +49,15 @@ const rulesWithAutofixDisabled = Object.fromEntries(
 		])
 );
 
-const config = [
+/**
+ * ESLint configuration.
+ *
+ * This configuration includes settings for various file types, plugins, and rules.
+ * It also defines specific settings for different environments and file patterns.
+ *
+ * @satisfies {Linter.Config[]}
+ */
+const config = /** @type {const} */ ([
 	{
 		ignores: [
 			"_fresh/**",
@@ -215,6 +227,6 @@ const config = [
 		plugins,
 		rules: rulesWithAutofixDisabled
 	}
-];
+]);
 
 export default config;
