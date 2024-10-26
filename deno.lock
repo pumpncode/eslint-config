@@ -1,7 +1,6 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@std/path@1": "1.0.6",
     "npm:@eslint-community/eslint-plugin-eslint-comments@^4.4.0": "4.4.0_eslint@9.13.0",
     "npm:@eslint-react/eslint-plugin@^1.15.0": "1.15.0_eslint@9.13.0",
     "npm:@stylistic/eslint-plugin@^2.9.0": "2.9.0_eslint@9.13.0",
@@ -23,13 +22,7 @@
     "npm:eslint-plugin-unicorn@56": "56.0.0_eslint@9.13.0",
     "npm:eslint@*": "9.13.0",
     "npm:eslint@^9.13.0": "9.13.0",
-    "npm:globals@^15.11.0": "15.11.0",
-    "npm:globals@^15.9.0": "15.11.0"
-  },
-  "jsr": {
-    "@std/path@1.0.6": {
-      "integrity": "ab2c55f902b380cf28e0eec501b4906e4c1960d13f00e11cfbcd21de15f18fed"
-    }
+    "npm:globals@^15.11.0": "15.11.0"
   },
   "npm": {
     "@alloc/quick-lru@5.2.0": {
