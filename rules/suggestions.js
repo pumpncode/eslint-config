@@ -125,10 +125,15 @@ const suggestionsRules = {
 			enforceConst: false,
 			ignore: [
 				-1,
+				"-1n",
 				0,
+				"0n",
 				1,
+				"1n",
 				2,
-				10
+				"2n",
+				10,
+				"10n"
 			],
 			ignoreArrayIndexes: false,
 			ignoreClassFieldInitialValues: true,
