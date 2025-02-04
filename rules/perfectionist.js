@@ -17,12 +17,12 @@ const perfectionistRules = {
 		{
 			groups: [
 				"index-signature",
+				["private-static-property", "private-static-accessor-property"],
+				["private-static-get-method", "private-static-set-method"],
 				["static-property", "static-accessor-property"],
 				["static-get-method", "static-set-method"],
 				["protected-static-property", "protected-static-accessor-property"],
 				["protected-static-get-method", "protected-static-set-method"],
-				["private-static-property", "private-static-accessor-property"],
-				["private-static-get-method", "private-static-set-method"],
 				"static-block",
 				["property", "accessor-property"],
 				["get-method", "set-method"],
@@ -39,7 +39,7 @@ const perfectionistRules = {
 				["private-method", "private-function-property"],
 				"unknown"
 			],
-			partitionByComment: false
+			partitionByComment: String.raw`\/\/`
 		}
 	],
 	"perfectionist/sort-enums": ["error"],
@@ -50,12 +50,12 @@ const perfectionistRules = {
 			customGroups: {
 				type: {},
 				value: {
-					components: "@/components/**",
-					islands: "@/islands/**",
-					logic: "@/logic/**",
-					plugins: "@/plugins/**",
-					std: "@std/**",
-					utilities: "@/utilities/**"
+					components: "^@/components/.*",
+					islands: "^@/islands/.*",
+					logic: "^@/logic/.*",
+					plugins: "^@/plugins/.*",
+					std: "^@std/.*",
+					utilities: "^@/utilities/.*"
 				}
 			},
 			groups: [
@@ -79,8 +79,9 @@ const perfectionistRules = {
 				"index",
 				"unknown"
 			],
-			internalPattern: ["@/**"],
+			internalPattern: ["^@/.*"],
 			newlinesBetween: "always",
+			partitionByNewLine: false,
 			sortSideEffects: true
 		}
 	],
@@ -104,46 +105,46 @@ const perfectionistRules = {
 		"error",
 		{
 			customGroups: {
-				id: ["id"],
-				groupBeforeAfter1: ["before*"],
-				groupBeforeAfter2: ["after*"],
-				groupColor1: ["r", "l"],
+				id: ["^id$"],
+				groupBeforeAfter1: ["^before.*"],
+				groupBeforeAfter2: ["^after.*"],
+				groupColor1: ["^r$", "^l$"],
 				groupColor2: [
-					"g",
-					"c",
-					"a"
+					"^g$",
+					"^c$",
+					"^a$"
 				],
-				groupColor3: ["b", "h"],
-				groupMinMax1: ["min*"],
-				groupMinMax2: ["max*"],
-				groupMinimumMaximum1: ["minimum*"],
-				groupMinimumMaximum2: ["maximum*"],
-				groupPrecedenceOrdinal1: ["primary*"],
-				groupPrecedenceOrdinal2: ["secondary*"],
-				groupPrecedenceOrdinal3: ["tertiary*"],
-				groupPrecedenceOrdinal4: ["quaternary*"],
-				groupPrecedenceOrdinal5: ["quinary*"],
-				groupPrecedenceOrdinal6: ["senary*"],
-				groupPrecedenceOrdinal7: ["septenary*"],
-				groupPrecedenceOrdinal8: ["octonary*"],
-				groupPrecedenceOrdinal9: ["nonary*"],
-				groupPrecedenceOrdinal10: ["denary*"],
-				groupPrecedenceOrdinalLast: ["ultimate*"],
-				groupPrevNext1: ["prev!(ent*)"],
-				groupPrevNext2: ["next*"],
-				groupPreviousNext1: ["previous*"],
-				groupPreviousNext2: ["next*"],
-				groupSpatialOrdinal1: ["first*"],
-				groupSpatialOrdinal2: ["second*"],
-				groupSpatialOrdinal3: ["third*"],
-				groupSpatialOrdinal4: ["fourth*"],
-				groupSpatialOrdinal5: ["fifth*"],
-				groupSpatialOrdinal6: ["sixth*"],
-				groupSpatialOrdinal7: ["seventh*"],
-				groupSpatialOrdinal8: ["eighth*"],
-				groupSpatialOrdinal9: ["ninth*"],
-				groupSpatialOrdinal10: ["tenth*"],
-				groupSpatialOrdinalLast: ["last*"]
+				groupColor3: ["^b$", "^h$"],
+				groupMinimumMaximum1: ["^minimum(([A-Z].*)|$)"],
+				groupMinimumMaximum2: ["^maximum(([A-Z].*)|$)"],
+				groupMinMax1: ["^min(([A-Z_-].*)|$)"],
+				groupMinMax2: ["^max(([A-Z_-].*)|$)"],
+				groupPrecedenceOrdinal1: ["^primary.*"],
+				groupPrecedenceOrdinal2: ["^secondary.*"],
+				groupPrecedenceOrdinal3: ["^tertiary.*"],
+				groupPrecedenceOrdinal4: ["^quaternary.*"],
+				groupPrecedenceOrdinal5: ["^quinary.*"],
+				groupPrecedenceOrdinal6: ["^senary.*"],
+				groupPrecedenceOrdinal7: ["^septenary.*"],
+				groupPrecedenceOrdinal8: ["^octonary.*"],
+				groupPrecedenceOrdinal9: ["^nonary.*"],
+				groupPrecedenceOrdinal10: ["^denary.*"],
+				groupPrecedenceOrdinalLast: ["^ultimate.*"],
+				groupPreviousNext1: ["^previous.*"],
+				groupPreviousNext2: ["^next.*"],
+				groupPrevNext1: ["^prev(?!ent).*"],
+				groupPrevNext2: ["^next.*"],
+				groupSpatialOrdinal1: ["^first.*"],
+				groupSpatialOrdinal2: ["^second.*"],
+				groupSpatialOrdinal3: ["^third.*"],
+				groupSpatialOrdinal4: ["^fourth.*"],
+				groupSpatialOrdinal5: ["^fifth.*"],
+				groupSpatialOrdinal6: ["^sixth.*"],
+				groupSpatialOrdinal7: ["^seventh.*"],
+				groupSpatialOrdinal8: ["^eighth.*"],
+				groupSpatialOrdinal9: ["^ninth.*"],
+				groupSpatialOrdinal10: ["^tenth.*"],
+				groupSpatialOrdinalLast: ["^last.*"]
 			},
 			groups: [
 				"id",

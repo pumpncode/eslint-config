@@ -57,7 +57,7 @@ const staticAnalysisRules = {
 		}
 	],
 	"import-x/no-self-import": "error",
-	// TODO [2024-11-01]: Change to "error" when there is a resolver for deno
+	// TODO [2025-03-01]: Change to "error" when there is a resolver for deno (maybe https://github.com/redabacha/eslint-import-resolver-deno)
 	"import-x/no-unresolved": "off",
 	"import-x/no-useless-path-segments": [
 		"error",

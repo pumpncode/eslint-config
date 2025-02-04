@@ -173,6 +173,7 @@ const config = /** @type {const} */ ([
 	{
 		files: ["**/_exports.?(*.)js"],
 		rules: {
+			"@eslint-react/naming-convention/filename": "off",
 			"import-x/max-dependencies": "off",
 			"import-x/prefer-default-export": "off"
 		}
@@ -226,6 +227,20 @@ const config = /** @type {const} */ ([
 		},
 		plugins,
 		rules: rulesWithAutofixDisabled
+	},
+	{
+		files: ["**/*.doc.js"],
+		rules: {
+			"import-x/unambiguous": "off",
+			"unicorn/no-empty-file": "off",
+			"unicorn/prevent-abbreviations": "off"
+		}
+	},
+	{
+		files: ["dev.js"],
+		rules: {
+			"unicorn/prevent-abbreviations": "off"
+		}
 	}
 ]);
 

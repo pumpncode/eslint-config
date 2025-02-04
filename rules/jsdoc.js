@@ -176,7 +176,7 @@ const jsdocRules = {
 							Property > AssignmentPattern
 						)
 					) > ArrowFunctionExpression
-				`.replaceAll(/\s/gu, "")
+				`.replaceAll(/\s/gv, "")
 			],
 			require: {
 				ArrowFunctionExpression: false,

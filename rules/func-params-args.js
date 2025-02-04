@@ -10,6 +10,7 @@ const funcParamsArgsRules = {
 		"warn",
 		{
 			global: 3,
+			join: -1,
 			reduce: 4
 		}
 	]
