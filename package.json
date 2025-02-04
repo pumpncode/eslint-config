@@ -43,10 +43,5 @@
 	},
 	"peerDependencies": {
 		"eslint": "^9.19.0"
-	},
-	"overrides": {
-		"@typescript-eslint/type-utils": "^8.11.0",
-		"@typescript-eslint/utils": "^8.11.0",
-		"eslint": "^9.19.0"
 	}
 }
