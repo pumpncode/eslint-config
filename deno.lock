@@ -2878,7 +2878,6 @@
       "npm:@typescript-eslint/parser@^8.11.0",
       "npm:eslint-plugin-command@^3.1.0",
       "npm:eslint-plugin-depend@0.12",
-      "npm:eslint-plugin-disable-autofix@^5.0.1",
       "npm:eslint-plugin-import-x@^4.3.1",
       "npm:eslint-plugin-jsdoc@^50.4.3",
       "npm:eslint-plugin-no-secrets@^2.2.1",
