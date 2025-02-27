@@ -183,7 +183,7 @@ const jsdocRules = {
 				ClassDeclaration: true,
 				ClassExpression: true,
 				FunctionDeclaration: true,
-				FunctionExpression: true,
+				FunctionExpression: false,
 				MethodDefinition: true
 			}
 		}

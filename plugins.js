@@ -8,9 +8,9 @@
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
 import react from "@eslint-react/eslint-plugin";
 import stylistic from "@stylistic/eslint-plugin";
+import command from "eslint-plugin-command";
 import depend from "eslint-plugin-depend";
 import disableAutofix from "eslint-plugin-disable-autofix";
-import funcParamsArgs from "eslint-plugin-func-params-args";
 import importX from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
 import noSecrets from "eslint-plugin-no-secrets";
@@ -40,9 +40,9 @@ const plugins = /** @type {const} */ ({
 	// "no-unsanitized": noUnsanitized,
 	"@eslint-community/eslint-comments": eslintComments,
 	"@stylistic": /** @type {ESLint.Plugin} */ (stylistic),
+	command,
 	depend,
 	"disable-autofix": disableAutofix,
-	"func-params-args": funcParamsArgs,
 	"import-x": /** @type {ESLint.Plugin} */ (
 		/** @type {unknown} */ (importX)
 	),

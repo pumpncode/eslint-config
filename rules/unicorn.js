@@ -39,6 +39,8 @@ const patterns = {
  */
 const unicornRules = {
 	"unicorn/catch-error-name": "error",
+	"unicorn/consistent-assert": "error",
+	"unicorn/consistent-date-clone": "error",
 	"unicorn/consistent-destructuring": "error",
 	"unicorn/consistent-empty-array-spread": "error",
 	"unicorn/consistent-existence-index-check": "error",
@@ -58,6 +60,7 @@ const unicornRules = {
 	"unicorn/import-style": "error",
 	"unicorn/new-for-builtins": "error",
 	"unicorn/no-abusive-eslint-disable": "error",
+	"unicorn/no-accessor-recursion": "error",
 	"unicorn/no-anonymous-default-export": "error",
 	"unicorn/no-array-callback-reference": "off",
 	"unicorn/no-array-for-each": "error",
@@ -72,6 +75,7 @@ const unicornRules = {
 	"unicorn/no-for-loop": "error",
 	"unicorn/no-hex-escape": "error",
 	"unicorn/no-instanceof-array": "error",
+	"unicorn/no-instanceof-builtins": "error",
 	"unicorn/no-invalid-fetch-options": "error",
 	"unicorn/no-invalid-remove-event-listener": "error",
 	"unicorn/no-keyword-prefix": [
@@ -84,6 +88,7 @@ const unicornRules = {
 	"unicorn/no-length-as-slice-end": "error",
 	"unicorn/no-lonely-if": "error",
 	"unicorn/no-magic-array-flat-depth": "error",
+	"unicorn/no-named-default": "error",
 	"unicorn/no-negated-condition": "error",
 	"unicorn/no-negation-in-equality-check": "error",
 	"unicorn/no-nested-ternary": "error",

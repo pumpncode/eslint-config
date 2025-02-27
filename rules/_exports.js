@@ -1,6 +1,5 @@
 export { default as dependRules } from "./depend.js";
 export { default as eslintCommentsRules } from "./eslint-comments.js";
-export { default as funcParamsArgsRules } from "./func-params-args.js";
 // export { default as githubRules } from "./github.js";
 export { default as importXRules } from "./import-x.js";
 export { default as jsdocRules } from "./jsdoc.js";
@@ -14,6 +13,7 @@ export { default as perfectionistRules } from "./perfectionist.js";
 export { default as possibleProblemsRules } from "./possible-problems.js";
 export { default as reactRules } from "./react.js";
 // export { default as redosRules } from "./redos.js";
+export { default as commandRules } from "./command.js";
 export { default as regexpRules } from "./regexp.js";
 export { default as securityRules } from "./security.js";
 export { default as sonarjsRules } from "./sonarjs.js";

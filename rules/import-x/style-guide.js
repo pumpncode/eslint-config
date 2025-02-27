@@ -31,12 +31,7 @@ const styleGuideRules = {
 	"import-x/no-duplicates": "error",
 	"import-x/no-named-default": "error",
 	"import-x/no-named-export": "off",
-	"import-x/no-namespace": [
-		"error",
-		{
-			ignore: ["{./**/,**/}_exports.?(*.)js", "@typescript-eslint/parser"]
-		}
-	],
+	"import-x/no-namespace": "off",
 	"import-x/no-unassigned-import": "error",
 	"import-x/order": [
 		"off",

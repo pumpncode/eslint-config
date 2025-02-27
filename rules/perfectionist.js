@@ -39,7 +39,8 @@ const perfectionistRules = {
 				["private-method", "private-function-property"],
 				"unknown"
 			],
-			partitionByComment: String.raw`\/\/`
+			partitionByComment: String.raw`\/\/`,
+			partitionByNewLine: false
 		}
 	],
 	"perfectionist/sort-enums": ["error"],
@@ -97,7 +98,15 @@ const perfectionistRules = {
 			]
 		}
 	],
-	"perfectionist/sort-maps": ["error"],
+	"perfectionist/sort-maps": [
+		"error",
+		{
+			ignoreCase: false,
+			order: "asc",
+			partitionByNewLine: true,
+			type: "natural"
+		}
+	],
 	"perfectionist/sort-named-exports": ["error"],
 	"perfectionist/sort-named-imports": ["error", { partitionByComment: false }],
 	"perfectionist/sort-object-types": ["error"],
