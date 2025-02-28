@@ -10,7 +10,6 @@ import react from "@eslint-react/eslint-plugin";
 import stylistic from "@stylistic/eslint-plugin";
 import command from "eslint-plugin-command";
 import depend from "eslint-plugin-depend";
-import disableAutofix from "eslint-plugin-disable-autofix";
 import importX from "eslint-plugin-import-x";
 import jsdoc from "eslint-plugin-jsdoc";
 import noSecrets from "eslint-plugin-no-secrets";
@@ -42,7 +41,6 @@ const plugins = /** @type {const} */ ({
 	"@stylistic": /** @type {ESLint.Plugin} */ (stylistic),
 	command,
 	depend,
-	"disable-autofix": disableAutofix,
 	"import-x": /** @type {ESLint.Plugin} */ (
 		/** @type {unknown} */ (importX)
 	),

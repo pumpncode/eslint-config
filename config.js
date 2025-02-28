@@ -1,5 +1,4 @@
 import * as parser from "@typescript-eslint/parser";
-import { getJsdocProcessorPlugin } from "eslint-plugin-jsdoc/getJsdocProcessorPlugin.js";
 import globals from "globals";
 
 import plugins from "./plugins.js";
@@ -25,29 +24,6 @@ const convertedGlobals = Object.fromEntries(
 );
 
 const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
-
-const rulesDisabledInExamples = new Set([
-	"@eslint-react/no-leaked-conditional-rendering",
-	"@eslint-react/prefer-read-only-props",
-	"@stylistic/eol-last",
-	"@stylistic/line-comment-position",
-	"@stylistic/no-multiple-empty-lines",
-	"import-x/no-self-import",
-	"no-inline-comments"
-]);
-
-const rulesWithAutofixDisabled = Object.fromEntries(
-	Object.entries(rules)
-		.flatMap(([key, value]) => [
-			[key, "off"],
-			[
-				`disable-autofix/${key}`,
-				rulesDisabledInExamples.has(key)
-					? "off"
-					: value
-			]
-		])
-);
 
 /**
  * ESLint configuration.
@@ -194,39 +170,6 @@ const config = /** @type {const} */ ([
 		rules: {
 			"no-undef": "off"
 		}
-	},
-	{
-		files: [defaultGlob],
-		plugins: {
-			examples: getJsdocProcessorPlugin({
-				captionRequired: false,
-				checkDefaults: true,
-				checkExamples: true,
-				checkParams: true,
-				checkProperties: true,
-				paddedIndent: 0,
-				parser,
-				sourceType: "module"
-			})
-		},
-		processor: "examples/examples"
-	},
-	{
-		files: [
-			"**/*.md/*.js",
-			"**/*.jsdoc-defaults",
-			"**/*.jsdoc-params",
-			"**/*.jsdoc-properties"
-		],
-		languageOptions: {
-			parserOptions: {
-				program: null,
-				project: false,
-				projectService: false
-			}
-		},
-		plugins,
-		rules: rulesWithAutofixDisabled
 	},
 	{
 		files: ["**/*.doc.js"],

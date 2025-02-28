@@ -26,7 +26,6 @@
 		"@typescript-eslint/parser": "^8.25.0",
 		"eslint-plugin-command": "^3.1.0",
 		"eslint-plugin-depend": "^0.12.0",
-		"eslint-plugin-disable-autofix": "github:pumpncode/eslint-plugin-disable-autofix",
 		"eslint-plugin-import-x": "^4.6.1",
 		"eslint-plugin-jsdoc": "^50.6.3",
 		"eslint-plugin-no-secrets": "^2.2.1",
