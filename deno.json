@@ -65,5 +65,5 @@
 	"exclude": [
 		"**/_fresh/*"
 	],
-	"nodeModulesDir": "none"
+	"nodeModulesDir": "manual"
 }
