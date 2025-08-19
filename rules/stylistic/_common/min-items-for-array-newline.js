@@ -1,3 +1,3 @@
-const minItemsForArrayNewline = 3;
+const minItemsForArrayNewline = 4;
 
 export default minItemsForArrayNewline;

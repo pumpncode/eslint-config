@@ -1,7 +1,7 @@
 import * as reactRuleSets from "./react/_exports.js";
 
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**

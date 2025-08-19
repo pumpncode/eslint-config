@@ -1,42 +1,62 @@
 import { join } from "@std/path";
 
+import denoJson from "../deno.json" with { type: "json" };
+import packageJson from "../package.json" with { type: "json" };
+
 const {
 	cwd,
-	readTextFile,
 	writeTextFile
 } = Deno;
 
-const importMapFilePath = join(cwd(), "deno.json");
-const importMapFileContent = await readTextFile(importMapFilePath);
-const importMap = JSON.parse(importMapFileContent);
-
 const packageJsonFilePath = join(cwd(), "package.json");
-const packageJsonFileContent = await readTextFile(packageJsonFilePath);
-const packageJson = JSON.parse(packageJsonFileContent);
 
 const collator = new Intl.Collator("en", {
 	numeric: true
 });
 
+/**
+ * Parses the version from a URL.
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+const parseVersion = (url) => url.replace(/^npm:.*?@(?=[^@]+$)/v, "");
+
+/**
+ * Converts import map entries to a sorted array of tuples with specificer and version.
+ *
+ * @param {readonly (readonly [string, string])[]} entries
+ * @returns {readonly (readonly [string, string])[]}
+ */
+const convertImportMapEntries = (entries) => entries
+	.map(([specificer, url]) => /** @type {const} */ ([specificer, parseVersion(url)]))
+	.toSorted((
+		[packageNameA],
+		[packageNameB]
+	) => collator.compare(
+		packageNameA,
+		packageNameB
+	));
+
 const updatedPackageJson = {
 	...packageJson,
 	dependencies: Object.fromEntries(
-		Object.entries(
-			importMap.imports
+		convertImportMapEntries(
+			Object.entries(denoJson.imports)
+				.filter(([specifier, url]) => url.startsWith("npm:") && specifier !== "eslint")
 		)
-			.filter(([specifier, url]) => url.startsWith("npm:"))
-			.map(([specificer, url]) => {
-				const version = url.replace(/^npm:.*?@(?<version>[^@]+)$/v, "$<version>");
-
-				return [specificer, version];
-			})
-			.toSorted((
-				[packageNameA],
-				[packageNameB]
-			) => collator.compare(
-				packageNameA,
-				packageNameB
-			))
+	),
+	devDependencies: Object.fromEntries(
+		convertImportMapEntries(
+			Object.entries(denoJson.imports)
+				.filter(([specifier, url]) => url.startsWith("npm:") && specifier === "eslint")
+		)
+	),
+	peerDependencies: Object.fromEntries(
+		convertImportMapEntries(
+			Object.entries(denoJson.imports)
+				.filter(([specifier, url]) => url.startsWith("npm:") && specifier === "eslint")
+		)
 	)
 };
 

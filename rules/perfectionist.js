@@ -1,5 +1,5 @@
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**
@@ -9,7 +9,8 @@ const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",
 		{
-			groupKind: "literals-first"
+			groupKind: "mixed",
+			groups: ["literal", "spread"]
 		}
 	],
 	"perfectionist/sort-classes": [
@@ -43,8 +44,10 @@ const perfectionistRules = {
 			partitionByNewLine: false
 		}
 	],
-	"perfectionist/sort-enums": ["error"],
-	"perfectionist/sort-exports": ["error"],
+	"perfectionist/sort-decorators": "error",
+	"perfectionist/sort-enums": "error",
+	"perfectionist/sort-exports": "error",
+	"perfectionist/sort-heritage-clauses": "error",
 	"perfectionist/sort-imports": [
 		"error",
 		{
@@ -80,14 +83,14 @@ const perfectionistRules = {
 				"index",
 				"unknown"
 			],
-			internalPattern: ["^@/.*"],
+			internalPattern: ["^@/.+"],
 			newlinesBetween: "always",
 			partitionByNewLine: false,
 			sortSideEffects: true
 		}
 	],
-	"perfectionist/sort-interfaces": ["error"],
-	"perfectionist/sort-intersection-types": ["error"],
+	"perfectionist/sort-interfaces": "error",
+	"perfectionist/sort-intersection-types": "error",
 	"perfectionist/sort-jsx-props": [
 		"error",
 		{
@@ -98,18 +101,11 @@ const perfectionistRules = {
 			]
 		}
 	],
-	"perfectionist/sort-maps": [
-		"error",
-		{
-			ignoreCase: false,
-			order: "asc",
-			partitionByNewLine: true,
-			type: "natural"
-		}
-	],
-	"perfectionist/sort-named-exports": ["error"],
+	"perfectionist/sort-maps": "error",
+	"perfectionist/sort-modules": "off",
+	"perfectionist/sort-named-exports": "error",
 	"perfectionist/sort-named-imports": ["error", { partitionByComment: false }],
-	"perfectionist/sort-object-types": ["error"],
+	"perfectionist/sort-object-types": "error",
 	"perfectionist/sort-objects": [
 		"error",
 		{
@@ -196,9 +192,9 @@ const perfectionistRules = {
 			]
 		}
 	],
-	"perfectionist/sort-sets": ["error"],
-	"perfectionist/sort-switch-case": ["error"],
-	"perfectionist/sort-union-types": ["error"],
+	"perfectionist/sort-sets": "error",
+	"perfectionist/sort-switch-case": "error",
+	"perfectionist/sort-union-types": "error",
 	"perfectionist/sort-variable-declarations": ["error", { partitionByComment: false }]
 };
 

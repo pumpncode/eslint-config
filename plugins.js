@@ -1,5 +1,5 @@
-/* eslint-disable object-shorthand -- const types */
-/* eslint-disable import-x/no-rename-default -- bad export names */
+// TODO [2025-10-01]: Remove this directive once https://github.com/eslint-stylistic/eslint-stylistic/issues/573 is resolved
+/* eslint-disable object-shorthand -- see above */
 /* eslint-disable import-x/max-dependencies -- collection file */
 
 // import github from "eslint-plugin-github";
@@ -16,7 +16,7 @@ import noSecrets from "eslint-plugin-no-secrets";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
 import redos from "eslint-plugin-redos";
-import regexp from "eslint-plugin-regexp";
+import * as regexp from "eslint-plugin-regexp";
 import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
 import tailwindcss from "eslint-plugin-tailwindcss";
@@ -38,22 +38,26 @@ const plugins = /** @type {const} */ ({
 	// "jsx-a11y": jsxA11y,
 	// "no-unsanitized": noUnsanitized,
 	"@eslint-community/eslint-comments": eslintComments,
-	"@stylistic": /** @type {ESLint.Plugin} */ (stylistic),
+	"@stylistic": stylistic,
 	command,
 	depend,
+	// TODO [2025-10-01]: Remove assertion once https://github.com/un-ts/eslint-plugin-import-x/issues/421 is resolved
 	"import-x": /** @type {ESLint.Plugin} */ (
-		/** @type {unknown} */ (importX)
+		/** @type {unknown} */ (
+			importX
+		)
 	),
 	jsdoc,
 	"no-secrets": noSecrets,
-	perfectionist: /** @type {ESLint.Plugin} */ (
-		/** @type {unknown} */ (perfectionist)
-	),
+	perfectionist,
 	promise,
 	redos,
 	regexp,
 	security,
-	sonarjs,
+	// TODO [2025-10-01]: Remove assertion once an issue is opened at https://community.sonarsource.com/ and resolved (:/)
+	sonarjs: /** @type {ESLint.Plugin} */ (
+		sonarjs
+	),
 	tailwindcss,
 	unicorn,
 	...reactPlugins

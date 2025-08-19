@@ -1,7 +1,7 @@
 import * as stylisticRuleSets from "./stylistic/_exports.js";
 
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**

@@ -1,5 +1,18 @@
 {
 	"deno.enable": true,
 	"deno.lint": false,
-	"eslint.useESLintClass": true
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.hg/store/**": true,
+		"**/.dart_tool": true,
+		"**/.trunk/*actions/": true,
+		"**/.trunk/*logs/": true,
+		"**/.trunk/*out": true,
+		"**/.trunk/*out/": true,
+		"**/.trunk/*plugins/": true,
+		"**/.git/**": true,
+		"**/node_modules/**": true,
+		"**/.vscode/**": true
+	}
 }

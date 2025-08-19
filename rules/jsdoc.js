@@ -1,5 +1,5 @@
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**
@@ -144,7 +144,7 @@ const jsdocRules = {
 		}
 	],
 	"jsdoc/require-description-complete-sentence": "off",
-	"jsdoc/require-example": "warn",
+	"jsdoc/require-example": "off",
 	"jsdoc/require-file-overview": [
 		"off",
 		{
@@ -163,31 +163,7 @@ const jsdocRules = {
 		}
 	],
 	"jsdoc/require-hyphen-before-param-description": ["warn", "always"],
-	"jsdoc/require-jsdoc": [
-		"warn",
-		{
-			contexts: [
-				`
-					:not(
-						:matches(
-							ObjectExpression > Property,
-							ArrayExpression:has(Literal ~ ArrowFunctionExpression),
-							CallExpression,
-							Property > AssignmentPattern
-						)
-					) > ArrowFunctionExpression
-				`.replaceAll(/\s/gv, "")
-			],
-			require: {
-				ArrowFunctionExpression: false,
-				ClassDeclaration: true,
-				ClassExpression: true,
-				FunctionDeclaration: true,
-				FunctionExpression: false,
-				MethodDefinition: true
-			}
-		}
-	],
+	"jsdoc/require-jsdoc": "off",
 	"jsdoc/require-param": ["warn", { unnamedRootBase: ["options"] }],
 	"jsdoc/require-param-description": [
 		"warn",

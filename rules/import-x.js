@@ -1,7 +1,7 @@
 import * as importRuleSets from "./import-x/_exports.js";
 
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**

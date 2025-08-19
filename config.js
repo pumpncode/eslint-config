@@ -1,12 +1,10 @@
 import * as parser from "@typescript-eslint/parser";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 
 import plugins from "./plugins.js";
 import rules from "./rules.js";
-
-/**
- * @import { Linter } from "eslint"
- */
 
 const cssFilesRefreshRate = 5_000;
 
@@ -25,15 +23,26 @@ const convertedGlobals = Object.fromEntries(
 
 const defaultGlob = "**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}";
 
+const typeScriptExtensions = /** @type {const} */ ([
+	".ts",
+	".tsx",
+	".cts",
+	".mts"
+]);
+
+const allExtensions = /** @type {const} */ ([
+	...typeScriptExtensions,
+	".js",
+	".jsx",
+	".cjs",
+	".mjs"
+]);
+
 /**
- * ESLint configuration.
- *
  * This configuration includes settings for various file types, plugins, and rules.
  * It also defines specific settings for different environments and file patterns.
- *
- * @satisfies {Linter.Config[]}
  */
-const config = /** @type {const} */ ([
+const config = defineConfig([
 	{
 		ignores: [
 			"_fresh/**",
@@ -73,21 +82,16 @@ const config = /** @type {const} */ ([
 		rules,
 		settings: {
 			formComponents: ["Form"],
-			"import-x/core-modules": [],
-			"import-x/extensions": [
-				".js",
-				".mjs",
-				".jsx"
-			],
-			"import-x/ignore": ["@turf/turf"],
+			"import-x/extensions": allExtensions,
+			"import-x/external-module-folders": ["node_modules", "node_modules/@types"],
 			"import-x/parsers": {
-				espree: [
-					".js",
-					".cjs",
-					".mjs",
-					".jsx"
-				]
+				"@typescript-eslint/parser": [...typeScriptExtensions]
 			},
+			"import-x/resolver-next": [
+				createTypeScriptImportResolver({
+					alwaysTryTypes: true
+				})
+			],
 			jsdoc: {
 				mode: "typescript",
 				tagNamePreference: {
@@ -108,6 +112,7 @@ const config = /** @type {const} */ ([
 				order: "asc",
 				partitionByComment: true,
 				partitionByNewLine: true,
+				specialCharacters: "keep",
 				type: "natural"
 			},
 			"react-x": {

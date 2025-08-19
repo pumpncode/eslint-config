@@ -1,5 +1,5 @@
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 const hexadecimalGroupLength = 2;
@@ -48,11 +48,12 @@ const unicornRules = {
 	"unicorn/custom-error-definition": "error",
 	"unicorn/empty-brace-spaces": "error",
 	"unicorn/error-message": "error",
-	"unicorn/escape-case": "error",
+	"unicorn/escape-case": ["error", "uppercase"],
 	"unicorn/expiring-todo-comments": [
 		"error",
 		{
-			allowWarningComments: false
+			allowWarningComments: false,
+			terms: ["todo", "fixme"]
 		}
 	],
 	"unicorn/explicit-length-check": "error",
@@ -65,8 +66,8 @@ const unicornRules = {
 	"unicorn/no-array-callback-reference": "off",
 	"unicorn/no-array-for-each": "error",
 	"unicorn/no-array-method-this-argument": "error",
-	"unicorn/no-array-push-push": "error",
 	"unicorn/no-array-reduce": "off",
+	"unicorn/no-array-reverse": "error",
 	"unicorn/no-await-expression-member": "error",
 	"unicorn/no-await-in-promise-methods": "error",
 	"unicorn/no-console-spaces": "error",
@@ -85,7 +86,6 @@ const unicornRules = {
 			onlyCamelCase: true
 		}
 	],
-	"unicorn/no-length-as-slice-end": "error",
 	"unicorn/no-lonely-if": "error",
 	"unicorn/no-magic-array-flat-depth": "error",
 	"unicorn/no-named-default": "error",
@@ -102,11 +102,15 @@ const unicornRules = {
 	"unicorn/no-thenable": "error",
 	"unicorn/no-this-assignment": "error",
 	"unicorn/no-typeof-undefined": "error",
+	"unicorn/no-unnecessary-array-flat-depth": "error",
+	"unicorn/no-unnecessary-array-splice-count": "error",
 	"unicorn/no-unnecessary-await": "error",
 	"unicorn/no-unnecessary-polyfills": "error",
+	"unicorn/no-unnecessary-slice-end": "error",
 	"unicorn/no-unreadable-array-destructuring": "error",
 	"unicorn/no-unreadable-iife": "error",
 	"unicorn/no-unused-properties": "error",
+	"unicorn/no-useless-error-capture-stack-trace": "error",
 	"unicorn/no-useless-fallback-in-spread": "error",
 	"unicorn/no-useless-length-check": "error",
 	"unicorn/no-useless-promise-resolve-reject": "error",
@@ -114,7 +118,12 @@ const unicornRules = {
 	"unicorn/no-useless-switch-case": "error",
 	"unicorn/no-useless-undefined": "error",
 	"unicorn/no-zero-fractions": "error",
-	"unicorn/number-literal-case": "error",
+	"unicorn/number-literal-case": [
+		"error",
+		{
+			hexadecimalValue: "uppercase"
+		}
+	],
 	"unicorn/numeric-separators-style": [
 		"error",
 		{
@@ -145,6 +154,7 @@ const unicornRules = {
 	"unicorn/prefer-array-some": "error",
 	"unicorn/prefer-at": "error",
 	"unicorn/prefer-blob-reading-methods": "error",
+	"unicorn/prefer-class-fields": "error",
 	"unicorn/prefer-code-point": "error",
 	"unicorn/prefer-date-now": "error",
 	"unicorn/prefer-default-parameters": "error",
@@ -155,6 +165,7 @@ const unicornRules = {
 	"unicorn/prefer-event-target": "error",
 	"unicorn/prefer-export-from": "error",
 	"unicorn/prefer-global-this": "error",
+	"unicorn/prefer-import-meta-properties": "error",
 	"unicorn/prefer-includes": "error",
 	"unicorn/prefer-json-parse-buffer": "off",
 	"unicorn/prefer-keyboard-event-key": "error",
@@ -181,6 +192,7 @@ const unicornRules = {
 	"unicorn/prefer-regexp-test": "error",
 	"unicorn/prefer-set-has": "error",
 	"unicorn/prefer-set-size": "error",
+	"unicorn/prefer-single-call": "error",
 	"unicorn/prefer-spread": "error",
 	"unicorn/prefer-string-raw": "error",
 	"unicorn/prefer-string-replace-all": "error",
@@ -195,6 +207,7 @@ const unicornRules = {
 	"unicorn/prevent-abbreviations": "error",
 	"unicorn/relative-url-style": "error",
 	"unicorn/require-array-join-separator": "error",
+	"unicorn/require-module-specifiers": "error",
 	"unicorn/require-number-to-fixed-digits-argument": "error",
 	"unicorn/require-post-message-target-origin": "off",
 	"unicorn/string-content": [

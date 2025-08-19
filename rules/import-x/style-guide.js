@@ -4,7 +4,14 @@ const styleGuideRules = {
 	"import-x/consistent-type-specifier-style": "error",
 	"import-x/dynamic-import-chunkname": "off",
 	"import-x/exports-last": "error",
-	"import-x/extensions": ["error", "ignorePackages"],
+	"import-x/extensions": [
+		"error",
+		"ignorePackages",
+		{
+			checkTypeImports: true,
+			fix: true
+		}
+	],
 	"import-x/first": "error",
 	"import-x/group-exports": "error",
 	"import-x/max-dependencies": [
@@ -75,7 +82,8 @@ const styleGuideRules = {
 			warnOnUnassignedImports: false
 		}
 	],
-	"import-x/prefer-default-export": ["error", { target: "single" }]
+	"import-x/prefer-default-export": ["error", { target: "single" }],
+	"import-x/prefer-namespace-import": ["error", { patterns: ["react"] }]
 };
 
 export default styleGuideRules;

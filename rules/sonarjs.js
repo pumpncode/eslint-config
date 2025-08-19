@@ -1,7 +1,7 @@
 import * as sonarjsRuleSets from "./sonarjs/_exports.js";
 
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**

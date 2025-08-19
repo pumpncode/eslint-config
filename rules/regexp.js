@@ -1,7 +1,7 @@
 import * as regexpRuleSets from "./regexp/_exports.js";
 
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 /**

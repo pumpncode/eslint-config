@@ -1,5 +1,5 @@
 /**
- * @import { Linter } from "eslint"
+ * @import { Linter } from "eslint";
  */
 
 const tolerance = 5;
