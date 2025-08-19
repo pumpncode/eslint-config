@@ -1,8 +1,6 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@std/internal@^1.0.10": "1.0.10",
-    "jsr:@std/path@1": "1.1.2",
     "npm:@eslint-community/eslint-plugin-eslint-comments@^4.5.0": "4.5.0_eslint@9.33.0",
     "npm:@eslint-react/eslint-plugin@^1.52.6": "1.52.6_eslint@9.33.0",
     "npm:@stylistic/eslint-plugin@^5.2.3": "5.2.3_eslint@9.33.0",
@@ -24,17 +22,6 @@
     "npm:eslint@*": "9.33.0",
     "npm:eslint@^9.33.0": "9.33.0",
     "npm:globals@^16.3.0": "16.3.0"
-  },
-  "jsr": {
-    "@std/internal@1.0.10": {
-      "integrity": "e3be62ce42cab0e177c27698e5d9800122f67b766a0bea6ca4867886cbde8cf7"
-    },
-    "@std/path@1.1.2": {
-      "integrity": "c0b13b97dfe06546d5e16bf3966b1cadf92e1cc83e56ba5476ad8b498d9e3038",
-      "dependencies": [
-        "jsr:@std/internal"
-      ]
-    }
   },
   "npm": {
     "@babel/helper-validator-identifier@7.27.1": {
@@ -2416,12 +2403,6 @@
     "zod@4.0.17": {
       "integrity": "sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ=="
     }
-  },
-  "remote": {
-    "https://esm.sh/*preact@10.19.3/denonext/jsx-runtime.development.mjs": "ebb1aabad1ba79fab26fd10860f6966079bcc49446261756d3aab2015f74c9da",
-    "https://esm.sh/*preact@10.19.3/denonext/preact.development.mjs": "490b9d9db533ec16ae123b35eacc2da7790de5f7c4b9dd5488a5815c35339a8b",
-    "https://esm.sh/*preact@10.19.3/jsx-runtime?dev": "93d93980c0522f6c00bd867b1b9df986da98ed6849892320705b89b27149e417",
-    "https://esm.sh/*preact@10.19.3?dev": "e9581939664914f17efaf2a51b4d95225530c8013e21b66bf3546e5c2f386b70"
   },
   "workspace": {
     "dependencies": [
