@@ -44,11 +44,7 @@ const allExtensions = /** @type {const} */ ([
  */
 const config = defineConfig([
 	{
-		ignores: [
-			"_fresh/**",
-			"documentation/**",
-			"patches/**"
-		]
+		ignores: ["_fresh/**", "documentation/**", "patches/**"]
 	},
 	{
 		files: [defaultGlob],
@@ -123,11 +119,7 @@ const config = defineConfig([
 				allowedCharacterRanges: ["alphanumeric"]
 			},
 			tailwindcss: {
-				callees: [
-					"classnames",
-					"clsx",
-					"ctl"
-				],
+				callees: ["classnames", "clsx", "ctl"],
 				classRegex: "^class(Name)?$",
 				config: "tailwind.config.js",
 				cssFiles: [
@@ -160,11 +152,7 @@ const config = defineConfig([
 		}
 	},
 	{
-		files: [
-			"benchmarks/**/*",
-			"tests/**/*",
-			"scripts/**/*"
-		],
+		files: ["benchmarks/**/*", "tests/**/*", "scripts/**/*"],
 		rules: {
 			"import-x/no-unused-modules": "off",
 			"import-x/unambiguous": "off"

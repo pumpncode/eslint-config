@@ -94,11 +94,7 @@ const perfectionistRules = {
 	"perfectionist/sort-jsx-props": [
 		"error",
 		{
-			groups: [
-				"shorthand",
-				"unknown",
-				"multiline"
-			]
+			groups: ["shorthand", "unknown", "multiline"]
 		}
 	],
 	"perfectionist/sort-maps": "error",
@@ -114,11 +110,7 @@ const perfectionistRules = {
 				groupBeforeAfter1: ["^before.*"],
 				groupBeforeAfter2: ["^after.*"],
 				groupColor1: ["^r$", "^l$"],
-				groupColor2: [
-					"^g$",
-					"^c$",
-					"^a$"
-				],
+				groupColor2: ["^g$", "^c$", "^a$"],
 				groupColor3: ["^b$", "^h$"],
 				groupMinimumMaximum1: ["^minimum(([A-Z].*)|$)"],
 				groupMinimumMaximum2: ["^maximum(([A-Z].*)|$)"],

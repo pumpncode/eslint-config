@@ -21,11 +21,7 @@ const eslintConfig = [
 		}
 	},
 	{
-		files: [
-			"plugins.js",
-			"rules/_exports.js",
-			"rules/func-params-args.js"
-		],
+		files: ["plugins.js", "rules/_exports.js", "rules/func-params-args.js"],
 		rules: {
 			"unicorn/prevent-abbreviations": [
 				"error",

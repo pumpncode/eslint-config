@@ -8,7 +8,6 @@ const indentRules = {
 		}
 	],
 	"@stylistic/indent-binary-ops": ["error", "tab"],
-	"@stylistic/jsx-indent": ["error", "tab"],
 	"@stylistic/jsx-indent-props": ["error", "tab"]
 };
 

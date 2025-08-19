@@ -38,25 +38,13 @@ const lineBreaksRules = {
 			blankLine: "always"
 		},
 		{
-			prev: [
-				"const",
-				"let",
-				"var"
-			],
+			prev: ["const", "let", "var"],
 			next: "*",
 			blankLine: "always"
 		},
 		{
-			prev: [
-				"const",
-				"let",
-				"var"
-			],
-			next: [
-				"const",
-				"let",
-				"var"
-			],
+			prev: ["const", "let", "var"],
+			next: ["const", "let", "var"],
 			blankLine: "any"
 		},
 		{

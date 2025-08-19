@@ -53,11 +53,7 @@ const suggestionsRules = {
 	"dot-notation": "error",
 	eqeqeq: "error",
 	"func-name-matching": "error",
-	"func-names": [
-		"error",
-		"as-needed",
-		{ generators: "as-needed" }
-	],
+	"func-names": ["error", "as-needed", { generators: "as-needed" }],
 	"func-style": "error",
 	"grouped-accessor-pairs": "error",
 	"guard-for-in": "off",
@@ -67,11 +63,7 @@ const suggestionsRules = {
 		{
 			min: minIdentifierLength,
 			max: maxIdentifierLength,
-			exceptions: [
-				"x",
-				"y",
-				"z"
-			],
+			exceptions: ["x", "y", "z"],
 			properties: "never"
 		}
 	],
@@ -88,11 +80,7 @@ const suggestionsRules = {
 	"no-console": [
 		"error",
 		{
-			allow: [
-				"warn",
-				"error",
-				"info"
-			]
+			allow: ["warn", "error", "info"]
 		}
 	],
 	"no-continue": "off",

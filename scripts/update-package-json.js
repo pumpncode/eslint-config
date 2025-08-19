@@ -17,16 +17,16 @@ const collator = new Intl.Collator("en", {
 /**
  * Parses the version from a URL.
  *
- * @param {string} url
- * @returns {string}
+ * @param {string} url - The URL to parse.
+ * @returns {string} - The parsed version.
  */
 const parseVersion = (url) => url.replace(/^npm:.*?@(?=[^@]+$)/v, "");
 
 /**
  * Converts import map entries to a sorted array of tuples with specificer and version.
  *
- * @param {readonly (readonly [string, string])[]} entries
- * @returns {readonly (readonly [string, string])[]}
+ * @param {readonly (readonly [string, string])[]} entries - The import map entries to convert.
+ * @returns {readonly (readonly [string, string])[]} - The sorted array of tuples.
  */
 const convertImportMapEntries = (entries) => entries
 	.map(([specificer, url]) => /** @type {const} */ ([specificer, parseVersion(url)]))
