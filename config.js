@@ -65,8 +65,7 @@ const config = defineConfig([
 				parser,
 				project: "./tsconfig.json",
 				requireConfigFile: false,
-				sourceType: "module",
-				tsconfigRootDir: "./"
+				sourceType: "module"
 			},
 			sourceType: "module"
 		},

@@ -3,8 +3,6 @@ const namingConventionRules = {
 		"error",
 		{
 			allowAllCaps: false,
-			allowLeadingUnderscore: false,
-			allowNamespace: false,
 			excepts: [],
 			rule: "PascalCase"
 		}

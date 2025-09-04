@@ -11,7 +11,6 @@ const jsxRules = {
 	],
 	"@stylistic/jsx-one-expression-per-line": ["error", { allow: "single-line" }],
 	"@stylistic/jsx-pascal-case": ["error", { allowNamespace: true }],
-	"@stylistic/jsx-props-no-multi-spaces": "error",
 	"@stylistic/jsx-self-closing-comp": "error",
 	"@stylistic/jsx-sort-props": [
 		"off",
