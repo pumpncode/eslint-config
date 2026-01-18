@@ -9,7 +9,6 @@ const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",
 		{
-			groupKind: "mixed",
 			groups: ["literal", "spread"]
 		}
 	],
@@ -46,22 +45,39 @@ const perfectionistRules = {
 	],
 	"perfectionist/sort-decorators": "error",
 	"perfectionist/sort-enums": "error",
+	"perfectionist/sort-export-attributes": "error",
 	"perfectionist/sort-exports": "error",
 	"perfectionist/sort-heritage-clauses": "error",
+	"perfectionist/sort-import-attributes": "error",
 	"perfectionist/sort-imports": [
 		"error",
 		{
-			customGroups: {
-				type: {},
-				value: {
-					components: "^@/components/.*",
-					islands: "^@/islands/.*",
-					logic: "^@/logic/.*",
-					plugins: "^@/plugins/.*",
-					std: "^@std/.*",
-					utilities: "^@/utilities/.*"
+			customGroups: [
+				{
+					elementNamePattern: "^@/components/.*",
+					groupName: "components"
+				},
+				{
+					elementNamePattern: "^@/islands/.*",
+					groupName: "islands"
+				},
+				{
+					elementNamePattern: "^@/logic/.*",
+					groupName: "logic"
+				},
+				{
+					elementNamePattern: "^@/plugins/.*",
+					groupName: "plugins"
+				},
+				{
+					elementNamePattern: "^@std/.*",
+					groupName: "std"
+				},
+				{
+					elementNamePattern: "^@/utilities/.*",
+					groupName: "utilities"
 				}
-			},
+			],
 			groups: [
 				"builtin",
 				"std",
@@ -73,10 +89,10 @@ const perfectionistRules = {
 				"islands",
 				"internal",
 				"type",
-				"internal-type",
-				"parent-type",
-				"sibling-type",
-				"index-type",
+				"type-internal",
+				"type-parent",
+				"type-sibling",
+				"type-index",
 				"object",
 				"parent",
 				"sibling",
@@ -84,7 +100,7 @@ const perfectionistRules = {
 				"unknown"
 			],
 			internalPattern: ["^@/.+"],
-			newlinesBetween: "always",
+			newlinesBetween: 1,
 			partitionByNewLine: false,
 			sortSideEffects: true
 		}
@@ -105,44 +121,152 @@ const perfectionistRules = {
 	"perfectionist/sort-objects": [
 		"error",
 		{
-			customGroups: {
-				id: ["^id$"],
-				groupBeforeAfter1: ["^before.*"],
-				groupBeforeAfter2: ["^after.*"],
-				groupColor1: ["^r$", "^l$"],
-				groupColor2: ["^g$", "^c$", "^a$"],
-				groupColor3: ["^b$", "^h$"],
-				groupMinimumMaximum1: ["^minimum(([A-Z].*)|$)"],
-				groupMinimumMaximum2: ["^maximum(([A-Z].*)|$)"],
-				groupMinMax1: ["^min(([A-Z_-].*)|$)"],
-				groupMinMax2: ["^max(([A-Z_-].*)|$)"],
-				groupPrecedenceOrdinal1: ["^primary.*"],
-				groupPrecedenceOrdinal2: ["^secondary.*"],
-				groupPrecedenceOrdinal3: ["^tertiary.*"],
-				groupPrecedenceOrdinal4: ["^quaternary.*"],
-				groupPrecedenceOrdinal5: ["^quinary.*"],
-				groupPrecedenceOrdinal6: ["^senary.*"],
-				groupPrecedenceOrdinal7: ["^septenary.*"],
-				groupPrecedenceOrdinal8: ["^octonary.*"],
-				groupPrecedenceOrdinal9: ["^nonary.*"],
-				groupPrecedenceOrdinal10: ["^denary.*"],
-				groupPrecedenceOrdinalLast: ["^ultimate.*"],
-				groupPreviousNext1: ["^previous.*"],
-				groupPreviousNext2: ["^next.*"],
-				groupPrevNext1: ["^prev(?!ent).*"],
-				groupPrevNext2: ["^next.*"],
-				groupSpatialOrdinal1: ["^first.*"],
-				groupSpatialOrdinal2: ["^second.*"],
-				groupSpatialOrdinal3: ["^third.*"],
-				groupSpatialOrdinal4: ["^fourth.*"],
-				groupSpatialOrdinal5: ["^fifth.*"],
-				groupSpatialOrdinal6: ["^sixth.*"],
-				groupSpatialOrdinal7: ["^seventh.*"],
-				groupSpatialOrdinal8: ["^eighth.*"],
-				groupSpatialOrdinal9: ["^ninth.*"],
-				groupSpatialOrdinal10: ["^tenth.*"],
-				groupSpatialOrdinalLast: ["^last.*"]
-			},
+			customGroups: [
+				{
+					elementNamePattern: ["^id$"],
+					groupName: "id"
+				},
+				{
+					elementNamePattern: ["^before.*"],
+					groupName: "groupBeforeAfter1"
+				},
+				{
+					elementNamePattern: ["^after.*"],
+					groupName: "groupBeforeAfter2"
+				},
+				{
+					elementNamePattern: ["^r$", "^l$"],
+					groupName: "groupColor1"
+				},
+				{
+					elementNamePattern: ["^g$", "^c$", "^a$"],
+					groupName: "groupColor2"
+				},
+				{
+					elementNamePattern: ["^b$", "^h$"],
+					groupName: "groupColor3"
+				},
+				{
+					elementNamePattern: ["^minimum(([A-Z].*)|$)"],
+					groupName: "groupMinimumMaximum1"
+				},
+				{
+					elementNamePattern: ["^maximum(([A-Z].*)|$)"],
+					groupName: "groupMinimumMaximum2"
+				},
+				{
+					elementNamePattern: ["^min(([A-Z_-].*)|$)"],
+					groupName: "groupMinMax1"
+				},
+				{
+					elementNamePattern: ["^max(([A-Z_-].*)|$)"],
+					groupName: "groupMinMax2"
+				},
+				{
+					elementNamePattern: ["^primary.*"],
+					groupName: "groupPrecedenceOrdinal1"
+				},
+				{
+					elementNamePattern: ["^secondary.*"],
+					groupName: "groupPrecedenceOrdinal2"
+				},
+				{
+					elementNamePattern: ["^tertiary.*"],
+					groupName: "groupPrecedenceOrdinal3"
+				},
+				{
+					elementNamePattern: ["^quaternary.*"],
+					groupName: "groupPrecedenceOrdinal4"
+				},
+				{
+					elementNamePattern: ["^quinary.*"],
+					groupName: "groupPrecedenceOrdinal5"
+				},
+				{
+					elementNamePattern: ["^senary.*"],
+					groupName: "groupPrecedenceOrdinal6"
+				},
+				{
+					elementNamePattern: ["^septenary.*"],
+					groupName: "groupPrecedenceOrdinal7"
+				},
+				{
+					elementNamePattern: ["^octonary.*"],
+					groupName: "groupPrecedenceOrdinal8"
+				},
+				{
+					elementNamePattern: ["^nonary.*"],
+					groupName: "groupPrecedenceOrdinal9"
+				},
+				{
+					elementNamePattern: ["^denary.*"],
+					groupName: "groupPrecedenceOrdinal10"
+				},
+				{
+					elementNamePattern: ["^ultimate.*"],
+					groupName: "groupPrecedenceOrdinalLast"
+				},
+				{
+					elementNamePattern: ["^previous.*"],
+					groupName: "groupPreviousNext1"
+				},
+				{
+					elementNamePattern: ["^next.*"],
+					groupName: "groupPreviousNext2"
+				},
+				{
+					elementNamePattern: ["^prev(?!ent).*"],
+					groupName: "groupPrevNext1"
+				},
+				{
+					elementNamePattern: ["^next.*"],
+					groupName: "groupPrevNext2"
+				},
+				{
+					elementNamePattern: ["^first.*"],
+					groupName: "groupSpatialOrdinal1"
+				},
+				{
+					elementNamePattern: ["^second.*"],
+					groupName: "groupSpatialOrdinal2"
+				},
+				{
+					elementNamePattern: ["^third.*"],
+					groupName: "groupSpatialOrdinal3"
+				},
+				{
+					elementNamePattern: ["^fourth.*"],
+					groupName: "groupSpatialOrdinal4"
+				},
+				{
+					elementNamePattern: ["^fifth.*"],
+					groupName: "groupSpatialOrdinal5"
+				},
+				{
+					elementNamePattern: ["^sixth.*"],
+					groupName: "groupSpatialOrdinal6"
+				},
+				{
+					elementNamePattern: ["^seventh.*"],
+					groupName: "groupSpatialOrdinal7"
+				},
+				{
+					elementNamePattern: ["^eighth.*"],
+					groupName: "groupSpatialOrdinal8"
+				},
+				{
+					elementNamePattern: ["^ninth.*"],
+					groupName: "groupSpatialOrdinal9"
+				},
+				{
+					elementNamePattern: ["^tenth.*"],
+					groupName: "groupSpatialOrdinal10"
+				},
+				{
+					elementNamePattern: ["^last.*"],
+					groupName: "groupSpatialOrdinalLast"
+				}
+			],
 			groups: [
 				"id",
 				"groupBeforeAfter1",
