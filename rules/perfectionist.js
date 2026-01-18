@@ -93,7 +93,6 @@ const perfectionistRules = {
 				"type-parent",
 				"type-sibling",
 				"type-index",
-				"object",
 				"parent",
 				"sibling",
 				"index",

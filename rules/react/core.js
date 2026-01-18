@@ -16,7 +16,6 @@ const coreRules = {
 	"@eslint-react/no-children-to-array": "error",
 	"@eslint-react/no-class-component": "error",
 	"@eslint-react/no-clone-element": "error",
-	"@eslint-react/no-complex-conditional-rendering": "error",
 	"@eslint-react/no-component-will-mount": "error",
 	"@eslint-react/no-component-will-receive-props": "error",
 	"@eslint-react/no-component-will-update": "error",

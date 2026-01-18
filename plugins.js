@@ -1,12 +1,11 @@
-// TODO [2025-10-01]: Remove this directive once https://github.com/eslint-stylistic/eslint-stylistic/issues/573 is resolved
-/* eslint-disable object-shorthand -- see above */
+// TODO [2026-07-01]: Remove the directive below once this is resolved: https://github.com/eslint-community/eslint-plugin-eslint-comments/pull/246#issuecomment-3764843636
+/* eslint-disable import-x/default -- see above */
 /* eslint-disable import-x/max-dependencies -- collection file */
 
 // import github from "eslint-plugin-github";
 // import jsxA11y from "eslint-plugin-jsx-a11y";
 // import noUnsanitized from "eslint-plugin-no-unsanitized";
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
-import react from "@eslint-react/eslint-plugin";
 import stylistic from "@stylistic/eslint-plugin";
 import command from "eslint-plugin-command";
 import depend from "eslint-plugin-depend";
@@ -15,6 +14,11 @@ import jsdoc from "eslint-plugin-jsdoc";
 import noSecrets from "eslint-plugin-no-secrets";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
+import reactDom from "eslint-plugin-react-dom";
+import reactHooksExtra from "eslint-plugin-react-hooks-extra";
+import reactNamingConvention from "eslint-plugin-react-naming-convention";
+import reactWebApi from "eslint-plugin-react-web-api";
+import react from "eslint-plugin-react-x";
 import redos from "eslint-plugin-redos";
 import * as regexp from "eslint-plugin-regexp";
 import security from "eslint-plugin-security";
@@ -25,10 +29,6 @@ import unicorn from "eslint-plugin-unicorn";
 /**
  * @import { Linter, ESLint } from "eslint"
  */
-
-const reactPlugins = /** @type {Record<string, ESLint.Plugin>} */ (
-	/** @type {unknown} */ (react.configs.all.plugins)
-);
 
 /**
  * @satisfies { Linter.Config["plugins"] }
@@ -41,7 +41,13 @@ const plugins = /** @type {const} */ ({
 	"@stylistic": stylistic,
 	command,
 	depend,
-	// TODO [2025-10-01]: Remove assertion once https://github.com/un-ts/eslint-plugin-import-x/issues/421 is resolved
+
+	"@eslint-react": react,
+	"@eslint-react/dom": reactDom,
+	"@eslint-react/hooks-extra": reactHooksExtra,
+	"@eslint-react/naming-convention": reactNamingConvention,
+	"@eslint-react/web-api": reactWebApi,
+	// TODO [2026-07-01]: Remove assertion once https://github.com/un-ts/eslint-plugin-import-x/issues/421 is resolved
 	"import-x": /** @type {ESLint.Plugin} */ (
 		/** @type {unknown} */ (
 			importX
@@ -54,13 +60,9 @@ const plugins = /** @type {const} */ ({
 	redos,
 	regexp,
 	security,
-	// TODO [2025-10-01]: Remove assertion once an issue is opened at https://community.sonarsource.com/ and resolved (:/)
-	sonarjs: /** @type {ESLint.Plugin} */ (
-		sonarjs
-	),
+	sonarjs,
 	tailwindcss,
-	unicorn,
-	...reactPlugins
+	unicorn
 });
 
 export default plugins;

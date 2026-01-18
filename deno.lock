@@ -4,7 +4,6 @@
     "jsr:@std/internal@^1.0.12": "1.0.12",
     "jsr:@std/path@^1.1.4": "1.1.4",
     "npm:@eslint-community/eslint-plugin-eslint-comments@^4.6.0": "4.6.0_eslint@9.39.2",
-    "npm:@eslint-react/eslint-plugin@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
     "npm:@stylistic/eslint-plugin@^5.7.0": "5.7.0_eslint@9.39.2",
     "npm:@typescript-eslint/parser@^8.53.0": "8.53.0_eslint@9.39.2_typescript@5.9.2",
     "npm:eslint-import-resolver-typescript@^4.4.4": "4.4.4_eslint@9.39.2_eslint-plugin-import-x@4.16.1__eslint@9.39.2__unrs-resolver@1.11.1_unrs-resolver@1.11.1",
@@ -15,12 +14,18 @@
     "npm:eslint-plugin-no-secrets@^2.2.1": "2.2.1_eslint@9.39.2",
     "npm:eslint-plugin-perfectionist@^5.3.1": "5.3.1_eslint@9.39.2",
     "npm:eslint-plugin-promise@^7.2.1": "7.2.1_eslint@9.39.2",
+    "npm:eslint-plugin-react-dom@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
+    "npm:eslint-plugin-react-hooks-extra@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
+    "npm:eslint-plugin-react-naming-convention@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
+    "npm:eslint-plugin-react-web-api@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
+    "npm:eslint-plugin-react-x@^2.7.2": "2.7.2_eslint@9.39.2_typescript@5.9.2",
     "npm:eslint-plugin-redos@^4.5.0": "4.5.0_eslint@9.39.2",
     "npm:eslint-plugin-regexp@^2.10.0": "2.10.0_eslint@9.39.2",
     "npm:eslint-plugin-security@^3.0.1": "3.0.1",
     "npm:eslint-plugin-sonarjs@^3.0.5": "3.0.5_eslint@9.39.2",
     "npm:eslint-plugin-tailwindcss@^4.0.0-beta.0": "4.0.0-beta.0_tailwindcss@4.1.12",
     "npm:eslint-plugin-unicorn@62": "62.0.0_eslint@9.39.2",
+    "npm:eslint@*": "9.39.2",
     "npm:eslint@^9.39.2": "9.39.2",
     "npm:globals@17": "17.0.0"
   },
@@ -129,25 +134,6 @@
     },
     "@eslint-react/eff@2.7.2": {
       "integrity": "sha512-AzQGbidoI8g8izka/1H9xCKW56NR7xWGGPMccBCUZwbCoJZ4wyRKcE10E7ot7LwBv5kBoUQp3GJ9UXCcg/Er0w=="
-    },
-    "@eslint-react/eslint-plugin@2.7.2_eslint@9.39.2_typescript@5.9.2": {
-      "integrity": "sha512-h9T5cc2TxsKMv/8iO63KKamXyJjHHAmeG2MJVjeIm4FaZdsX0/2Bx254B3Fa8IDqQi4X81AMyJ8ohtbxsn6pOw==",
-      "dependencies": [
-        "@eslint-react/eff",
-        "@eslint-react/shared",
-        "@typescript-eslint/scope-manager",
-        "@typescript-eslint/type-utils",
-        "@typescript-eslint/types",
-        "@typescript-eslint/utils",
-        "eslint",
-        "eslint-plugin-react-dom",
-        "eslint-plugin-react-hooks-extra",
-        "eslint-plugin-react-naming-convention",
-        "eslint-plugin-react-web-api",
-        "eslint-plugin-react-x",
-        "ts-api-utils",
-        "typescript"
-      ]
     },
     "@eslint-react/shared@2.7.2_eslint@9.39.2_typescript@5.9.2": {
       "integrity": "sha512-U1H3dLaTj7kvEbyJyJEgn6xX3BmrCH1f9f+tg9gLWlN7askgWT5NF56wfX1l+jtwiEAZD/78W1TfICKkMnZDxQ==",
@@ -1695,7 +1681,6 @@
     "dependencies": [
       "jsr:@std/path@^1.1.4",
       "npm:@eslint-community/eslint-plugin-eslint-comments@^4.6.0",
-      "npm:@eslint-react/eslint-plugin@^2.7.2",
       "npm:@stylistic/eslint-plugin@^5.7.0",
       "npm:@typescript-eslint/parser@^8.53.0",
       "npm:eslint-import-resolver-typescript@^4.4.4",
@@ -1706,6 +1691,11 @@
       "npm:eslint-plugin-no-secrets@^2.2.1",
       "npm:eslint-plugin-perfectionist@^5.3.1",
       "npm:eslint-plugin-promise@^7.2.1",
+      "npm:eslint-plugin-react-dom@^2.7.2",
+      "npm:eslint-plugin-react-hooks-extra@^2.7.2",
+      "npm:eslint-plugin-react-naming-convention@^2.7.2",
+      "npm:eslint-plugin-react-web-api@^2.7.2",
+      "npm:eslint-plugin-react-x@^2.7.2",
       "npm:eslint-plugin-redos@^4.5.0",
       "npm:eslint-plugin-regexp@^2.10.0",
       "npm:eslint-plugin-security@^3.0.1",
@@ -1718,7 +1708,6 @@
     "packageJson": {
       "dependencies": [
         "npm:@eslint-community/eslint-plugin-eslint-comments@^4.6.0",
-        "npm:@eslint-react/eslint-plugin@^2.7.2",
         "npm:@stylistic/eslint-plugin@^5.7.0",
         "npm:@typescript-eslint/parser@^8.53.0",
         "npm:eslint-import-resolver-typescript@^4.4.4",
@@ -1729,6 +1718,11 @@
         "npm:eslint-plugin-no-secrets@^2.2.1",
         "npm:eslint-plugin-perfectionist@^5.3.1",
         "npm:eslint-plugin-promise@^7.2.1",
+        "npm:eslint-plugin-react-dom@^2.7.2",
+        "npm:eslint-plugin-react-hooks-extra@^2.7.2",
+        "npm:eslint-plugin-react-naming-convention@^2.7.2",
+        "npm:eslint-plugin-react-web-api@^2.7.2",
+        "npm:eslint-plugin-react-x@^2.7.2",
         "npm:eslint-plugin-redos@^4.5.0",
         "npm:eslint-plugin-regexp@^2.10.0",
         "npm:eslint-plugin-security@^3.0.1",

@@ -3,7 +3,7 @@
 	"version": "16.1.2",
 	"exports": "./config.js",
 	"tasks": {
-		"lint": "deno run -A npm:eslint",
+		"lint": "deno x eslint",
 		"publish": "deno task lint && VERSION=$(cat deno.json | jq -r .version) && git tag -a \"v$VERSION\" -m \"\" && git push origin \"v$VERSION\" && deno publish --no-check && npm publish",
 		"update-import-map": "deno run -A ./scripts/update-import-map.js",
 		"update-package-json": "deno run -A ./scripts/update-package-json.js",
@@ -38,7 +38,6 @@
 	},
 	"imports": {
 		"@eslint-community/eslint-plugin-eslint-comments": "npm:@eslint-community/eslint-plugin-eslint-comments@^4.6.0",
-		"@eslint-react/eslint-plugin": "npm:@eslint-react/eslint-plugin@^2.7.2",
 		"@std/path": "jsr:@std/path@^1.1.4",
 		"@stylistic/eslint-plugin": "npm:@stylistic/eslint-plugin@^5.7.0",
 		"@typescript-eslint/parser": "npm:@typescript-eslint/parser@^8.53.0",
@@ -51,6 +50,11 @@
 		"eslint-plugin-no-secrets": "npm:eslint-plugin-no-secrets@^2.2.1",
 		"eslint-plugin-perfectionist": "npm:eslint-plugin-perfectionist@^5.3.1",
 		"eslint-plugin-promise": "npm:eslint-plugin-promise@^7.2.1",
+		"eslint-plugin-react-dom": "npm:eslint-plugin-react-dom@^2.7.2",
+		"eslint-plugin-react-hooks-extra": "npm:eslint-plugin-react-hooks-extra@^2.7.2",
+		"eslint-plugin-react-naming-convention": "npm:eslint-plugin-react-naming-convention@^2.7.2",
+		"eslint-plugin-react-web-api": "npm:eslint-plugin-react-web-api@^2.7.2",
+		"eslint-plugin-react-x": "npm:eslint-plugin-react-x@^2.7.2",
 		"eslint-plugin-redos": "npm:eslint-plugin-redos@^4.5.0",
 		"eslint-plugin-regexp": "npm:eslint-plugin-regexp@^2.10.0",
 		"eslint-plugin-security": "npm:eslint-plugin-security@^3.0.1",
