@@ -112,6 +112,7 @@ const config = defineConfig([
 			},
 			"react-x": {
 				jsxPragma: "h",
+				polymorphicPropName: "as",
 				version: "18"
 			},
 			regexp: {

@@ -1,7 +1,11 @@
 const coreRules = {
-	"@eslint-react/avoid-shorthand-boolean": "off",
-	"@eslint-react/avoid-shorthand-fragment": "off",
-	"@eslint-react/ensure-forward-ref-using-ref": "error",
+	"@eslint-react/jsx-dollar": "error",
+	"@eslint-react/jsx-key-before-spread": "error",
+	"@eslint-react/jsx-no-comment-textnodes": "error",
+	"@eslint-react/jsx-no-duplicate-props": "error",
+	"@eslint-react/jsx-shorthand-boolean": "error",
+	"@eslint-react/jsx-shorthand-fragment": "error",
+	"@eslint-react/jsx-uses-vars": "error",
 	"@eslint-react/no-access-state-in-setstate": "error",
 	"@eslint-react/no-array-index-key": "error",
 	"@eslint-react/no-children-count": "error",
@@ -12,7 +16,6 @@ const coreRules = {
 	"@eslint-react/no-children-to-array": "error",
 	"@eslint-react/no-class-component": "error",
 	"@eslint-react/no-clone-element": "error",
-	"@eslint-react/no-comment-textnodes": "error",
 	"@eslint-react/no-complex-conditional-rendering": "error",
 	"@eslint-react/no-component-will-mount": "error",
 	"@eslint-react/no-component-will-receive-props": "error",
@@ -25,26 +28,38 @@ const coreRules = {
 	"@eslint-react/no-leaked-conditional-rendering": "error",
 	"@eslint-react/no-missing-component-display-name": "error",
 	"@eslint-react/no-missing-key": "error",
-	"@eslint-react/no-nested-components": "error",
+	"@eslint-react/no-nested-component-definitions": "error",
 	"@eslint-react/no-prop-types": "error",
 	"@eslint-react/no-redundant-should-component-update": "error",
 	"@eslint-react/no-set-state-in-component-did-mount": "error",
 	"@eslint-react/no-set-state-in-component-did-update": "error",
 	"@eslint-react/no-set-state-in-component-will-update": "error",
 	"@eslint-react/no-string-refs": "error",
+	"@eslint-react/no-unnecessary-key": "error",
+	"@eslint-react/no-unnecessary-use-callback": "error",
+	"@eslint-react/no-unnecessary-use-memo": "error",
+	"@eslint-react/no-unnecessary-use-prefix": "error",
+	"@eslint-react/no-unnecessary-use-ref": "error",
 	"@eslint-react/no-unsafe-component-will-mount": "error",
 	"@eslint-react/no-unsafe-component-will-receive-props": "error",
 	"@eslint-react/no-unsafe-component-will-update": "error",
 	"@eslint-react/no-unstable-context-value": "error",
 	"@eslint-react/no-unstable-default-props": "error",
 	"@eslint-react/no-unused-class-component-members": "error",
+	"@eslint-react/no-unused-props": "error",
 	"@eslint-react/no-unused-state": "error",
-	"@eslint-react/no-useless-fragment": ["error", { allowExpressions: true }],
+	"@eslint-react/no-useless-forward-ref": "error",
+	"@eslint-react/no-useless-fragment": [
+		"error",
+		{
+			allowEmptyFragment: false,
+			allowExpressions: true
+		}
+	],
 	"@eslint-react/prefer-destructuring-assignment": "error",
-	"@eslint-react/prefer-react-namespace-import": "error",
+	"@eslint-react/prefer-namespace-import": "error",
 	"@eslint-react/prefer-read-only-props": "error",
-	"@eslint-react/prefer-shorthand-boolean": "error",
-	"@eslint-react/prefer-shorthand-fragment": "error"
+	"@eslint-react/prefer-use-state-lazy-initialization": "error"
 };
 
 export default coreRules;

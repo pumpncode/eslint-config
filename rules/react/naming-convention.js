@@ -15,7 +15,14 @@ const namingConventionRules = {
 			extensions: [".jsx", ".tsx"]
 		}
 	],
-	"@eslint-react/naming-convention/use-state": "error"
+	"@eslint-react/naming-convention/ref-name": "off",
+	"@eslint-react/naming-convention/use-state": [
+		"error",
+		{
+			enforceAssignment: false,
+			enforceSetterName: true
+		}
+	]
 };
 
 export default namingConventionRules;
