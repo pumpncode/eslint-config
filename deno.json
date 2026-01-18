@@ -40,7 +40,7 @@
 		"@eslint-community/eslint-plugin-eslint-comments": "npm:@eslint-community/eslint-plugin-eslint-comments@^4.6.0",
 		"@eslint-react/eslint-plugin": "npm:@eslint-react/eslint-plugin@^2.7.1",
 		"@std/path": "jsr:@std/path@^1.1.2",
-		"@stylistic/eslint-plugin": "npm:@stylistic/eslint-plugin@^5.3.1",
+		"@stylistic/eslint-plugin": "npm:@stylistic/eslint-plugin@^5.7.0",
 		"@typescript-eslint/parser": "npm:@typescript-eslint/parser@^8.42.0",
 		"eslint": "npm:eslint@^9.34.0",
 		"eslint-import-resolver-typescript": "npm:eslint-import-resolver-typescript@^4.4.4",

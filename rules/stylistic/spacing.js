@@ -9,13 +9,7 @@ const spacingRules = {
 	"@stylistic/block-spacing": ["error", "always"],
 	"@stylistic/computed-property-spacing": ["error", "never"],
 	"@stylistic/function-call-spacing": ["error", "never"],
-	"@stylistic/generator-star-spacing": [
-		"error",
-		{
-			before: false,
-			after: true
-		}
-	],
+	"@stylistic/generator-star-spacing": ["error", "after"],
 	"@stylistic/key-spacing": [
 		"error",
 		{
