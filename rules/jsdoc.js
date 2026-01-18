@@ -7,20 +7,11 @@
  */
 const jsdocRules = {
 	"jsdoc/check-access": "warn",
-	"jsdoc/check-alignment": "warn",
-	"jsdoc/check-examples": [
-		"off",
-		{
-			allowInlineConfig: true,
-			captionRequired: false,
-			noDefaultExampleRules: true,
-			paddedIndent: 4,
-			reportUnusedDisableDirectives: true
-		}
-	],
+	"jsdoc/check-alignment": ["warn", { innerIndent: 1 }],
 	"jsdoc/check-indentation": [
 		"warn",
 		{
+			allowIndentedSections: true,
 			excludeTags: ["example", "typedef"]
 		}
 	],
@@ -31,7 +22,13 @@ const jsdocRules = {
 	"jsdoc/check-tag-names": [
 		"warn",
 		{
-			definedTags: ["category", "component"]
+			definedTags: ["category", "component"],
+			inlineTags: [
+				"link",
+				"linkcode",
+				"linkplain",
+				"tutorial"
+			]
 		}
 	],
 	"jsdoc/check-template-names": "off",
@@ -56,6 +53,14 @@ const jsdocRules = {
 		}
 	],
 	"jsdoc/empty-tags": "warn",
+	"jsdoc/escape-inline-tags": [
+		"warn",
+		{
+			allowedInlineTags: [],
+			enableFixer: true,
+			fixType: "backslash"
+		}
+	],
 	"jsdoc/implements-on-classes": "warn",
 	"jsdoc/imports-as-dependencies": "off",
 	"jsdoc/informative-docs": "warn",
@@ -81,9 +86,20 @@ const jsdocRules = {
 	"jsdoc/no-undefined-types": [
 		"off",
 		{
+			checkUsedTypedefs: true,
 			definedTypes: ["Iterable", "IterableIterator"]
 		}
 	],
+	"jsdoc/prefer-import-tag": [
+		"warn",
+		{
+			enableFixer: true,
+			exemptTypedefs: false,
+			outputType: "named-import"
+		}
+	],
+	"jsdoc/reject-any-type": "warn",
+	"jsdoc/reject-function-type": "warn",
 	"jsdoc/require-asterisk-prefix": [
 		"warn",
 		"always",
@@ -164,6 +180,8 @@ const jsdocRules = {
 	],
 	"jsdoc/require-hyphen-before-param-description": ["warn", "always"],
 	"jsdoc/require-jsdoc": "off",
+	"jsdoc/require-next-description": "warn",
+	"jsdoc/require-next-type": "warn",
 	"jsdoc/require-param": ["warn", { unnamedRootBase: ["options"] }],
 	"jsdoc/require-param-description": [
 		"warn",
@@ -177,6 +195,7 @@ const jsdocRules = {
 	"jsdoc/require-property-description": "warn",
 	"jsdoc/require-property-name": "warn",
 	"jsdoc/require-property-type": "warn",
+	"jsdoc/require-rejects": "off",
 	"jsdoc/require-returns": "warn",
 	"jsdoc/require-returns-check": "warn",
 	"jsdoc/require-returns-description": "warn",
@@ -187,9 +206,14 @@ const jsdocRules = {
 			requireSeparateTemplates: true
 		}
 	],
+	"jsdoc/require-template-description": "off",
 	"jsdoc/require-throws": "warn",
+	"jsdoc/require-throws-description": "warn",
+	"jsdoc/require-throws-type": "warn",
 	"jsdoc/require-yields": "warn",
 	"jsdoc/require-yields-check": "warn",
+	"jsdoc/require-yields-description": "warn",
+	"jsdoc/require-yields-type": "warn",
 	"jsdoc/sort-tags": [
 		"warn",
 		{
@@ -363,7 +387,45 @@ const jsdocRules = {
 		}
 	],
 	"jsdoc/text-escaping": "off",
-	"jsdoc/valid-types": "off"
+	"jsdoc/ts-method-signature-style": ["warn", "property", { enableFixer: true }],
+	"jsdoc/ts-no-empty-object-type": "warn",
+	"jsdoc/ts-no-unnecessary-template-expression": ["warn", { enableFixer: true }],
+	"jsdoc/ts-prefer-function-type": ["warn", { enableFixer: true }],
+	"jsdoc/type-formatting": [
+		"warn",
+		{
+			arrayBrackets: "square",
+			arrowFunctionPostReturnMarkerSpacing: " ",
+			arrowFunctionPreReturnMarkerSpacing: " ",
+			enableFixer: true,
+			functionOrClassParameterSpacing: " ",
+			functionOrClassPostGenericSpacing: "",
+			functionOrClassPostReturnMarkerSpacing: "",
+			functionOrClassPreReturnMarkerSpacing: "",
+			functionOrClassTypeParameterSpacing: " ",
+			genericAndTupleElementSpacing: " ",
+			genericDot: false,
+			keyValuePostColonSpacing: " ",
+			keyValuePostKeySpacing: "",
+			keyValuePostOptionalSpacing: "",
+			keyValuePostVariadicSpacing: "",
+			methodQuotes: "double",
+			objectFieldIndent: "\t",
+			objectFieldQuote: null,
+			objectFieldSeparator: "comma-and-linebreak",
+			objectFieldSeparatorOptionalLinebreak: true,
+			objectFieldSeparatorTrailingPunctuation: false,
+			parameterDefaultValueSpacing: " ",
+			postMethodNameSpacing: "",
+			postNewSpacing: " ",
+			separatorForSingleObjectField: false,
+			stringQuotes: "double",
+			typeBracketSpacing: "",
+			unionSpacing: " "
+		}
+	],
+	"jsdoc/valid-types": "off",
+	"jsodc/require-tags": "off"
 };
 
 export default jsdocRules;
