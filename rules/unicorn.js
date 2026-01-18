@@ -68,6 +68,7 @@ const unicornRules = {
 	"unicorn/no-array-method-this-argument": "error",
 	"unicorn/no-array-reduce": "off",
 	"unicorn/no-array-reverse": "error",
+	"unicorn/no-array-sort": "off",
 	"unicorn/no-await-expression-member": "error",
 	"unicorn/no-await-in-promise-methods": "error",
 	"unicorn/no-console-spaces": "error",
@@ -75,6 +76,7 @@ const unicornRules = {
 	"unicorn/no-empty-file": "error",
 	"unicorn/no-for-loop": "error",
 	"unicorn/no-hex-escape": "error",
+	"unicorn/no-immediate-mutation": "error",
 	"unicorn/no-instanceof-array": "error",
 	"unicorn/no-instanceof-builtins": "error",
 	"unicorn/no-invalid-fetch-options": "error",
@@ -110,6 +112,7 @@ const unicornRules = {
 	"unicorn/no-unreadable-array-destructuring": "error",
 	"unicorn/no-unreadable-iife": "error",
 	"unicorn/no-unused-properties": "error",
+	"unicorn/no-useless-collection-argument": "error",
 	"unicorn/no-useless-error-capture-stack-trace": "error",
 	"unicorn/no-useless-fallback-in-spread": "error",
 	"unicorn/no-useless-length-check": "error",
@@ -153,8 +156,10 @@ const unicornRules = {
 	"unicorn/prefer-array-index-of": "error",
 	"unicorn/prefer-array-some": "error",
 	"unicorn/prefer-at": "error",
+	"unicorn/prefer-bigint-literals": "error",
 	"unicorn/prefer-blob-reading-methods": "error",
 	"unicorn/prefer-class-fields": "error",
+	"unicorn/prefer-classlist-toggle": "error",
 	"unicorn/prefer-code-point": "error",
 	"unicorn/prefer-date-now": "error",
 	"unicorn/prefer-default-parameters": "error",
@@ -190,6 +195,7 @@ const unicornRules = {
 	"unicorn/prefer-query-selector": "error",
 	"unicorn/prefer-reflect-apply": "error",
 	"unicorn/prefer-regexp-test": "error",
+	"unicorn/prefer-response-static-json": "error",
 	"unicorn/prefer-set-has": "error",
 	"unicorn/prefer-set-size": "error",
 	"unicorn/prefer-single-call": "error",
@@ -207,6 +213,7 @@ const unicornRules = {
 	"unicorn/prevent-abbreviations": "error",
 	"unicorn/relative-url-style": "error",
 	"unicorn/require-array-join-separator": "error",
+	"unicorn/require-module-attributes": "error",
 	"unicorn/require-module-specifiers": "error",
 	"unicorn/require-number-to-fixed-digits-argument": "error",
 	"unicorn/require-post-message-target-origin": "off",
@@ -234,7 +241,7 @@ const unicornRules = {
 			]
 		}
 	],
-	"unicorn/text-encoding-identifier-case": "error",
+	"unicorn/text-encoding-identifier-case": ["error", { withDash: true }],
 	"unicorn/throw-new-error": "error"
 };
 
