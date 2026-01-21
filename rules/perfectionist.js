@@ -109,7 +109,7 @@ const perfectionistRules = {
 	"perfectionist/sort-jsx-props": [
 		"error",
 		{
-			groups: ["shorthand", "unknown", "multiline"]
+			groups: ["shorthand-prop", "unknown", "multiline-prop"]
 		}
 	],
 	"perfectionist/sort-maps": "error",
