@@ -110,7 +110,7 @@ const jsdocRules = {
 		}
 	],
 	"jsdoc/require-description": [
-		"warn",
+		"off",
 		{
 			contexts: [
 				// "ArrayExpression",
@@ -180,11 +180,11 @@ const jsdocRules = {
 	],
 	"jsdoc/require-hyphen-before-param-description": ["warn", "always"],
 	"jsdoc/require-jsdoc": "off",
-	"jsdoc/require-next-description": "warn",
+	"jsdoc/require-next-description": "off",
 	"jsdoc/require-next-type": "warn",
 	"jsdoc/require-param": ["warn", { unnamedRootBase: ["options"] }],
 	"jsdoc/require-param-description": [
-		"warn",
+		"off",
 		{
 			setDefaultDestructuredRootDescription: true
 		}
@@ -192,13 +192,13 @@ const jsdocRules = {
 	"jsdoc/require-param-name": "warn",
 	"jsdoc/require-param-type": "warn",
 	"jsdoc/require-property": "warn",
-	"jsdoc/require-property-description": "warn",
+	"jsdoc/require-property-description": "off",
 	"jsdoc/require-property-name": "warn",
 	"jsdoc/require-property-type": "warn",
 	"jsdoc/require-rejects": "off",
-	"jsdoc/require-returns": "warn",
+	"jsdoc/require-returns": "off",
 	"jsdoc/require-returns-check": "warn",
-	"jsdoc/require-returns-description": "warn",
+	"jsdoc/require-returns-description": "off",
 	"jsdoc/require-returns-type": "warn",
 	"jsdoc/require-template": [
 		"off",
@@ -212,7 +212,7 @@ const jsdocRules = {
 	"jsdoc/require-throws-type": "warn",
 	"jsdoc/require-yields": "warn",
 	"jsdoc/require-yields-check": "warn",
-	"jsdoc/require-yields-description": "warn",
+	"jsdoc/require-yields-description": "off",
 	"jsdoc/require-yields-type": "warn",
 	"jsdoc/sort-tags": [
 		"warn",
@@ -392,7 +392,7 @@ const jsdocRules = {
 	"jsdoc/ts-no-unnecessary-template-expression": ["warn", { enableFixer: true }],
 	"jsdoc/ts-prefer-function-type": ["warn", { enableFixer: true }],
 	"jsdoc/type-formatting": [
-		"warn",
+		"off",
 		{
 			arrayBrackets: "square",
 			arrowFunctionPostReturnMarkerSpacing: " ",
