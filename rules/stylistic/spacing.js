@@ -15,6 +15,7 @@ const spacingRules = {
 				minItems: 0
 			},
 			overrides: {
+				"[]": "off",
 				"{}": { singleLine: { spacing: "always" } }
 			},
 			singleLine: {
