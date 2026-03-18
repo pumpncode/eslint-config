@@ -9,7 +9,7 @@ const perfectionistRules = {
 	"perfectionist/sort-array-includes": [
 		"error",
 		{
-			groups: ["literal", "spread"]
+			groups: ["literal"]
 		}
 	],
 	"perfectionist/sort-classes": [

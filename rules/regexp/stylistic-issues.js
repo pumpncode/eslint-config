@@ -6,8 +6,8 @@ const stylisticIssuesRules = {
 		{
 			caseInsensitive: "lowercase",
 			controlEscape: "uppercase",
-			hexadecimalEscape: "lowercase",
-			unicodeEscape: "lowercase"
+			hexadecimalEscape: "uppercase",
+			unicodeEscape: "uppercase"
 		}
 	],
 	"regexp/match-any": "error",
