@@ -8,6 +8,21 @@ const spacingRules = {
 	],
 	"@stylistic/block-spacing": ["error", "always"],
 	"@stylistic/computed-property-spacing": ["error", "never"],
+	"@stylistic/exp-list-style": [
+		"error",
+		{
+			multiLine: {
+				minItems: 0
+			},
+			overrides: {
+				"{}": { singleLine: { spacing: "always" } }
+			},
+			singleLine: {
+				maxItems: 3,
+				spacing: "never"
+			}
+		}
+	],
 	"@stylistic/function-call-spacing": ["error", "never"],
 	"@stylistic/generator-star-spacing": ["error", "after"],
 	"@stylistic/key-spacing": [

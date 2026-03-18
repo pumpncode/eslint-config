@@ -415,11 +415,13 @@ const jsdocRules = {
 			objectFieldSeparator: "comma-and-linebreak",
 			objectFieldSeparatorOptionalLinebreak: true,
 			objectFieldSeparatorTrailingPunctuation: false,
+			objectTypeBracketSpacing: "",
 			parameterDefaultValueSpacing: " ",
 			postMethodNameSpacing: "",
 			postNewSpacing: " ",
 			separatorForSingleObjectField: false,
 			stringQuotes: "double",
+			trailingPunctuationMultilineOnly: false,
 			typeBracketSpacing: "",
 			unionSpacing: " "
 		}

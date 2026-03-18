@@ -17,34 +17,34 @@
 		"test": "echo 'no tests yet'"
 	},
 	"devDependencies": {
-		"eslint": "^9.39.2"
+		"eslint": "^10.0.3"
 	},
 	"dependencies": {
-		"@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
-		"@stylistic/eslint-plugin": "^5.7.0",
-		"@typescript-eslint/parser": "^8.53.0",
+		"@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"@typescript-eslint/parser": "^8.57.1",
 		"eslint-import-resolver-typescript": "^4.4.4",
-		"eslint-plugin-command": "^3.4.0",
-		"eslint-plugin-depend": "^1.4.0",
-		"eslint-plugin-import-x": "^4.16.1",
-		"eslint-plugin-jsdoc": "^62.1.0",
-		"eslint-plugin-no-secrets": "^2.2.1",
-		"eslint-plugin-perfectionist": "^5.3.1",
+		"eslint-plugin-command": "^3.5.2",
+		"eslint-plugin-depend": "^1.5.0",
+		"eslint-plugin-import-x": "^4.16.2",
+		"eslint-plugin-jsdoc": "^62.8.0",
+		"eslint-plugin-no-secrets": "^2.3.3",
+		"eslint-plugin-perfectionist": "^5.7.0",
 		"eslint-plugin-promise": "^7.2.1",
-		"eslint-plugin-react-dom": "^2.7.2",
-		"eslint-plugin-react-hooks-extra": "^2.7.2",
-		"eslint-plugin-react-naming-convention": "^2.7.2",
-		"eslint-plugin-react-web-api": "^2.7.2",
-		"eslint-plugin-react-x": "^2.7.2",
+		"eslint-plugin-react-dom": "^3.0.0",
+		"eslint-plugin-react-naming-convention": "^3.0.0",
+		"eslint-plugin-react-rsc": "^3.0.0",
+		"eslint-plugin-react-web-api": "^3.0.0",
+		"eslint-plugin-react-x": "^3.0.0",
 		"eslint-plugin-redos": "^4.5.0",
-		"eslint-plugin-regexp": "^2.10.0",
-		"eslint-plugin-security": "^3.0.1",
-		"eslint-plugin-sonarjs": "^3.0.5",
+		"eslint-plugin-regexp": "^3.1.0",
+		"eslint-plugin-security": "^4.0.0",
+		"eslint-plugin-sonarjs": "^4.0.2",
 		"eslint-plugin-tailwindcss": "^4.0.0-beta.0",
-		"eslint-plugin-unicorn": "^62.0.0",
-		"globals": "^17.0.0"
+		"eslint-plugin-unicorn": "^63.0.0",
+		"globals": "^17.4.0"
 	},
 	"peerDependencies": {
-		"eslint": "^9.34.0"
+		"eslint": "^10.0.3"
 	}
 }

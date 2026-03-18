@@ -59,6 +59,15 @@ const unicornRules = {
 	"unicorn/explicit-length-check": "error",
 	"unicorn/filename-case": ["error", { case: "kebabCase" }],
 	"unicorn/import-style": "error",
+	"unicorn/isolated-functions": [
+		"error",
+		{
+			comments: ["@isolated"],
+			functions: ["makeSynchronous"],
+			overrideGlobals: undefined,
+			selectors: []
+		}
+	],
 	"unicorn/new-for-builtins": "error",
 	"unicorn/no-abusive-eslint-disable": "error",
 	"unicorn/no-accessor-recursion": "error",

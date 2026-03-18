@@ -12,6 +12,7 @@ const helpfulWarningsRules = {
 		{
 			ignoreUnusedTypeExports: true,
 			missingExports: true,
+			suppressMissingFileEnumeratorAPIWarning: true,
 			unusedExports: false
 		}
 	]

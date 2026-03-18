@@ -2,9 +2,6 @@
 /* eslint-disable import-x/default -- see above */
 /* eslint-disable import-x/max-dependencies -- collection file */
 
-// import github from "eslint-plugin-github";
-// import jsxA11y from "eslint-plugin-jsx-a11y";
-// import noUnsanitized from "eslint-plugin-no-unsanitized";
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
 import command from "eslint-plugin-command";
@@ -15,12 +12,11 @@ import noSecrets from "eslint-plugin-no-secrets";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
 import reactDom from "eslint-plugin-react-dom";
-import reactHooksExtra from "eslint-plugin-react-hooks-extra";
 import reactNamingConvention from "eslint-plugin-react-naming-convention";
+import reactRsc from "eslint-plugin-react-rsc";
 import reactWebApi from "eslint-plugin-react-web-api";
 import react from "eslint-plugin-react-x";
-import redos from "eslint-plugin-redos";
-import * as regexp from "eslint-plugin-regexp";
+import regexp from "eslint-plugin-regexp";
 import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
 import tailwindcss from "eslint-plugin-tailwindcss";
@@ -44,20 +40,14 @@ const plugins = /** @type {const} */ ({
 
 	"@eslint-react": react,
 	"@eslint-react/dom": reactDom,
-	"@eslint-react/hooks-extra": reactHooksExtra,
 	"@eslint-react/naming-convention": reactNamingConvention,
+	"@eslint-react/rsc": reactRsc,
 	"@eslint-react/web-api": reactWebApi,
-	// TODO [2026-07-01]: Remove assertion once https://github.com/un-ts/eslint-plugin-import-x/issues/421 is resolved
-	"import-x": /** @type {ESLint.Plugin} */ (
-		/** @type {unknown} */ (
-			importX
-		)
-	),
+	"import-x": importX,
 	jsdoc,
 	"no-secrets": noSecrets,
 	perfectionist,
 	promise,
-	redos,
 	regexp,
 	security,
 	sonarjs,

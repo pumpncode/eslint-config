@@ -162,7 +162,21 @@ const suggestionsRules = {
 	"no-restricted-globals": "error",
 	"no-restricted-imports": "error",
 	"no-restricted-properties": "error",
-	"no-restricted-syntax": "error",
+	"no-restricted-syntax": [
+		"error",
+		{
+			message: "[Deprecated] Use ES6 default parameters instead.",
+			selector: "AssignmentExpression[operator='='][left.property.name='defaultProps']"
+		},
+		{
+			message: "[Deprecated] Use TypeScript or another type-checking solution instead.",
+			selector: "AssignmentExpression[operator='='][left.property.name='propTypes']"
+		},
+		{
+			message: "[Deprecated] Use callback refs instead.",
+			selector: "JSXAttribute[name.name='ref'][value.type='Literal']"
+		}
+	],
 	"no-return-assign": "error",
 	"no-script-url": "error",
 	"no-sequences": "error",

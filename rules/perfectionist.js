@@ -304,7 +304,8 @@ const perfectionistRules = {
 				"groupColor2",
 				"groupColor3",
 				"unknown"
-			]
+			],
+			sortBy: "name"
 		}
 	],
 	"perfectionist/sort-sets": "error",

@@ -1,28 +1,6 @@
 const namingConventionRules = {
-	"@eslint-react/naming-convention/component-name": [
-		"error",
-		{
-			allowAllCaps: false,
-			excepts: [],
-			rule: "PascalCase"
-		}
-	],
-	"@eslint-react/naming-convention/filename": ["error", { rule: "kebab-case" }],
-	"@eslint-react/naming-convention/filename-extension": [
-		"error",
-		{
-			allow: "as-needed",
-			extensions: [".jsx", ".tsx"]
-		}
-	],
-	"@eslint-react/naming-convention/ref-name": "off",
-	"@eslint-react/naming-convention/use-state": [
-		"error",
-		{
-			enforceAssignment: false,
-			enforceSetterName: true
-		}
-	]
+	"@eslint-react/naming-convention/id-name": "error",
+	"@eslint-react/naming-convention/ref-name": "off"
 };
 
 export default namingConventionRules;

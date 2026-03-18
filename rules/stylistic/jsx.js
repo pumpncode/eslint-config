@@ -1,4 +1,15 @@
 const jsxRules = {
+	"@stylistic/exp-jsx-props-style": [
+		"error",
+		{
+			multiLine: {
+				minItems: 0
+			},
+			singleLine: {
+				maxItems: 3
+			}
+		}
+	],
 	"@stylistic/jsx-child-element-spacing": "error",
 	"@stylistic/jsx-closing-tag-location": ["error", "line-aligned"],
 	"@stylistic/jsx-equals-spacing": ["error", "never"],

@@ -111,6 +111,7 @@ const config = defineConfig([
 				type: "natural"
 			},
 			"react-x": {
+				compilationMode: "infer",
 				jsxPragma: "h",
 				polymorphicPropName: "as",
 				version: "18"
