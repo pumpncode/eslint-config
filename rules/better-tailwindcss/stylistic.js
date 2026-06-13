@@ -29,7 +29,7 @@ const stylisticRules = {
 		}
 	],
 	"better-tailwindcss/enforce-consistent-variant-order": "error",
-	"better-tailwindcss/enforce-logical-properties": "error",
+	"better-tailwindcss/enforce-logical-properties": ["error", { ignore: ["size"] }],
 	"better-tailwindcss/no-deprecated-classes": "error",
 	"better-tailwindcss/no-duplicate-classes": "error",
 	"better-tailwindcss/no-unnecessary-whitespace": ["error", { allowMultiline: true }]
