@@ -12,6 +12,7 @@ const perfectionistRules = {
 			groups: ["literal"]
 		}
 	],
+	"perfectionist/sort-arrays": "error",
 	"perfectionist/sort-classes": [
 		"error",
 		{

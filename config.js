@@ -169,7 +169,6 @@ const config = defineConfig([
 		files: ["**/*.doc.js"],
 		rules: {
 			"import-x/unambiguous": "off",
-			"unicorn/no-empty-file": "off",
 			"unicorn/prevent-abbreviations": "off"
 		}
 	},
@@ -177,6 +176,33 @@ const config = defineConfig([
 		files: ["dev.js"],
 		rules: {
 			"unicorn/prevent-abbreviations": "off"
+		}
+	},
+	{
+		files: ["_types/global.d.ts"],
+		rules: {
+			"max-classes-per-file": "off",
+			"sonarjs/no-built-in-override": "off",
+			"unicorn/prevent-abbreviations": "off",
+			"unicorn/require-module-specifiers": "off"
+		}
+	},
+	{
+		files: ["**/*.d.ts"],
+		rules: {
+			"max-classes-per-file": "off",
+			"import-x/group-exports": "off",
+			"import-x/prefer-default-export": "off",
+			"import-x/unambiguous": "off",
+			"no-unused-vars": "off",
+			"sonarjs/no-built-in-override": "off",
+			"unicorn/prevent-abbreviations": "off"
+		}
+	},
+	{
+		files: ["routes/**"],
+		rules: {
+			"import-x/prefer-default-export": "off"
 		}
 	}
 ]);

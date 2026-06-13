@@ -25,7 +25,7 @@ const suggestionRules = {
 	"sonarjs/file-name-differ-from-class": "off",
 	"sonarjs/fixme-tag": "error",
 	"sonarjs/function-inside-loop": "error",
-	"sonarjs/function-name": "error",
+	"sonarjs/function-name": "off",
 	"sonarjs/function-return-type": "error",
 	"sonarjs/future-reserved-words": "error",
 	"sonarjs/inconsistent-function-call": "error",

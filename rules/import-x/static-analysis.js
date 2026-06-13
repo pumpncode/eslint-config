@@ -18,44 +18,7 @@ const staticAnalysisRules = {
 	],
 	"import-x/no-relative-packages": "error",
 	"import-x/no-relative-parent-imports": "off",
-	"import-x/no-restricted-paths": [
-		"error",
-		{
-			zones: [
-				{
-					except: ["**/utilities/_exports.client.js"],
-					from: [
-						"plugins",
-						"routes",
-						"static",
-						"utilities"
-					]
-						.map((folderName) => `./${folderName}/**/*`),
-					message: "Please use the utilities/_exports.client.js file to import server utilities",
-					target: "./islands/**/*"
-				},
-				{
-					except: ["**/utilities/_exports.server.js"],
-					from: [
-						"plugins",
-						"routes",
-						"static",
-						"utilities"
-					]
-						.map((folderName) => `./${folderName}/**/*`),
-					message: "Please use the utilities/_exports.server.js file to import server utilities",
-					target: [
-						"./components/**/*",
-						"./logic/**/*",
-						"./patches/**/*",
-						"./plugins/**/*",
-						"./routes/**/*",
-						"./static/**/*"
-					]
-				}
-			]
-		}
-	],
+	"import-x/no-restricted-paths": "off",
 	"import-x/no-self-import": "error",
 	// TODO [2026-07-01]: Change to "error" when there is a resolver for deno (maybe https://github.com/redabacha/eslint-import-resolver-deno)
 	"import-x/no-unresolved": "off",

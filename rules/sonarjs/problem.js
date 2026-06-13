@@ -33,6 +33,7 @@ const problemRules = {
 	"sonarjs/disabled-auto-escaping": "error",
 	"sonarjs/disabled-resource-integrity": "error",
 	"sonarjs/disabled-timeout": "error",
+	"sonarjs/dompurify-unsafe-config": "error",
 	"sonarjs/empty-string-repetition": "error",
 	"sonarjs/encryption-secure-mode": "error",
 	"sonarjs/existing-groups": "error",

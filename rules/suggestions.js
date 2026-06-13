@@ -3,7 +3,7 @@
  */
 
 const minIdentifierLength = 2;
-const maxIdentifierLength = 30;
+const maxIdentifierLength = 40;
 const maxClassesPerFile = 1;
 const maxDepth = 8;
 const maxLinesPerFile = 500;
@@ -63,7 +63,12 @@ const suggestionsRules = {
 		{
 			min: minIdentifierLength,
 			max: maxIdentifierLength,
-			exceptions: ["x", "y", "z"],
+			exceptions: [
+				"v",
+				"x",
+				"y",
+				"z"
+			],
 			properties: "never"
 		}
 	],

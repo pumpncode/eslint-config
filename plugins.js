@@ -12,6 +12,7 @@ import noSecrets from "eslint-plugin-no-secrets";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
 import reactDom from "eslint-plugin-react-dom";
+import reactJsx from "eslint-plugin-react-jsx";
 import reactNamingConvention from "eslint-plugin-react-naming-convention";
 import reactRsc from "eslint-plugin-react-rsc";
 import reactWebApi from "eslint-plugin-react-web-api";
@@ -23,7 +24,7 @@ import tailwindcss from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 
 /**
- * @import { Linter, ESLint } from "eslint"
+ * @import { Linter } from "eslint"
  */
 
 /**
@@ -40,6 +41,7 @@ const plugins = /** @type {const} */ ({
 
 	"@eslint-react": react,
 	"@eslint-react/dom": reactDom,
+	"@eslint-react/jsx": reactJsx,
 	"@eslint-react/naming-convention": reactNamingConvention,
 	"@eslint-react/rsc": reactRsc,
 	"@eslint-react/web-api": reactWebApi,
