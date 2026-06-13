@@ -46,6 +46,6 @@
 		"globals": "^17.6.0"
 	},
 	"peerDependencies": {
-		"eslint": "^10.0.3"
+		"eslint": "^10.5.0"
 	}
 }
