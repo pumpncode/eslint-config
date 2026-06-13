@@ -75,7 +75,8 @@ const config = defineConfig([
 		rules,
 		settings: {
 			"better-tailwindcss": {
-				entryPoint: "./assets/style.css"
+				entryPoint: "./assets/style.css",
+				rootFontSize: 16
 			},
 			formComponents: ["Form"],
 			"import-x/extensions": allExtensions,
