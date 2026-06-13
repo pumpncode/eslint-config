@@ -1,11 +1,11 @@
-const maxLineLength = 100;
-const tabWidth = 4;
+import maximumLineLength from "../_common/maximum-line-length.js";
+import tabWidth from "../_common/tab-width.js";
 
 const miscRules = {
 	"@stylistic/max-len": [
 		"error",
 		{
-			code: maxLineLength,
+			code: maximumLineLength,
 			ignoreComments: true,
 			ignoreRegExpLiterals: true,
 			ignoreStrings: true,

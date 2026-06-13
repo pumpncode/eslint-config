@@ -6,8 +6,6 @@ import globals from "globals";
 import plugins from "./plugins.js";
 import rules from "./rules.js";
 
-const cssFilesRefreshRate = 5_000;
-
 const convertedGlobals = Object.fromEntries(
 	Object.entries({
 		...globals.browser,
@@ -76,6 +74,9 @@ const config = defineConfig([
 		plugins,
 		rules,
 		settings: {
+			"better-tailwindcss": {
+				entryPoint: "./assets/style.css"
+			},
 			formComponents: ["Form"],
 			"import-x/extensions": allExtensions,
 			"import-x/external-module-folders": ["node_modules", "node_modules/@types"],
@@ -118,23 +119,6 @@ const config = defineConfig([
 			},
 			regexp: {
 				allowedCharacterRanges: ["alphanumeric"]
-			},
-			tailwindcss: {
-				callees: ["classnames", "clsx", "ctl"],
-				classRegex: "^class(Name)?$",
-				config: "tailwind.config.js",
-				cssFiles: [
-					"**/*.css",
-					"!**/node_modules",
-					"!**/.*",
-					"!**/dist",
-					"!**/build"
-				],
-				cssFilesRefreshRate,
-				removeDuplicates: true,
-				skipClassAttribute: false,
-				tags: [],
-				whitelist: []
 			}
 		}
 	},

@@ -1,3 +1,4 @@
+export { default as betterTailwindcssRules } from "./better-tailwindcss.js";
 export { default as commandRules } from "./command.js";
 export { default as dependRules } from "./depend.js";
 export { default as eslintCommentsRules } from "./eslint-comments.js";
@@ -15,5 +16,4 @@ export { default as securityRules } from "./security.js";
 export { default as sonarjsRules } from "./sonarjs.js";
 export { default as stylisticRules } from "./stylistic.js";
 export { default as suggestionsRules } from "./suggestions.js";
-export { default as tailwindcssRules } from "./tailwindcss.js";
 export { default as unicornRules } from "./unicorn.js";

@@ -4,6 +4,7 @@
 
 import eslintComments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
+import betterTailwindcss from "eslint-plugin-better-tailwindcss";
 import command from "eslint-plugin-command";
 import depend from "eslint-plugin-depend";
 import importX from "eslint-plugin-import-x";
@@ -20,7 +21,6 @@ import react from "eslint-plugin-react-x";
 import regexp from "eslint-plugin-regexp";
 import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
-import tailwindcss from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 
 /**
@@ -31,9 +31,6 @@ import unicorn from "eslint-plugin-unicorn";
  * @satisfies { Linter.Config["plugins"] }
  */
 const plugins = /** @type {const} */ ({
-	// github,
-	// "jsx-a11y": jsxA11y,
-	// "no-unsanitized": noUnsanitized,
 	"@eslint-community/eslint-comments": eslintComments,
 	"@stylistic": stylistic,
 	command,
@@ -45,6 +42,7 @@ const plugins = /** @type {const} */ ({
 	"@eslint-react/naming-convention": reactNamingConvention,
 	"@eslint-react/rsc": reactRsc,
 	"@eslint-react/web-api": reactWebApi,
+	"better-tailwindcss": betterTailwindcss,
 	"import-x": importX,
 	jsdoc,
 	"no-secrets": noSecrets,
@@ -53,7 +51,6 @@ const plugins = /** @type {const} */ ({
 	regexp,
 	security,
 	sonarjs,
-	tailwindcss,
 	unicorn
 });
 
