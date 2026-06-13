@@ -1,6 +1,6 @@
 {
 	"name": "@pumpn/eslint-config",
-	"version": "17.1.4",
+	"version": "17.2.0",
 	"exports": "./config.js",
 	"license": "MIT",
 	"tasks": {
