@@ -62,7 +62,13 @@ const unicornRules = {
 		}
 	],
 	"unicorn/explicit-length-check": "error",
-	"unicorn/filename-case": ["error", { case: "kebabCase" }],
+	"unicorn/filename-case": [
+		"error",
+		{
+			case: "kebabCase",
+			ignore: [/\(_[_a-z][\-_a-z]+\)/v]
+		}
+	],
 	"unicorn/import-style": "error",
 	"unicorn/isolated-functions": [
 		"error",

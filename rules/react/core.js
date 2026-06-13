@@ -2,7 +2,7 @@ const coreRules = {
 	"@eslint-react/error-boundaries": "error",
 	"@eslint-react/exhaustive-deps": "error",
 	"@eslint-react/globals": "error",
-	"@eslint-react/immutability": "error",
+	"@eslint-react/immutability": "off",
 	"@eslint-react/no-access-state-in-setstate": "error",
 	"@eslint-react/no-array-index-key": "error",
 	"@eslint-react/no-children-count": "error",
