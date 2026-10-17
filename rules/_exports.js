@@ -10,6 +10,7 @@ export {
 export { default as noSecretsRules } from "./no-secrets.js";
 export { default as perfectionistRules } from "./perfectionist.js";
 export { default as possibleProblemsRules } from "./possible-problems.js";
+export { default as promiseRules } from "./promise.js";
 export { default as reactRules } from "./react.js";
 export { default as regexpRules } from "./regexp.js";
 export { default as securityRules } from "./security.js";
