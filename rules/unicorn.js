@@ -66,7 +66,7 @@ const unicornRules = {
 		"error",
 		{
 			case: "kebabCase",
-			ignore: [/\(_[_a-z][\-_a-z]+\)/v]
+			ignore: [/\(_[_a-z][\-_a-z]*\)/v]
 		}
 	],
 	"unicorn/import-style": "error",
